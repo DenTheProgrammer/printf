@@ -39,19 +39,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/den/Programs/clion-2019.1.2/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /Users/mdebbi/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake
 
 # The command to remove a file.
-RM = /home/den/Programs/clion-2019.1.2/bin/cmake/linux/bin/cmake -E remove -f
+RM = /Users/mdebbi/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/den/Desktop/printf
+CMAKE_SOURCE_DIR = /Users/mdebbi/Desktop/printf
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/den/Desktop/printf/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/mdebbi/Desktop/printf/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /home/den/Desktop/printf/cmake-build-debug
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/home/den/Programs/clion-2019.1.2/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/Users/mdebbi/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -70,7 +70,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/home/den/Programs/clion-2019.1.2/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/Users/mdebbi/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/den/Desktop/printf/cmake-build-debug/CMakeFiles /home/den/Desktop/printf/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/mdebbi/Desktop/printf/cmake-build-debug/CMakeFiles /Users/mdebbi/Desktop/printf/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/den/Desktop/printf/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/mdebbi/Desktop/printf/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -1824,6 +1824,33 @@ libft/ft_toupper.c.s:
 	$(MAKE) -f CMakeFiles/printf.dir/build.make CMakeFiles/printf.dir/libft/ft_toupper.c.s
 .PHONY : libft/ft_toupper.c.s
 
+srcs/flist.o: srcs/flist.c.o
+
+.PHONY : srcs/flist.o
+
+# target to build an object file
+srcs/flist.c.o:
+	$(MAKE) -f CMakeFiles/printf.dir/build.make CMakeFiles/printf.dir/srcs/flist.c.o
+.PHONY : srcs/flist.c.o
+
+srcs/flist.i: srcs/flist.c.i
+
+.PHONY : srcs/flist.i
+
+# target to preprocess a source file
+srcs/flist.c.i:
+	$(MAKE) -f CMakeFiles/printf.dir/build.make CMakeFiles/printf.dir/srcs/flist.c.i
+.PHONY : srcs/flist.c.i
+
+srcs/flist.s: srcs/flist.c.s
+
+.PHONY : srcs/flist.s
+
+# target to generate assembly for a file
+srcs/flist.c.s:
+	$(MAKE) -f CMakeFiles/printf.dir/build.make CMakeFiles/printf.dir/srcs/flist.c.s
+.PHONY : srcs/flist.c.s
+
 srcs/main.o: srcs/main.c.o
 
 .PHONY : srcs/main.o
@@ -1850,6 +1877,33 @@ srcs/main.s: srcs/main.c.s
 srcs/main.c.s:
 	$(MAKE) -f CMakeFiles/printf.dir/build.make CMakeFiles/printf.dir/srcs/main.c.s
 .PHONY : srcs/main.c.s
+
+srcs/output.o: srcs/output.c.o
+
+.PHONY : srcs/output.o
+
+# target to build an object file
+srcs/output.c.o:
+	$(MAKE) -f CMakeFiles/printf.dir/build.make CMakeFiles/printf.dir/srcs/output.c.o
+.PHONY : srcs/output.c.o
+
+srcs/output.i: srcs/output.c.i
+
+.PHONY : srcs/output.i
+
+# target to preprocess a source file
+srcs/output.c.i:
+	$(MAKE) -f CMakeFiles/printf.dir/build.make CMakeFiles/printf.dir/srcs/output.c.i
+.PHONY : srcs/output.c.i
+
+srcs/output.s: srcs/output.c.s
+
+.PHONY : srcs/output.s
+
+# target to generate assembly for a file
+srcs/output.c.s:
+	$(MAKE) -f CMakeFiles/printf.dir/build.make CMakeFiles/printf.dir/srcs/output.c.s
+.PHONY : srcs/output.c.s
 
 srcs/parse_arguments.o: srcs/parse_arguments.c.o
 
@@ -1912,8 +1966,8 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... printf"
 	@echo "... edit_cache"
+	@echo "... printf"
 	@echo "... libft/ft_atoi.o"
 	@echo "... libft/ft_atoi.i"
 	@echo "... libft/ft_atoi.s"
@@ -2103,9 +2157,15 @@ help:
 	@echo "... libft/ft_toupper.o"
 	@echo "... libft/ft_toupper.i"
 	@echo "... libft/ft_toupper.s"
+	@echo "... srcs/flist.o"
+	@echo "... srcs/flist.i"
+	@echo "... srcs/flist.s"
 	@echo "... srcs/main.o"
 	@echo "... srcs/main.i"
 	@echo "... srcs/main.s"
+	@echo "... srcs/output.o"
+	@echo "... srcs/output.i"
+	@echo "... srcs/output.s"
 	@echo "... srcs/parse_arguments.o"
 	@echo "... srcs/parse_arguments.i"
 	@echo "... srcs/parse_arguments.s"

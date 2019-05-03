@@ -74,4 +74,4 @@ add_executable(printf
         srcs/main.c
         srcs/parse_arguments.c
         srcs/printf.h
-        srcs/validation.c)
+        srcs/validation.c srcs/output.c srcs/flist.c)

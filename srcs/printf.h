@@ -4,6 +4,9 @@
 
 #ifndef PRINTF_PRINTF_H
 # define PRINTF_PRINTF_H
+# include "libft.h"
+# include <stdio.h>
+# include <stdarg.h>
 
 typedef struct s_flist
 {
@@ -13,4 +16,10 @@ typedef struct s_flist
 	struct s_flist		*next;
 } t_flist;
 
-#endif //PRINTF_PRINTF_H
+char	**parse_input(const char *str);
+void	fill_formats_list(t_flist *flist, char **parsed, size_t fcount, va_list *valist);
+void	apply_formats(t_flist *flist);
+int		printf_output(t_flist *flist);
+t_flist	*flist_create(char *format, void *argument);
+void	flist_push(t_flist *node);
+#endif
