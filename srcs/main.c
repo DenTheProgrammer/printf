@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include <stdarg.h>
+#include "libft.h"
+#include "printf.h"
 
 int  get_arguments_count(const char *str)
 {
@@ -30,6 +32,12 @@ int ft_printf(const char *str, ...)//format in prototype?? return int??
 
 
 int main() {
-	ft_printf("%%%%", 42, 21, 314, 5);
+//	ft_printf("%%%%", 42, 21, 314, 5);
+	ft_putstr("test");
+	t_flist *flist = malloc(sizeof(t_flist));
+	flist->next = NULL;
+	flist->format = "s";
+	flist->argument = "success";
+	flist->output = "success";
 	return 0;
 }

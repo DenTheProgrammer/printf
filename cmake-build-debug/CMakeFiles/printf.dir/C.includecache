@@ -6,9 +6,25 @@
 
 #IncludeRegexTransform: 
 
-/Users/mdebbi/Desktop/printf/srcs/main.c
+../libft/libft.h
+unistd.h
+-
+fcntl.h
+-
+stdlib.h
+-
+string.h
+-
+
+/home/den/Desktop/printf/srcs/main.c
 stdio.h
 -
 stdarg.h
 -
+libft.h
+/home/den/Desktop/printf/srcs/libft.h
+printf.h
+/home/den/Desktop/printf/srcs/printf.h
+
+/home/den/Desktop/printf/srcs/printf.h
 
