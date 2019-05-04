@@ -177,6 +177,10 @@ CMakeFiles/printf.dir/libft/ft_tolower.c.o
  /Users/mdebbi/Desktop/printf/libft/ft_tolower.c
 CMakeFiles/printf.dir/libft/ft_toupper.c.o
  /Users/mdebbi/Desktop/printf/libft/ft_toupper.c
+CMakeFiles/printf.dir/srcs/apply_formats.c.o
+ ../libft/libft.h
+ /Users/mdebbi/Desktop/printf/srcs/apply_formats.c
+ /Users/mdebbi/Desktop/printf/srcs/printf.h
 CMakeFiles/printf.dir/srcs/flist.c.o
  ../libft/libft.h
  /Users/mdebbi/Desktop/printf/srcs/flist.c
@@ -190,6 +194,8 @@ CMakeFiles/printf.dir/srcs/output.c.o
  /Users/mdebbi/Desktop/printf/srcs/output.c
  /Users/mdebbi/Desktop/printf/srcs/printf.h
 CMakeFiles/printf.dir/srcs/parse_arguments.c.o
+ ../libft/libft.h
  /Users/mdebbi/Desktop/printf/srcs/parse_arguments.c
+ /Users/mdebbi/Desktop/printf/srcs/printf.h
 CMakeFiles/printf.dir/srcs/validation.c.o
  /Users/mdebbi/Desktop/printf/srcs/validation.c

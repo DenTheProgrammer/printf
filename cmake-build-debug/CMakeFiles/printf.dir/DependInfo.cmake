@@ -67,6 +67,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/mdebbi/Desktop/printf/libft/ft_strtrim.c" "/Users/mdebbi/Desktop/printf/cmake-build-debug/CMakeFiles/printf.dir/libft/ft_strtrim.c.o"
   "/Users/mdebbi/Desktop/printf/libft/ft_tolower.c" "/Users/mdebbi/Desktop/printf/cmake-build-debug/CMakeFiles/printf.dir/libft/ft_tolower.c.o"
   "/Users/mdebbi/Desktop/printf/libft/ft_toupper.c" "/Users/mdebbi/Desktop/printf/cmake-build-debug/CMakeFiles/printf.dir/libft/ft_toupper.c.o"
+  "/Users/mdebbi/Desktop/printf/srcs/apply_formats.c" "/Users/mdebbi/Desktop/printf/cmake-build-debug/CMakeFiles/printf.dir/srcs/apply_formats.c.o"
   "/Users/mdebbi/Desktop/printf/srcs/flist.c" "/Users/mdebbi/Desktop/printf/cmake-build-debug/CMakeFiles/printf.dir/srcs/flist.c.o"
   "/Users/mdebbi/Desktop/printf/srcs/main.c" "/Users/mdebbi/Desktop/printf/cmake-build-debug/CMakeFiles/printf.dir/srcs/main.c.o"
   "/Users/mdebbi/Desktop/printf/srcs/output.c" "/Users/mdebbi/Desktop/printf/cmake-build-debug/CMakeFiles/printf.dir/srcs/output.c.o"

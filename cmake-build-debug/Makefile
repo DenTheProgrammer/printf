@@ -1824,6 +1824,33 @@ libft/ft_toupper.c.s:
 	$(MAKE) -f CMakeFiles/printf.dir/build.make CMakeFiles/printf.dir/libft/ft_toupper.c.s
 .PHONY : libft/ft_toupper.c.s
 
+srcs/apply_formats.o: srcs/apply_formats.c.o
+
+.PHONY : srcs/apply_formats.o
+
+# target to build an object file
+srcs/apply_formats.c.o:
+	$(MAKE) -f CMakeFiles/printf.dir/build.make CMakeFiles/printf.dir/srcs/apply_formats.c.o
+.PHONY : srcs/apply_formats.c.o
+
+srcs/apply_formats.i: srcs/apply_formats.c.i
+
+.PHONY : srcs/apply_formats.i
+
+# target to preprocess a source file
+srcs/apply_formats.c.i:
+	$(MAKE) -f CMakeFiles/printf.dir/build.make CMakeFiles/printf.dir/srcs/apply_formats.c.i
+.PHONY : srcs/apply_formats.c.i
+
+srcs/apply_formats.s: srcs/apply_formats.c.s
+
+.PHONY : srcs/apply_formats.s
+
+# target to generate assembly for a file
+srcs/apply_formats.c.s:
+	$(MAKE) -f CMakeFiles/printf.dir/build.make CMakeFiles/printf.dir/srcs/apply_formats.c.s
+.PHONY : srcs/apply_formats.c.s
+
 srcs/flist.o: srcs/flist.c.o
 
 .PHONY : srcs/flist.o
@@ -2157,6 +2184,9 @@ help:
 	@echo "... libft/ft_toupper.o"
 	@echo "... libft/ft_toupper.i"
 	@echo "... libft/ft_toupper.s"
+	@echo "... srcs/apply_formats.o"
+	@echo "... srcs/apply_formats.i"
+	@echo "... srcs/apply_formats.s"
 	@echo "... srcs/flist.o"
 	@echo "... srcs/flist.i"
 	@echo "... srcs/flist.s"

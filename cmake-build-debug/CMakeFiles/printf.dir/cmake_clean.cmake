@@ -67,6 +67,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/printf.dir/srcs/validation.c.o"
   "CMakeFiles/printf.dir/srcs/output.c.o"
   "CMakeFiles/printf.dir/srcs/flist.c.o"
+  "CMakeFiles/printf.dir/srcs/apply_formats.c.o"
   "printf.pdb"
   "printf"
 )

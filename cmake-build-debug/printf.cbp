@@ -276,6 +276,9 @@
 		<Unit filename="/Users/mdebbi/Desktop/printf/libft/libft.h">
 			<Option target="printf"/>
 		</Unit>
+		<Unit filename="/Users/mdebbi/Desktop/printf/srcs/apply_formats.c">
+			<Option target="printf"/>
+		</Unit>
 		<Unit filename="/Users/mdebbi/Desktop/printf/srcs/flist.c">
 			<Option target="printf"/>
 		</Unit>
