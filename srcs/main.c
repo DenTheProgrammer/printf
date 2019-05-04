@@ -37,6 +37,9 @@ int		ft_printf(const char *str, ...)
 
 
 int		main() {
-	ft_printf("ft = %d, test = %s, char = %c", 42, "test", '*');
+	int a = 42;
+	ft_printf("ft = %o, ptr = %p, perc = %%\n", a, &a);
+	printf("ft = %o, ptr = %p, perc = %%\n", a, &a);
+//	printf("%ul\n%ul",sizeof(&a), sizeof(long int));
 	return 0;
 }

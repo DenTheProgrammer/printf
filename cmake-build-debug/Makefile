@@ -366,6 +366,33 @@ libft/ft_itoa.c.s:
 	$(MAKE) -f CMakeFiles/printf.dir/build.make CMakeFiles/printf.dir/libft/ft_itoa.c.s
 .PHONY : libft/ft_itoa.c.s
 
+libft/ft_itoa_base.o: libft/ft_itoa_base.c.o
+
+.PHONY : libft/ft_itoa_base.o
+
+# target to build an object file
+libft/ft_itoa_base.c.o:
+	$(MAKE) -f CMakeFiles/printf.dir/build.make CMakeFiles/printf.dir/libft/ft_itoa_base.c.o
+.PHONY : libft/ft_itoa_base.c.o
+
+libft/ft_itoa_base.i: libft/ft_itoa_base.c.i
+
+.PHONY : libft/ft_itoa_base.i
+
+# target to preprocess a source file
+libft/ft_itoa_base.c.i:
+	$(MAKE) -f CMakeFiles/printf.dir/build.make CMakeFiles/printf.dir/libft/ft_itoa_base.c.i
+.PHONY : libft/ft_itoa_base.c.i
+
+libft/ft_itoa_base.s: libft/ft_itoa_base.c.s
+
+.PHONY : libft/ft_itoa_base.s
+
+# target to generate assembly for a file
+libft/ft_itoa_base.c.s:
+	$(MAKE) -f CMakeFiles/printf.dir/build.make CMakeFiles/printf.dir/libft/ft_itoa_base.c.s
+.PHONY : libft/ft_itoa_base.c.s
+
 libft/ft_lstadd.o: libft/ft_lstadd.c.o
 
 .PHONY : libft/ft_lstadd.o
@@ -2022,6 +2049,9 @@ help:
 	@echo "... libft/ft_itoa.o"
 	@echo "... libft/ft_itoa.i"
 	@echo "... libft/ft_itoa.s"
+	@echo "... libft/ft_itoa_base.o"
+	@echo "... libft/ft_itoa_base.i"
+	@echo "... libft/ft_itoa_base.s"
 	@echo "... libft/ft_lstadd.o"
 	@echo "... libft/ft_lstadd.i"
 	@echo "... libft/ft_lstadd.s"

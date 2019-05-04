@@ -99,4 +99,5 @@ size_t				ft_lstlen(t_list *list);
 int					ft_isspace(int c);
 char				*ft_strtolower(char *str);
 char				*ft_strtoupper(char *str);
+char				*ft_itoa_base(long int n, int base);
 #endif

@@ -28,4 +28,7 @@ void	flist_push(t_flist **head, t_flist *node);
 char	*apply_format_int(char *format, int arg);
 char	*apply_format_str(char *format, char *arg);
 char	*apply_format_char(char *format, char arg);//todo other formats
+char	*apply_format_oct(char *format, int arg);
+char	*apply_format_hex(char *format, int arg);
+char	*apply_format_ptr(char *format, long int arg);
 #endif

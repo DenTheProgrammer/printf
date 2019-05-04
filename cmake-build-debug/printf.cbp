@@ -109,6 +109,9 @@
 		<Unit filename="/home/den/Desktop/printf/libft/ft_itoa.c">
 			<Option target="printf"/>
 		</Unit>
+		<Unit filename="/home/den/Desktop/printf/libft/ft_itoa_base.c">
+			<Option target="printf"/>
+		</Unit>
 		<Unit filename="/home/den/Desktop/printf/libft/ft_lstadd.c">
 			<Option target="printf"/>
 		</Unit>

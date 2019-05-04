@@ -70,6 +70,7 @@ add_executable(printf
         libft/ft_strtrim.c
         libft/ft_tolower.c
         libft/ft_toupper.c
+        libft/ft_itoa_base.c
         libft/libft.h
         srcs/main.c
         srcs/parse_arguments.c

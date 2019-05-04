@@ -16,13 +16,21 @@ stdlib.h
 string.h
 -
 
-/Users/mdebbi/Desktop/printf/srcs/main.c
+/home/den/Desktop/printf/srcs/apply_formats.c
 printf.h
-/Users/mdebbi/Desktop/printf/srcs/printf.h
+/home/den/Desktop/printf/srcs/printf.h
 
-/Users/mdebbi/Desktop/printf/srcs/printf.h
+/home/den/Desktop/printf/srcs/main.c
+printf.h
+/home/den/Desktop/printf/srcs/printf.h
+
+/home/den/Desktop/printf/srcs/parse_arguments.c
+printf.h
+/home/den/Desktop/printf/srcs/printf.h
+
+/home/den/Desktop/printf/srcs/printf.h
 libft.h
-/Users/mdebbi/Desktop/printf/srcs/libft.h
+/home/den/Desktop/printf/srcs/libft.h
 stdio.h
 -
 stdarg.h

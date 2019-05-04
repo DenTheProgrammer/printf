@@ -13,6 +13,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/home/den/Desktop/printf/libft/ft_isprint.c" "/home/den/Desktop/printf/cmake-build-debug/CMakeFiles/printf.dir/libft/ft_isprint.c.o"
   "/home/den/Desktop/printf/libft/ft_isspace.c" "/home/den/Desktop/printf/cmake-build-debug/CMakeFiles/printf.dir/libft/ft_isspace.c.o"
   "/home/den/Desktop/printf/libft/ft_itoa.c" "/home/den/Desktop/printf/cmake-build-debug/CMakeFiles/printf.dir/libft/ft_itoa.c.o"
+  "/home/den/Desktop/printf/libft/ft_itoa_base.c" "/home/den/Desktop/printf/cmake-build-debug/CMakeFiles/printf.dir/libft/ft_itoa_base.c.o"
   "/home/den/Desktop/printf/libft/ft_lstadd.c" "/home/den/Desktop/printf/cmake-build-debug/CMakeFiles/printf.dir/libft/ft_lstadd.c.o"
   "/home/den/Desktop/printf/libft/ft_lstdel.c" "/home/den/Desktop/printf/cmake-build-debug/CMakeFiles/printf.dir/libft/ft_lstdel.c.o"
   "/home/den/Desktop/printf/libft/ft_lstdelone.c" "/home/den/Desktop/printf/cmake-build-debug/CMakeFiles/printf.dir/libft/ft_lstdelone.c.o"

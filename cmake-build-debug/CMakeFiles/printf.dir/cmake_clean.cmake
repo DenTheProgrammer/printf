@@ -62,6 +62,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/printf.dir/libft/ft_strtrim.c.o"
   "CMakeFiles/printf.dir/libft/ft_tolower.c.o"
   "CMakeFiles/printf.dir/libft/ft_toupper.c.o"
+  "CMakeFiles/printf.dir/libft/ft_itoa_base.c.o"
   "CMakeFiles/printf.dir/srcs/main.c.o"
   "CMakeFiles/printf.dir/srcs/parse_arguments.c.o"
   "CMakeFiles/printf.dir/srcs/validation.c.o"

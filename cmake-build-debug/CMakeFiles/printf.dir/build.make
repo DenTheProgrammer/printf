@@ -876,9 +876,22 @@ CMakeFiles/printf.dir/libft/ft_toupper.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/printf.dir/libft/ft_toupper.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/den/Desktop/printf/libft/ft_toupper.c -o CMakeFiles/printf.dir/libft/ft_toupper.c.s
 
+CMakeFiles/printf.dir/libft/ft_itoa_base.c.o: CMakeFiles/printf.dir/flags.make
+CMakeFiles/printf.dir/libft/ft_itoa_base.c.o: ../libft/ft_itoa_base.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/den/Desktop/printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_64) "Building C object CMakeFiles/printf.dir/libft/ft_itoa_base.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/printf.dir/libft/ft_itoa_base.c.o   -c /home/den/Desktop/printf/libft/ft_itoa_base.c
+
+CMakeFiles/printf.dir/libft/ft_itoa_base.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/printf.dir/libft/ft_itoa_base.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/den/Desktop/printf/libft/ft_itoa_base.c > CMakeFiles/printf.dir/libft/ft_itoa_base.c.i
+
+CMakeFiles/printf.dir/libft/ft_itoa_base.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/printf.dir/libft/ft_itoa_base.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/den/Desktop/printf/libft/ft_itoa_base.c -o CMakeFiles/printf.dir/libft/ft_itoa_base.c.s
+
 CMakeFiles/printf.dir/srcs/main.c.o: CMakeFiles/printf.dir/flags.make
 CMakeFiles/printf.dir/srcs/main.c.o: ../srcs/main.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/den/Desktop/printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_64) "Building C object CMakeFiles/printf.dir/srcs/main.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/den/Desktop/printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_65) "Building C object CMakeFiles/printf.dir/srcs/main.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/printf.dir/srcs/main.c.o   -c /home/den/Desktop/printf/srcs/main.c
 
 CMakeFiles/printf.dir/srcs/main.c.i: cmake_force
@@ -891,7 +904,7 @@ CMakeFiles/printf.dir/srcs/main.c.s: cmake_force
 
 CMakeFiles/printf.dir/srcs/parse_arguments.c.o: CMakeFiles/printf.dir/flags.make
 CMakeFiles/printf.dir/srcs/parse_arguments.c.o: ../srcs/parse_arguments.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/den/Desktop/printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_65) "Building C object CMakeFiles/printf.dir/srcs/parse_arguments.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/den/Desktop/printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_66) "Building C object CMakeFiles/printf.dir/srcs/parse_arguments.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/printf.dir/srcs/parse_arguments.c.o   -c /home/den/Desktop/printf/srcs/parse_arguments.c
 
 CMakeFiles/printf.dir/srcs/parse_arguments.c.i: cmake_force
@@ -904,7 +917,7 @@ CMakeFiles/printf.dir/srcs/parse_arguments.c.s: cmake_force
 
 CMakeFiles/printf.dir/srcs/validation.c.o: CMakeFiles/printf.dir/flags.make
 CMakeFiles/printf.dir/srcs/validation.c.o: ../srcs/validation.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/den/Desktop/printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_66) "Building C object CMakeFiles/printf.dir/srcs/validation.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/den/Desktop/printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_67) "Building C object CMakeFiles/printf.dir/srcs/validation.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/printf.dir/srcs/validation.c.o   -c /home/den/Desktop/printf/srcs/validation.c
 
 CMakeFiles/printf.dir/srcs/validation.c.i: cmake_force
@@ -917,7 +930,7 @@ CMakeFiles/printf.dir/srcs/validation.c.s: cmake_force
 
 CMakeFiles/printf.dir/srcs/output.c.o: CMakeFiles/printf.dir/flags.make
 CMakeFiles/printf.dir/srcs/output.c.o: ../srcs/output.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/den/Desktop/printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_67) "Building C object CMakeFiles/printf.dir/srcs/output.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/den/Desktop/printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_68) "Building C object CMakeFiles/printf.dir/srcs/output.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/printf.dir/srcs/output.c.o   -c /home/den/Desktop/printf/srcs/output.c
 
 CMakeFiles/printf.dir/srcs/output.c.i: cmake_force
@@ -930,7 +943,7 @@ CMakeFiles/printf.dir/srcs/output.c.s: cmake_force
 
 CMakeFiles/printf.dir/srcs/flist.c.o: CMakeFiles/printf.dir/flags.make
 CMakeFiles/printf.dir/srcs/flist.c.o: ../srcs/flist.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/den/Desktop/printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_68) "Building C object CMakeFiles/printf.dir/srcs/flist.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/den/Desktop/printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_69) "Building C object CMakeFiles/printf.dir/srcs/flist.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/printf.dir/srcs/flist.c.o   -c /home/den/Desktop/printf/srcs/flist.c
 
 CMakeFiles/printf.dir/srcs/flist.c.i: cmake_force
@@ -943,7 +956,7 @@ CMakeFiles/printf.dir/srcs/flist.c.s: cmake_force
 
 CMakeFiles/printf.dir/srcs/apply_formats.c.o: CMakeFiles/printf.dir/flags.make
 CMakeFiles/printf.dir/srcs/apply_formats.c.o: ../srcs/apply_formats.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/den/Desktop/printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_69) "Building C object CMakeFiles/printf.dir/srcs/apply_formats.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/den/Desktop/printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_70) "Building C object CMakeFiles/printf.dir/srcs/apply_formats.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/printf.dir/srcs/apply_formats.c.o   -c /home/den/Desktop/printf/srcs/apply_formats.c
 
 CMakeFiles/printf.dir/srcs/apply_formats.c.i: cmake_force
@@ -1019,6 +1032,7 @@ printf_OBJECTS = \
 "CMakeFiles/printf.dir/libft/ft_strtrim.c.o" \
 "CMakeFiles/printf.dir/libft/ft_tolower.c.o" \
 "CMakeFiles/printf.dir/libft/ft_toupper.c.o" \
+"CMakeFiles/printf.dir/libft/ft_itoa_base.c.o" \
 "CMakeFiles/printf.dir/srcs/main.c.o" \
 "CMakeFiles/printf.dir/srcs/parse_arguments.c.o" \
 "CMakeFiles/printf.dir/srcs/validation.c.o" \
@@ -1092,6 +1106,7 @@ printf: CMakeFiles/printf.dir/libft/ft_strtoupper.c.o
 printf: CMakeFiles/printf.dir/libft/ft_strtrim.c.o
 printf: CMakeFiles/printf.dir/libft/ft_tolower.c.o
 printf: CMakeFiles/printf.dir/libft/ft_toupper.c.o
+printf: CMakeFiles/printf.dir/libft/ft_itoa_base.c.o
 printf: CMakeFiles/printf.dir/srcs/main.c.o
 printf: CMakeFiles/printf.dir/srcs/parse_arguments.c.o
 printf: CMakeFiles/printf.dir/srcs/validation.c.o
@@ -1100,7 +1115,7 @@ printf: CMakeFiles/printf.dir/srcs/flist.c.o
 printf: CMakeFiles/printf.dir/srcs/apply_formats.c.o
 printf: CMakeFiles/printf.dir/build.make
 printf: CMakeFiles/printf.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/den/Desktop/printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_70) "Linking C executable printf"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/den/Desktop/printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_71) "Linking C executable printf"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/printf.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
