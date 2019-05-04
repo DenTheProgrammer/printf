@@ -7,7 +7,7 @@
 t_flist *parse_input(const char *str)
 {
 	int w_start;
-	char *flags = "dscixpo%";
+	char *types = "%diufFeEgGxXoscpaAn";//todo all of that
 	t_flist *flist;
 
 	flist = NULL;
@@ -18,7 +18,7 @@ t_flist *parse_input(const char *str)
 		if (str[i] == '%')
 		{
 			i++;
-			while (!ft_strchr(flags, str[i]))//todo ll, hh, etc..
+			while (!ft_strchr(types, str[i]))//todo ll, hh, etc..
 				i++;
 			flist_push(&flist, flist_create(ft_strsub(str, w_start, i - w_start + 1), NULL));
 		}
