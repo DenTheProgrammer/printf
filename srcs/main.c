@@ -1,6 +1,6 @@
 #include "printf.h"
 
-int		get_format_count(const char *str)//not counting %% as format
+/*int		get_format_count(const char *str)//not counting %% as format
 {
 	int count;
 	int i = 0;
@@ -18,7 +18,7 @@ int		get_format_count(const char *str)//not counting %% as format
 		i++;
 	}
 	return (count);
-}
+}*/
 
 int		ft_printf(const char *str, ...)
 {
@@ -37,6 +37,6 @@ int		ft_printf(const char *str, ...)
 
 
 int		main() {
-	ft_printf("%d",ft_printf("ft = %d, 10 + 11 = %d ", 42, 21));
+	ft_printf("ft = %d, test = %s, char = %c", 42, "test", '*');
 	return 0;
 }

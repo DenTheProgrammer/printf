@@ -24,10 +24,10 @@ void	apply_formats(t_flist *flist, va_list *valist)
 	{
 		if (ft_strchr(flist->format, 'd') || ft_strchr(flist->format, 'i'))
 			flist->output = apply_format_int(flist->format, va_arg(*valist, int));
-//		else if (ft_strchr(flist->format, 's'))
-//			flist->output = apply_format_str(flist->format, va_arg(*valist, char*));
-//		else if (ft_strchr(flist->format, 'c'))
-//			flist->output = apply_format_char(flist->format, va_arg(*valist, int));
+		else if (ft_strchr(flist->format, 's'))
+			flist->output = apply_format_str(flist->format, va_arg(*valist, char*));
+		else if (ft_strchr(flist->format, 'c'))
+			flist->output = apply_format_char(flist->format, va_arg(*valist, int));
 		flist = flist->next;
 	}
 }
@@ -35,4 +35,17 @@ void	apply_formats(t_flist *flist, va_list *valist)
 char	*apply_format_int(char *format, int arg)
 {
 	return (ft_itoa(arg));
+}
+
+char	*apply_format_str(char *format, char *arg)
+{
+	return (arg);
+}
+
+char	*apply_format_char(char *format, char arg)
+{
+	char *c;
+	c = ft_strnew(2);
+	c[0] = arg;
+	return (c);
 }
