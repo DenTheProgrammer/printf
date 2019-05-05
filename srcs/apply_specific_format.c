@@ -23,8 +23,10 @@ char	*apply_format_uns(char *format, va_list *valist)
 char	*apply_format_str(char *format, va_list *valist)
 {
 	char *arg;
+	char *tmp;
 
-	arg = ft_strdup(va_arg(*valist, char*));
+	tmp = va_arg(*valist, char*);
+	arg = ft_strdup(tmp ? tmp : "(null)");
 	apply_precision(arg, format);
 	return (arg);
 }
