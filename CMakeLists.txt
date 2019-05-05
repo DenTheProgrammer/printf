@@ -71,8 +71,11 @@ add_executable(printf
         libft/ft_tolower.c
         libft/ft_toupper.c
         libft/ft_itoa_base.c
+        libft/ft_itoa_Ubase.c
+        libft/ft_itoa_uns.c
+        libft/ft_itoa_long.c
         libft/libft.h
         srcs/main.c
         srcs/parse_arguments.c
         srcs/printf.h
-        srcs/validation.c srcs/output.c srcs/flist.c srcs/apply_formats.c)
+        srcs/validation.c srcs/output.c srcs/flist.c srcs/apply_formats.c srcs/throw_error.c srcs/apply_specific_format.c srcs/apply_precision.c)

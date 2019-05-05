@@ -7,18 +7,19 @@
 t_flist *parse_input(const char *str)
 {
 	int w_start;
-	char *types = "%diufFeEgGxXoscpaAn";//todo all of that
+	char *types = "cspdiouxX%f";//todo f
 	t_flist *flist;
 
+	size_t len = ft_strlen(str);
 	flist = NULL;
-	int i = 0;
-	while (str[i])
+	size_t i = 0;
+	while (i < len)
 	{
 		w_start = i;
 		if (str[i] == '%')
 		{
 			i++;
-			while (!ft_strchr(types, str[i]))//todo ll, hh, etc..
+			while (str[i] != 0 && !ft_strchr(types, str[i]))//todo ll, hh, etc..
 				i++;
 			flist_push(&flist, flist_create(ft_strsub(str, w_start, i - w_start + 1), NULL));
 		}

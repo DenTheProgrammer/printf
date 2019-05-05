@@ -23,12 +23,19 @@ int		printf_output(t_flist *flist);
 t_flist	*flist_create(char *format, char *output);
 //void	flist_push(t_flist *node);
 void	flist_push(t_flist **head, t_flist *node);
-
+//
+long long apply_length(char *format, va_list *valist);
+unsigned long long apply_length_uns(char *format, va_list *valist);
+void	apply_precision(char *str, char *format);
 //format handlers:
-char	*apply_format_int(char *format, int arg);
-char	*apply_format_str(char *format, char *arg);
-char	*apply_format_char(char *format, char arg);//todo other formats
-char	*apply_format_oct(char *format, int arg);
-char	*apply_format_hex(char *format, int arg);
-char	*apply_format_ptr(char *format, long int arg);
+char	*apply_format_int(char *format, va_list *valist);
+char	*apply_format_str(char *format, va_list *valist);
+char	*apply_format_char(char *format, va_list *valist);//todo other formats
+char	*apply_format_oct(char *format, va_list *valist);
+char	*apply_format_hex(char *format, va_list *valist);
+char	*apply_format_ptr(char *format, va_list *valist);
+char	*apply_format_uns(char *format, va_list *valist);
+
+//error
+int		throw_error(char *msg);
 #endif

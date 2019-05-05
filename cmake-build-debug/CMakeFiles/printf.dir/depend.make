@@ -23,8 +23,17 @@ CMakeFiles/printf.dir/libft/ft_isspace.c.o: ../libft/ft_isspace.c
 CMakeFiles/printf.dir/libft/ft_itoa.c.o: ../libft/ft_itoa.c
 CMakeFiles/printf.dir/libft/ft_itoa.c.o: ../libft/libft.h
 
+CMakeFiles/printf.dir/libft/ft_itoa_Ubase.c.o: ../libft/ft_itoa_Ubase.c
+CMakeFiles/printf.dir/libft/ft_itoa_Ubase.c.o: ../libft/libft.h
+
 CMakeFiles/printf.dir/libft/ft_itoa_base.c.o: ../libft/ft_itoa_base.c
 CMakeFiles/printf.dir/libft/ft_itoa_base.c.o: ../libft/libft.h
+
+CMakeFiles/printf.dir/libft/ft_itoa_long.c.o: ../libft/ft_itoa_long.c
+CMakeFiles/printf.dir/libft/ft_itoa_long.c.o: ../libft/libft.h
+
+CMakeFiles/printf.dir/libft/ft_itoa_uns.c.o: ../libft/ft_itoa_uns.c
+CMakeFiles/printf.dir/libft/ft_itoa_uns.c.o: ../libft/libft.h
 
 CMakeFiles/printf.dir/libft/ft_lstadd.c.o: ../libft/ft_lstadd.c
 CMakeFiles/printf.dir/libft/ft_lstadd.c.o: ../libft/libft.h
@@ -184,6 +193,14 @@ CMakeFiles/printf.dir/srcs/apply_formats.c.o: ../libft/libft.h
 CMakeFiles/printf.dir/srcs/apply_formats.c.o: ../srcs/apply_formats.c
 CMakeFiles/printf.dir/srcs/apply_formats.c.o: ../srcs/printf.h
 
+CMakeFiles/printf.dir/srcs/apply_precision.c.o: ../libft/libft.h
+CMakeFiles/printf.dir/srcs/apply_precision.c.o: ../srcs/apply_precision.c
+CMakeFiles/printf.dir/srcs/apply_precision.c.o: ../srcs/printf.h
+
+CMakeFiles/printf.dir/srcs/apply_specific_format.c.o: ../libft/libft.h
+CMakeFiles/printf.dir/srcs/apply_specific_format.c.o: ../srcs/apply_specific_format.c
+CMakeFiles/printf.dir/srcs/apply_specific_format.c.o: ../srcs/printf.h
+
 CMakeFiles/printf.dir/srcs/flist.c.o: ../libft/libft.h
 CMakeFiles/printf.dir/srcs/flist.c.o: ../srcs/flist.c
 CMakeFiles/printf.dir/srcs/flist.c.o: ../srcs/printf.h
@@ -199,6 +216,10 @@ CMakeFiles/printf.dir/srcs/output.c.o: ../srcs/printf.h
 CMakeFiles/printf.dir/srcs/parse_arguments.c.o: ../libft/libft.h
 CMakeFiles/printf.dir/srcs/parse_arguments.c.o: ../srcs/parse_arguments.c
 CMakeFiles/printf.dir/srcs/parse_arguments.c.o: ../srcs/printf.h
+
+CMakeFiles/printf.dir/srcs/throw_error.c.o: ../libft/libft.h
+CMakeFiles/printf.dir/srcs/throw_error.c.o: ../srcs/printf.h
+CMakeFiles/printf.dir/srcs/throw_error.c.o: ../srcs/throw_error.c
 
 CMakeFiles/printf.dir/srcs/validation.c.o: ../srcs/validation.c
 

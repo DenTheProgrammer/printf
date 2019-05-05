@@ -4,69 +4,92 @@
 
 #include "printf.h"
 
-//void	fill_formats_list(t_flist *flist, va_list *valist)
-//{
-//	while (flist)
-//	{
-//		if (ft_strchr(flist->format, 'd') || ft_strchr(flist->format, 'i'))
-//			flist->argument = va_arg(*valist, int*);
-//		else if (ft_strchr(flist->format, 's'))
-//			flist->argument = va_arg(*valist, char**);
-//		else if (ft_strchr(flist->format, 'c'))
-//			flist->argument = va_arg(*valist, char*);
-//		flist = flist->next;
-//	}
-//}
+void validate_format(t_flist *flist)
+{
+	//todo
+}
+
+void apply_width(t_flist *flist)
+{
+	int width;
+	char *output = ft_strdup(flist->output);
+	int outlen = ft_strlen(output);
+	int i = 0;
+
+	width = ft_atoi(flist->format + 1);
+	if (width > outlen)
+	{
+		free(flist->output);
+		flist->output = ft_strnew(width);
+		while (width - outlen++)
+			flist->output[i++] = (flist->format[1] == '0') ? '0' : ' ';
+		ft_strcpy(flist->output + i, output);
+	}
+	free(output);
+}
 
 void	apply_formats(t_flist *flist, va_list *valist)
 {
 	while (flist)
 	{
-		if (ft_strchr(flist->format, 'd') || ft_strchr(flist->format, 'i'))
-			flist->output = apply_format_int(flist->format, va_arg(*valist, int));
-		else if (ft_strchr(flist->format, 's'))
-			flist->output = apply_format_str(flist->format, va_arg(*valist, char*));
-		else if (ft_strchr(flist->format, 'c'))
-			flist->output = apply_format_char(flist->format, va_arg(*valist, int));
-		else if (ft_strchr(flist->format, 'o'))
-			flist->output = apply_format_oct(flist->format, va_arg(*valist, int));//?type?
-		else if (ft_strchr(flist->format, 'x'))
-			flist->output = apply_format_hex(flist->format, va_arg(*valist, int));
-		else if (ft_strchr(flist->format, 'p'))
-			flist->output = apply_format_ptr(flist->format, va_arg(*valist, long int));
-		else if (ft_strchr(flist->format, '%'))
-			flist->output = ft_strdup("%");
+		if (flist->format)
+		{
+			validate_format(flist);
+			if (ft_strchr(flist->format, 'd') || ft_strchr(flist->format, 'i'))
+				flist->output = apply_format_int(flist->format, valist);
+			else if (ft_strchr(flist->format, 's'))
+				flist->output = apply_format_str(flist->format, valist);
+			else if (ft_strchr(flist->format, 'c'))
+				flist->output = apply_format_char(flist->format, valist);
+			else if (ft_strchr(flist->format, 'o'))
+				flist->output = apply_format_oct(flist->format, valist);//?type?
+			else if (ft_strchr(flist->format, 'x'))
+				flist->output = apply_format_hex(flist->format, valist);
+			else if (ft_strchr(flist->format, 'X'))
+				flist->output = apply_format_hex(flist->format, valist);
+			else if (ft_strchr(flist->format, 'p'))
+				flist->output = apply_format_ptr(flist->format, valist);
+			else if (ft_strchr(flist->format, 'u'))
+				flist->output = apply_format_uns(flist->format, valist);
+			else if (ft_strchr(flist->format, '%'))
+				flist->output = ft_strdup("%");
+			apply_width(flist);
+		}
 		flist = flist->next;
 	}
 }
 
-char	*apply_format_int(char *format, int arg)
+long long apply_length(char *format, va_list *valist)
 {
-	return (ft_itoa(arg));
-}
+	long long arg;
 
-char	*apply_format_str(char *format, char *arg)
-{
+	arg = va_arg(*valist, long long);
+	if (ft_strstr(format, "ll"))
+		arg = (long long)arg;
+	else if (ft_strstr(format, "l"))
+		arg = (long)arg;
+	else if (ft_strstr(format, "hh"))
+		arg = (char)arg;
+	else if (ft_strstr(format, "h"))
+		arg = (short)arg;
+	else
+		arg = (int)arg;
 	return (arg);
 }
+unsigned long long apply_length_uns(char *format, va_list *valist)
+{
+	unsigned long long arg;
 
-char	*apply_format_char(char *format, char arg)
-{
-	char *c;
-	c = ft_strnew(2);
-	c[0] = arg;
-	return (c);
-}
-
-char	*apply_format_oct(char *format, int arg)
-{
-	return (ft_itoa_base(arg, 8));
-}
-char	*apply_format_hex(char *format, int arg)
-{
-	return (ft_itoa_base(arg, 16));
-}
-char	*apply_format_ptr(char *format, long int arg)
-{
-	return (ft_strjoin("0x", ft_itoa_base(arg, 16)));
+	arg = va_arg(*valist, long long);
+	if (ft_strstr(format, "ll"))
+		arg = (unsigned long long)arg;
+	else if (ft_strstr(format, "l"))
+		arg = (unsigned long)arg;
+	else if (ft_strstr(format, "hh"))
+		arg = (unsigned char)arg;
+	else if (ft_strstr(format, "h"))
+		arg = (unsigned short)arg;
+	else
+		arg = (unsigned int)arg;
+	return (arg);
 }
