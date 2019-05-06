@@ -66,6 +66,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/printf.dir/libft/ft_itoa_Ubase.c.o"
   "CMakeFiles/printf.dir/libft/ft_itoa_uns.c.o"
   "CMakeFiles/printf.dir/libft/ft_itoa_long.c.o"
+  "CMakeFiles/printf.dir/libft/ft_strjoin_free.c.o"
   "CMakeFiles/printf.dir/srcs/main.c.o"
   "CMakeFiles/printf.dir/srcs/parse_arguments.c.o"
   "CMakeFiles/printf.dir/srcs/validation.c.o"
@@ -77,6 +78,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/printf.dir/srcs/apply_precision.c.o"
   "CMakeFiles/printf.dir/srcs/apply_width.c.o"
   "CMakeFiles/printf.dir/srcs/apply_flag.c.o"
+  "CMakeFiles/printf.dir/libft/ft_itoa_float.c.o"
+  "CMakeFiles/printf.dir/libft/ft_abs.c.o"
   "printf.pdb"
   "printf"
 )

@@ -84,6 +84,9 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/mdebbi/Desktop/printf/libft/ft_abs.c">
+			<Option target="printf"/>
+		</Unit>
 		<Unit filename="/Users/mdebbi/Desktop/printf/libft/ft_atoi.c">
 			<Option target="printf"/>
 		</Unit>
@@ -115,6 +118,9 @@
 			<Option target="printf"/>
 		</Unit>
 		<Unit filename="/Users/mdebbi/Desktop/printf/libft/ft_itoa_base.c">
+			<Option target="printf"/>
+		</Unit>
+		<Unit filename="/Users/mdebbi/Desktop/printf/libft/ft_itoa_float.c">
 			<Option target="printf"/>
 		</Unit>
 		<Unit filename="/Users/mdebbi/Desktop/printf/libft/ft_itoa_long.c">
@@ -226,6 +232,9 @@
 			<Option target="printf"/>
 		</Unit>
 		<Unit filename="/Users/mdebbi/Desktop/printf/libft/ft_strjoin.c">
+			<Option target="printf"/>
+		</Unit>
+		<Unit filename="/Users/mdebbi/Desktop/printf/libft/ft_strjoin_free.c">
 			<Option target="printf"/>
 		</Unit>
 		<Unit filename="/Users/mdebbi/Desktop/printf/libft/ft_strlcat.c">

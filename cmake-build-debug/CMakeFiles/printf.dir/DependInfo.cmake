@@ -4,6 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
+  "/Users/mdebbi/Desktop/printf/libft/ft_abs.c" "/Users/mdebbi/Desktop/printf/cmake-build-debug/CMakeFiles/printf.dir/libft/ft_abs.c.o"
   "/Users/mdebbi/Desktop/printf/libft/ft_atoi.c" "/Users/mdebbi/Desktop/printf/cmake-build-debug/CMakeFiles/printf.dir/libft/ft_atoi.c.o"
   "/Users/mdebbi/Desktop/printf/libft/ft_bzero.c" "/Users/mdebbi/Desktop/printf/cmake-build-debug/CMakeFiles/printf.dir/libft/ft_bzero.c.o"
   "/Users/mdebbi/Desktop/printf/libft/ft_isalnum.c" "/Users/mdebbi/Desktop/printf/cmake-build-debug/CMakeFiles/printf.dir/libft/ft_isalnum.c.o"
@@ -15,6 +16,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/mdebbi/Desktop/printf/libft/ft_itoa.c" "/Users/mdebbi/Desktop/printf/cmake-build-debug/CMakeFiles/printf.dir/libft/ft_itoa.c.o"
   "/Users/mdebbi/Desktop/printf/libft/ft_itoa_Ubase.c" "/Users/mdebbi/Desktop/printf/cmake-build-debug/CMakeFiles/printf.dir/libft/ft_itoa_Ubase.c.o"
   "/Users/mdebbi/Desktop/printf/libft/ft_itoa_base.c" "/Users/mdebbi/Desktop/printf/cmake-build-debug/CMakeFiles/printf.dir/libft/ft_itoa_base.c.o"
+  "/Users/mdebbi/Desktop/printf/libft/ft_itoa_float.c" "/Users/mdebbi/Desktop/printf/cmake-build-debug/CMakeFiles/printf.dir/libft/ft_itoa_float.c.o"
   "/Users/mdebbi/Desktop/printf/libft/ft_itoa_long.c" "/Users/mdebbi/Desktop/printf/cmake-build-debug/CMakeFiles/printf.dir/libft/ft_itoa_long.c.o"
   "/Users/mdebbi/Desktop/printf/libft/ft_itoa_uns.c" "/Users/mdebbi/Desktop/printf/cmake-build-debug/CMakeFiles/printf.dir/libft/ft_itoa_uns.c.o"
   "/Users/mdebbi/Desktop/printf/libft/ft_lstadd.c" "/Users/mdebbi/Desktop/printf/cmake-build-debug/CMakeFiles/printf.dir/libft/ft_lstadd.c.o"
@@ -52,6 +54,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/mdebbi/Desktop/printf/libft/ft_striter.c" "/Users/mdebbi/Desktop/printf/cmake-build-debug/CMakeFiles/printf.dir/libft/ft_striter.c.o"
   "/Users/mdebbi/Desktop/printf/libft/ft_striteri.c" "/Users/mdebbi/Desktop/printf/cmake-build-debug/CMakeFiles/printf.dir/libft/ft_striteri.c.o"
   "/Users/mdebbi/Desktop/printf/libft/ft_strjoin.c" "/Users/mdebbi/Desktop/printf/cmake-build-debug/CMakeFiles/printf.dir/libft/ft_strjoin.c.o"
+  "/Users/mdebbi/Desktop/printf/libft/ft_strjoin_free.c" "/Users/mdebbi/Desktop/printf/cmake-build-debug/CMakeFiles/printf.dir/libft/ft_strjoin_free.c.o"
   "/Users/mdebbi/Desktop/printf/libft/ft_strlcat.c" "/Users/mdebbi/Desktop/printf/cmake-build-debug/CMakeFiles/printf.dir/libft/ft_strlcat.c.o"
   "/Users/mdebbi/Desktop/printf/libft/ft_strlen.c" "/Users/mdebbi/Desktop/printf/cmake-build-debug/CMakeFiles/printf.dir/libft/ft_strlen.c.o"
   "/Users/mdebbi/Desktop/printf/libft/ft_strmap.c" "/Users/mdebbi/Desktop/printf/cmake-build-debug/CMakeFiles/printf.dir/libft/ft_strmap.c.o"

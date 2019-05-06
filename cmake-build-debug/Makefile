@@ -123,6 +123,33 @@ printf/fast:
 	$(MAKE) -f CMakeFiles/printf.dir/build.make CMakeFiles/printf.dir/build
 .PHONY : printf/fast
 
+libft/ft_abs.o: libft/ft_abs.c.o
+
+.PHONY : libft/ft_abs.o
+
+# target to build an object file
+libft/ft_abs.c.o:
+	$(MAKE) -f CMakeFiles/printf.dir/build.make CMakeFiles/printf.dir/libft/ft_abs.c.o
+.PHONY : libft/ft_abs.c.o
+
+libft/ft_abs.i: libft/ft_abs.c.i
+
+.PHONY : libft/ft_abs.i
+
+# target to preprocess a source file
+libft/ft_abs.c.i:
+	$(MAKE) -f CMakeFiles/printf.dir/build.make CMakeFiles/printf.dir/libft/ft_abs.c.i
+.PHONY : libft/ft_abs.c.i
+
+libft/ft_abs.s: libft/ft_abs.c.s
+
+.PHONY : libft/ft_abs.s
+
+# target to generate assembly for a file
+libft/ft_abs.c.s:
+	$(MAKE) -f CMakeFiles/printf.dir/build.make CMakeFiles/printf.dir/libft/ft_abs.c.s
+.PHONY : libft/ft_abs.c.s
+
 libft/ft_atoi.o: libft/ft_atoi.c.o
 
 .PHONY : libft/ft_atoi.o
@@ -419,6 +446,33 @@ libft/ft_itoa_base.s: libft/ft_itoa_base.c.s
 libft/ft_itoa_base.c.s:
 	$(MAKE) -f CMakeFiles/printf.dir/build.make CMakeFiles/printf.dir/libft/ft_itoa_base.c.s
 .PHONY : libft/ft_itoa_base.c.s
+
+libft/ft_itoa_float.o: libft/ft_itoa_float.c.o
+
+.PHONY : libft/ft_itoa_float.o
+
+# target to build an object file
+libft/ft_itoa_float.c.o:
+	$(MAKE) -f CMakeFiles/printf.dir/build.make CMakeFiles/printf.dir/libft/ft_itoa_float.c.o
+.PHONY : libft/ft_itoa_float.c.o
+
+libft/ft_itoa_float.i: libft/ft_itoa_float.c.i
+
+.PHONY : libft/ft_itoa_float.i
+
+# target to preprocess a source file
+libft/ft_itoa_float.c.i:
+	$(MAKE) -f CMakeFiles/printf.dir/build.make CMakeFiles/printf.dir/libft/ft_itoa_float.c.i
+.PHONY : libft/ft_itoa_float.c.i
+
+libft/ft_itoa_float.s: libft/ft_itoa_float.c.s
+
+.PHONY : libft/ft_itoa_float.s
+
+# target to generate assembly for a file
+libft/ft_itoa_float.c.s:
+	$(MAKE) -f CMakeFiles/printf.dir/build.make CMakeFiles/printf.dir/libft/ft_itoa_float.c.s
+.PHONY : libft/ft_itoa_float.c.s
 
 libft/ft_itoa_long.o: libft/ft_itoa_long.c.o
 
@@ -1419,6 +1473,33 @@ libft/ft_strjoin.c.s:
 	$(MAKE) -f CMakeFiles/printf.dir/build.make CMakeFiles/printf.dir/libft/ft_strjoin.c.s
 .PHONY : libft/ft_strjoin.c.s
 
+libft/ft_strjoin_free.o: libft/ft_strjoin_free.c.o
+
+.PHONY : libft/ft_strjoin_free.o
+
+# target to build an object file
+libft/ft_strjoin_free.c.o:
+	$(MAKE) -f CMakeFiles/printf.dir/build.make CMakeFiles/printf.dir/libft/ft_strjoin_free.c.o
+.PHONY : libft/ft_strjoin_free.c.o
+
+libft/ft_strjoin_free.i: libft/ft_strjoin_free.c.i
+
+.PHONY : libft/ft_strjoin_free.i
+
+# target to preprocess a source file
+libft/ft_strjoin_free.c.i:
+	$(MAKE) -f CMakeFiles/printf.dir/build.make CMakeFiles/printf.dir/libft/ft_strjoin_free.c.i
+.PHONY : libft/ft_strjoin_free.c.i
+
+libft/ft_strjoin_free.s: libft/ft_strjoin_free.c.s
+
+.PHONY : libft/ft_strjoin_free.s
+
+# target to generate assembly for a file
+libft/ft_strjoin_free.c.s:
+	$(MAKE) -f CMakeFiles/printf.dir/build.make CMakeFiles/printf.dir/libft/ft_strjoin_free.c.s
+.PHONY : libft/ft_strjoin_free.c.s
+
 libft/ft_strlcat.o: libft/ft_strlcat.c.o
 
 .PHONY : libft/ft_strlcat.o
@@ -2238,6 +2319,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... printf"
+	@echo "... libft/ft_abs.o"
+	@echo "... libft/ft_abs.i"
+	@echo "... libft/ft_abs.s"
 	@echo "... libft/ft_atoi.o"
 	@echo "... libft/ft_atoi.i"
 	@echo "... libft/ft_atoi.s"
@@ -2271,6 +2355,9 @@ help:
 	@echo "... libft/ft_itoa_base.o"
 	@echo "... libft/ft_itoa_base.i"
 	@echo "... libft/ft_itoa_base.s"
+	@echo "... libft/ft_itoa_float.o"
+	@echo "... libft/ft_itoa_float.i"
+	@echo "... libft/ft_itoa_float.s"
 	@echo "... libft/ft_itoa_long.o"
 	@echo "... libft/ft_itoa_long.i"
 	@echo "... libft/ft_itoa_long.s"
@@ -2382,6 +2469,9 @@ help:
 	@echo "... libft/ft_strjoin.o"
 	@echo "... libft/ft_strjoin.i"
 	@echo "... libft/ft_strjoin.s"
+	@echo "... libft/ft_strjoin_free.o"
+	@echo "... libft/ft_strjoin_free.i"
+	@echo "... libft/ft_strjoin_free.s"
 	@echo "... libft/ft_strlcat.o"
 	@echo "... libft/ft_strlcat.i"
 	@echo "... libft/ft_strlcat.s"

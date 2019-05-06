@@ -28,6 +28,8 @@ void	apply_formats(t_flist *flist, va_list *valist)
 				flist->output = apply_format_hex(flist->format, valist);
 			else if (ft_strchr(flist->format, 'X'))
 				flist->output = apply_format_hex(flist->format, valist);
+			else if (ft_strchr(flist->format, 'f'))
+				flist->output = apply_format_float(flist->format, valist);
 			else if (ft_strchr(flist->format, 'p'))
 				flist->output = apply_format_ptr(flist->format, valist);
 			else if (ft_strchr(flist->format, 'u'))

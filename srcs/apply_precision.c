@@ -4,15 +4,21 @@
 
 #include "printf.h"
 
-void	apply_precision(char *str, char *format)
+int get_precision(char *format)
 {
 	char *dotptr;
-	int prec;
 
 	if ((dotptr = ft_strchr(format, '.')))
-		prec = ft_atoi(dotptr + 1);
+		return (ft_atoi(dotptr + 1));
 	else
-		return ;
+		return 0;
+}
+
+void	apply_precision(char *str, char *format)
+{
+	int prec;
+
+	prec = get_precision(format);
 	if (prec < ft_strlen(str))
 		str[prec] = 0;
 }

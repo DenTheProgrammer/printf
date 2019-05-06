@@ -23,7 +23,7 @@ int		main() {
 //	printf("%s\n", NULL);
 //	printf("%+20d test %#20x\n", 0, 285);
 //	ft_printf("%+20d test %#20x\n", 0, 285);
-	printf("%f\n", 3.1);
-	ft_printf("%f\n", 3.141592);
+	printf("%f\n", -4/3.);
+	ft_printf("%f\n", -4/3.);
 	return 0;
 }

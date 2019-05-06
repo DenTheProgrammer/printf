@@ -29,6 +29,7 @@ unsigned long long apply_length_uns(char *format, va_list *valist);
 void	apply_precision(char *str, char *format);
 void apply_width(t_flist *flist);
 char get_flag(t_flist *flist);
+int get_precision(char *format);
 void apply_flag(t_flist *flist);
 //format handlers:
 char	*apply_format_int(char *format, va_list *valist);
@@ -38,6 +39,7 @@ char	*apply_format_oct(char *format, va_list *valist);
 char	*apply_format_hex(char *format, va_list *valist);
 char	*apply_format_ptr(char *format, va_list *valist);
 char	*apply_format_uns(char *format, va_list *valist);
+char	*apply_format_float(char *format, va_list *valist);
 
 //error
 int		throw_error(char *msg);

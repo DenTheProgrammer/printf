@@ -63,3 +63,10 @@ char	*apply_format_ptr(char *format, va_list *valist)
 	arg = va_arg(*valist, long int);
 	return (ft_strjoin("0x", ft_itoa_base(arg, 16)));
 }
+char	*apply_format_float(char *format, va_list *valist)
+{
+	double arg;
+
+	arg = va_arg(*valist, double);
+	return (ft_itoa_float(arg, get_precision(format)));
+}
