@@ -9,25 +9,6 @@ void validate_format(t_flist *flist)
 	//todo
 }
 
-void apply_width(t_flist *flist)
-{
-	int width;
-	char *output = ft_strdup(flist->output);
-	int outlen = ft_strlen(output);
-	int i = 0;
-
-	width = ft_atoi(flist->format + 1);
-	if (width > outlen)
-	{
-		free(flist->output);
-		flist->output = ft_strnew(width);
-		while (width - outlen++)
-			flist->output[i++] = (flist->format[1] == '0') ? '0' : ' ';
-		ft_strcpy(flist->output + i, output);
-	}
-	free(output);
-}
-
 void	apply_formats(t_flist *flist, va_list *valist)
 {
 	while (flist)

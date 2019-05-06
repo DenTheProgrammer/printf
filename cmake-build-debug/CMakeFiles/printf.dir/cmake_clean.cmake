@@ -75,6 +75,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/printf.dir/srcs/throw_error.c.o"
   "CMakeFiles/printf.dir/srcs/apply_specific_format.c.o"
   "CMakeFiles/printf.dir/srcs/apply_precision.c.o"
+  "CMakeFiles/printf.dir/srcs/apply_width.c.o"
   "printf.pdb"
   "printf"
 )

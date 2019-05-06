@@ -19,6 +19,8 @@ int		main() {
 	int b = 424242424;
 
 //	printf("%c\n", NULL);//???
+
+//	printf("%s\n", NULL);
 	ft_printf("%s\n", NULL);
 	return 0;
 }

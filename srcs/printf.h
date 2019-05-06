@@ -27,6 +27,7 @@ void	flist_push(t_flist **head, t_flist *node);
 long long apply_length(char *format, va_list *valist);
 unsigned long long apply_length_uns(char *format, va_list *valist);
 void	apply_precision(char *str, char *format);
+void apply_width(t_flist *flist);
 //format handlers:
 char	*apply_format_int(char *format, va_list *valist);
 char	*apply_format_str(char *format, va_list *valist);
