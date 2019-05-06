@@ -12,6 +12,12 @@ int		ft_printf(const char *str, ...);
 typedef struct s_flist
 {
 	char				*format;
+	int					parameter;
+	char 				flag;
+	int					width;
+	int 				precision;
+	char 				*length;
+	char 				type;
 //	void				*argument;//useless
 	char				*output;
 	struct s_flist		*next;
