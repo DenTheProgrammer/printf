@@ -1,7 +1,7 @@
 //
 // Created by Maybell Debbi on 2019-05-06.
 //
-#include "printf.h"
+#include "libft.h"
 
 char *ft_itoa_float(double nbr, int prec)
 {
@@ -18,6 +18,6 @@ char *ft_itoa_float(double nbr, int prec)
 	res = ft_strjoin_free(res, ".");
 	while (prec--)
 		div *= 10;
-	res = ft_strjoin_free(res, ft_itoa((int)div));
+	res = ft_strjoin_free(res, ft_itoa_long((long long int)div));
 	return (res);
 }

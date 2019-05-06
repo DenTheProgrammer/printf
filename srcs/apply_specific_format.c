@@ -27,7 +27,7 @@ char	*apply_format_str(char *format, va_list *valist)
 
 	tmp = va_arg(*valist, char*);
 	arg = ft_strdup(tmp ? tmp : "(null)");
-	apply_precision(arg, format);
+	apply_precision_str(arg, format);
 	return (arg);
 }
 
@@ -68,5 +68,5 @@ char	*apply_format_float(char *format, va_list *valist)
 	double arg;
 
 	arg = va_arg(*valist, double);
-	return (ft_itoa_float(arg, get_precision(format)));
+	return (ft_itoa_float(arg, get_precision_float(format)));
 }

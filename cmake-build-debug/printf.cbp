@@ -315,7 +315,7 @@
 		<Unit filename="/Users/mdebbi/Desktop/printf/srcs/flist.c">
 			<Option target="printf"/>
 		</Unit>
-		<Unit filename="/Users/mdebbi/Desktop/printf/srcs/main.c">
+		<Unit filename="/Users/mdebbi/Desktop/printf/srcs/ft_printf.c">
 			<Option target="printf"/>
 		</Unit>
 		<Unit filename="/Users/mdebbi/Desktop/printf/srcs/output.c">
@@ -328,9 +328,6 @@
 			<Option target="printf"/>
 		</Unit>
 		<Unit filename="/Users/mdebbi/Desktop/printf/srcs/throw_error.c">
-			<Option target="printf"/>
-		</Unit>
-		<Unit filename="/Users/mdebbi/Desktop/printf/srcs/validation.c">
 			<Option target="printf"/>
 		</Unit>
 		<Unit filename="/Users/mdebbi/Desktop/printf/CMakeLists.txt">

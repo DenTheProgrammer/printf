@@ -80,11 +80,10 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/mdebbi/Desktop/printf/srcs/apply_specific_format.c" "/Users/mdebbi/Desktop/printf/cmake-build-debug/CMakeFiles/printf.dir/srcs/apply_specific_format.c.o"
   "/Users/mdebbi/Desktop/printf/srcs/apply_width.c" "/Users/mdebbi/Desktop/printf/cmake-build-debug/CMakeFiles/printf.dir/srcs/apply_width.c.o"
   "/Users/mdebbi/Desktop/printf/srcs/flist.c" "/Users/mdebbi/Desktop/printf/cmake-build-debug/CMakeFiles/printf.dir/srcs/flist.c.o"
-  "/Users/mdebbi/Desktop/printf/srcs/main.c" "/Users/mdebbi/Desktop/printf/cmake-build-debug/CMakeFiles/printf.dir/srcs/main.c.o"
+  "/Users/mdebbi/Desktop/printf/srcs/ft_printf.c" "/Users/mdebbi/Desktop/printf/cmake-build-debug/CMakeFiles/printf.dir/srcs/ft_printf.c.o"
   "/Users/mdebbi/Desktop/printf/srcs/output.c" "/Users/mdebbi/Desktop/printf/cmake-build-debug/CMakeFiles/printf.dir/srcs/output.c.o"
   "/Users/mdebbi/Desktop/printf/srcs/parse_arguments.c" "/Users/mdebbi/Desktop/printf/cmake-build-debug/CMakeFiles/printf.dir/srcs/parse_arguments.c.o"
   "/Users/mdebbi/Desktop/printf/srcs/throw_error.c" "/Users/mdebbi/Desktop/printf/cmake-build-debug/CMakeFiles/printf.dir/srcs/throw_error.c.o"
-  "/Users/mdebbi/Desktop/printf/srcs/validation.c" "/Users/mdebbi/Desktop/printf/cmake-build-debug/CMakeFiles/printf.dir/srcs/validation.c.o"
   )
 set(CMAKE_C_COMPILER_ID "AppleClang")
 

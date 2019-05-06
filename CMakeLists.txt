@@ -76,7 +76,7 @@ add_executable(printf
         libft/ft_itoa_long.c
         libft/ft_strjoin_free.c
         libft/libft.h
-        srcs/main.c
+        srcs/ft_printf.c
         srcs/parse_arguments.c
         srcs/printf.h
-        srcs/validation.c srcs/output.c srcs/flist.c srcs/apply_formats.c srcs/throw_error.c srcs/apply_specific_format.c srcs/apply_precision.c srcs/apply_width.c srcs/apply_flag.c libft/ft_itoa_float.c libft/ft_abs.c)
+        srcs/output.c srcs/flist.c srcs/apply_formats.c srcs/throw_error.c srcs/apply_specific_format.c srcs/apply_precision.c srcs/apply_width.c srcs/apply_flag.c libft/ft_itoa_float.c libft/ft_abs.c)

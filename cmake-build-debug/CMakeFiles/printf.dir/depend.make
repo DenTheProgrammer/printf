@@ -31,9 +31,8 @@ CMakeFiles/printf.dir/libft/ft_itoa_Ubase.c.o: ../libft/libft.h
 CMakeFiles/printf.dir/libft/ft_itoa_base.c.o: ../libft/ft_itoa_base.c
 CMakeFiles/printf.dir/libft/ft_itoa_base.c.o: ../libft/libft.h
 
-CMakeFiles/printf.dir/libft/ft_itoa_float.c.o: ../libft/libft.h
-CMakeFiles/printf.dir/libft/ft_itoa_float.c.o: ../srcs/printf.h
 CMakeFiles/printf.dir/libft/ft_itoa_float.c.o: ../libft/ft_itoa_float.c
+CMakeFiles/printf.dir/libft/ft_itoa_float.c.o: ../libft/libft.h
 
 CMakeFiles/printf.dir/libft/ft_itoa_long.c.o: ../libft/ft_itoa_long.c
 CMakeFiles/printf.dir/libft/ft_itoa_long.c.o: ../libft/libft.h
@@ -222,9 +221,9 @@ CMakeFiles/printf.dir/srcs/flist.c.o: ../libft/libft.h
 CMakeFiles/printf.dir/srcs/flist.c.o: ../srcs/flist.c
 CMakeFiles/printf.dir/srcs/flist.c.o: ../srcs/printf.h
 
-CMakeFiles/printf.dir/srcs/main.c.o: ../libft/libft.h
-CMakeFiles/printf.dir/srcs/main.c.o: ../srcs/main.c
-CMakeFiles/printf.dir/srcs/main.c.o: ../srcs/printf.h
+CMakeFiles/printf.dir/srcs/ft_printf.c.o: ../libft/libft.h
+CMakeFiles/printf.dir/srcs/ft_printf.c.o: ../srcs/ft_printf.c
+CMakeFiles/printf.dir/srcs/ft_printf.c.o: ../srcs/printf.h
 
 CMakeFiles/printf.dir/srcs/output.c.o: ../libft/libft.h
 CMakeFiles/printf.dir/srcs/output.c.o: ../srcs/output.c
@@ -237,6 +236,4 @@ CMakeFiles/printf.dir/srcs/parse_arguments.c.o: ../srcs/printf.h
 CMakeFiles/printf.dir/srcs/throw_error.c.o: ../libft/libft.h
 CMakeFiles/printf.dir/srcs/throw_error.c.o: ../srcs/printf.h
 CMakeFiles/printf.dir/srcs/throw_error.c.o: ../srcs/throw_error.c
-
-CMakeFiles/printf.dir/srcs/validation.c.o: ../srcs/validation.c
 

@@ -10,23 +10,22 @@
 #                                                                              #
 # **************************************************************************** #
 
-NAME = libft.a
-
-INCLUDES = libft.h
-
-SRCS = *.c
+NAME = libftprintf.a
+LIBFT_DIR = ./libft
 
 $(NAME):
-	gcc -c -Wall -Wextra -Werror $(SRCS) $(INCLUDES)
+	@make -C $(LIBFT_DIR)
+	gcc -c srcs/*.c libft/*.c -I ./libft -I ./srcs
 	ar -rc $(NAME) *.o
 
 all: $(NAME)
 
 clean:
 	rm -f *.o
-	rm -f libft.h.gch
+	@make -C $(LIBFT_DIR) clean
 
 fclean: clean
 	rm -f $(NAME)
+	@make -C $(LIBFT_DIR) fclean
 
 re: fclean all

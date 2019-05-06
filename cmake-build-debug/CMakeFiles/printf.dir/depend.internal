@@ -32,9 +32,8 @@ CMakeFiles/printf.dir/libft/ft_itoa_base.c.o
  /Users/mdebbi/Desktop/printf/libft/ft_itoa_base.c
  /Users/mdebbi/Desktop/printf/libft/libft.h
 CMakeFiles/printf.dir/libft/ft_itoa_float.c.o
- ../libft/libft.h
- ../srcs/printf.h
  /Users/mdebbi/Desktop/printf/libft/ft_itoa_float.c
+ /Users/mdebbi/Desktop/printf/libft/libft.h
 CMakeFiles/printf.dir/libft/ft_itoa_long.c.o
  /Users/mdebbi/Desktop/printf/libft/ft_itoa_long.c
  /Users/mdebbi/Desktop/printf/libft/libft.h
@@ -199,44 +198,42 @@ CMakeFiles/printf.dir/libft/ft_tolower.c.o
 CMakeFiles/printf.dir/libft/ft_toupper.c.o
  /Users/mdebbi/Desktop/printf/libft/ft_toupper.c
 CMakeFiles/printf.dir/srcs/apply_flag.c.o
- ../libft/libft.h
+ /Users/mdebbi/Desktop/printf/libft/libft.h
  /Users/mdebbi/Desktop/printf/srcs/apply_flag.c
  /Users/mdebbi/Desktop/printf/srcs/printf.h
 CMakeFiles/printf.dir/srcs/apply_formats.c.o
- ../libft/libft.h
+ /Users/mdebbi/Desktop/printf/libft/libft.h
  /Users/mdebbi/Desktop/printf/srcs/apply_formats.c
  /Users/mdebbi/Desktop/printf/srcs/printf.h
 CMakeFiles/printf.dir/srcs/apply_precision.c.o
- ../libft/libft.h
+ /Users/mdebbi/Desktop/printf/libft/libft.h
  /Users/mdebbi/Desktop/printf/srcs/apply_precision.c
  /Users/mdebbi/Desktop/printf/srcs/printf.h
 CMakeFiles/printf.dir/srcs/apply_specific_format.c.o
- ../libft/libft.h
+ /Users/mdebbi/Desktop/printf/libft/libft.h
  /Users/mdebbi/Desktop/printf/srcs/apply_specific_format.c
  /Users/mdebbi/Desktop/printf/srcs/printf.h
 CMakeFiles/printf.dir/srcs/apply_width.c.o
- ../libft/libft.h
+ /Users/mdebbi/Desktop/printf/libft/libft.h
  /Users/mdebbi/Desktop/printf/srcs/apply_width.c
  /Users/mdebbi/Desktop/printf/srcs/printf.h
 CMakeFiles/printf.dir/srcs/flist.c.o
- ../libft/libft.h
+ /Users/mdebbi/Desktop/printf/libft/libft.h
  /Users/mdebbi/Desktop/printf/srcs/flist.c
  /Users/mdebbi/Desktop/printf/srcs/printf.h
-CMakeFiles/printf.dir/srcs/main.c.o
- ../libft/libft.h
- /Users/mdebbi/Desktop/printf/srcs/main.c
+CMakeFiles/printf.dir/srcs/ft_printf.c.o
+ /Users/mdebbi/Desktop/printf/libft/libft.h
+ /Users/mdebbi/Desktop/printf/srcs/ft_printf.c
  /Users/mdebbi/Desktop/printf/srcs/printf.h
 CMakeFiles/printf.dir/srcs/output.c.o
- ../libft/libft.h
+ /Users/mdebbi/Desktop/printf/libft/libft.h
  /Users/mdebbi/Desktop/printf/srcs/output.c
  /Users/mdebbi/Desktop/printf/srcs/printf.h
 CMakeFiles/printf.dir/srcs/parse_arguments.c.o
- ../libft/libft.h
+ /Users/mdebbi/Desktop/printf/libft/libft.h
  /Users/mdebbi/Desktop/printf/srcs/parse_arguments.c
  /Users/mdebbi/Desktop/printf/srcs/printf.h
 CMakeFiles/printf.dir/srcs/throw_error.c.o
- ../libft/libft.h
+ /Users/mdebbi/Desktop/printf/libft/libft.h
  /Users/mdebbi/Desktop/printf/srcs/printf.h
  /Users/mdebbi/Desktop/printf/srcs/throw_error.c
-CMakeFiles/printf.dir/srcs/validation.c.o
- /Users/mdebbi/Desktop/printf/srcs/validation.c

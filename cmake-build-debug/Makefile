@@ -2175,32 +2175,32 @@ srcs/flist.c.s:
 	$(MAKE) -f CMakeFiles/printf.dir/build.make CMakeFiles/printf.dir/srcs/flist.c.s
 .PHONY : srcs/flist.c.s
 
-srcs/main.o: srcs/main.c.o
+srcs/ft_printf.o: srcs/ft_printf.c.o
 
-.PHONY : srcs/main.o
+.PHONY : srcs/ft_printf.o
 
 # target to build an object file
-srcs/main.c.o:
-	$(MAKE) -f CMakeFiles/printf.dir/build.make CMakeFiles/printf.dir/srcs/main.c.o
-.PHONY : srcs/main.c.o
+srcs/ft_printf.c.o:
+	$(MAKE) -f CMakeFiles/printf.dir/build.make CMakeFiles/printf.dir/srcs/ft_printf.c.o
+.PHONY : srcs/ft_printf.c.o
 
-srcs/main.i: srcs/main.c.i
+srcs/ft_printf.i: srcs/ft_printf.c.i
 
-.PHONY : srcs/main.i
+.PHONY : srcs/ft_printf.i
 
 # target to preprocess a source file
-srcs/main.c.i:
-	$(MAKE) -f CMakeFiles/printf.dir/build.make CMakeFiles/printf.dir/srcs/main.c.i
-.PHONY : srcs/main.c.i
+srcs/ft_printf.c.i:
+	$(MAKE) -f CMakeFiles/printf.dir/build.make CMakeFiles/printf.dir/srcs/ft_printf.c.i
+.PHONY : srcs/ft_printf.c.i
 
-srcs/main.s: srcs/main.c.s
+srcs/ft_printf.s: srcs/ft_printf.c.s
 
-.PHONY : srcs/main.s
+.PHONY : srcs/ft_printf.s
 
 # target to generate assembly for a file
-srcs/main.c.s:
-	$(MAKE) -f CMakeFiles/printf.dir/build.make CMakeFiles/printf.dir/srcs/main.c.s
-.PHONY : srcs/main.c.s
+srcs/ft_printf.c.s:
+	$(MAKE) -f CMakeFiles/printf.dir/build.make CMakeFiles/printf.dir/srcs/ft_printf.c.s
+.PHONY : srcs/ft_printf.c.s
 
 srcs/output.o: srcs/output.c.o
 
@@ -2282,33 +2282,6 @@ srcs/throw_error.s: srcs/throw_error.c.s
 srcs/throw_error.c.s:
 	$(MAKE) -f CMakeFiles/printf.dir/build.make CMakeFiles/printf.dir/srcs/throw_error.c.s
 .PHONY : srcs/throw_error.c.s
-
-srcs/validation.o: srcs/validation.c.o
-
-.PHONY : srcs/validation.o
-
-# target to build an object file
-srcs/validation.c.o:
-	$(MAKE) -f CMakeFiles/printf.dir/build.make CMakeFiles/printf.dir/srcs/validation.c.o
-.PHONY : srcs/validation.c.o
-
-srcs/validation.i: srcs/validation.c.i
-
-.PHONY : srcs/validation.i
-
-# target to preprocess a source file
-srcs/validation.c.i:
-	$(MAKE) -f CMakeFiles/printf.dir/build.make CMakeFiles/printf.dir/srcs/validation.c.i
-.PHONY : srcs/validation.c.i
-
-srcs/validation.s: srcs/validation.c.s
-
-.PHONY : srcs/validation.s
-
-# target to generate assembly for a file
-srcs/validation.c.s:
-	$(MAKE) -f CMakeFiles/printf.dir/build.make CMakeFiles/printf.dir/srcs/validation.c.s
-.PHONY : srcs/validation.c.s
 
 # Help Target
 help:
@@ -2547,9 +2520,9 @@ help:
 	@echo "... srcs/flist.o"
 	@echo "... srcs/flist.i"
 	@echo "... srcs/flist.s"
-	@echo "... srcs/main.o"
-	@echo "... srcs/main.i"
-	@echo "... srcs/main.s"
+	@echo "... srcs/ft_printf.o"
+	@echo "... srcs/ft_printf.i"
+	@echo "... srcs/ft_printf.s"
 	@echo "... srcs/output.o"
 	@echo "... srcs/output.i"
 	@echo "... srcs/output.s"
@@ -2559,9 +2532,6 @@ help:
 	@echo "... srcs/throw_error.o"
 	@echo "... srcs/throw_error.i"
 	@echo "... srcs/throw_error.s"
-	@echo "... srcs/validation.o"
-	@echo "... srcs/validation.i"
-	@echo "... srcs/validation.s"
 .PHONY : help
 
 
