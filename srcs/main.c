@@ -21,6 +21,9 @@ int		main() {
 //	printf("%c\n", NULL);//???
 
 //	printf("%s\n", NULL);
-	ft_printf("%s\n", NULL);
+//	printf("%+20d test %#20x\n", 0, 285);
+//	ft_printf("%+20d test %#20x\n", 0, 285);
+	printf("%f\n", 3.1);
+	ft_printf("%f\n", 3.141592);
 	return 0;
 }

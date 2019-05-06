@@ -189,6 +189,10 @@ CMakeFiles/printf.dir/libft/ft_tolower.c.o: ../libft/ft_tolower.c
 
 CMakeFiles/printf.dir/libft/ft_toupper.c.o: ../libft/ft_toupper.c
 
+CMakeFiles/printf.dir/srcs/apply_flag.c.o: ../libft/libft.h
+CMakeFiles/printf.dir/srcs/apply_flag.c.o: ../srcs/apply_flag.c
+CMakeFiles/printf.dir/srcs/apply_flag.c.o: ../srcs/printf.h
+
 CMakeFiles/printf.dir/srcs/apply_formats.c.o: ../libft/libft.h
 CMakeFiles/printf.dir/srcs/apply_formats.c.o: ../srcs/apply_formats.c
 CMakeFiles/printf.dir/srcs/apply_formats.c.o: ../srcs/printf.h

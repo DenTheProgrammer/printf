@@ -34,6 +34,7 @@ void	apply_formats(t_flist *flist, va_list *valist)
 				flist->output = apply_format_uns(flist->format, valist);
 			else if (ft_strchr(flist->format, '%'))
 				flist->output = ft_strdup("%");
+			apply_flag(flist);
 			apply_width(flist);
 		}
 		flist = flist->next;

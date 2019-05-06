@@ -28,6 +28,8 @@ long long apply_length(char *format, va_list *valist);
 unsigned long long apply_length_uns(char *format, va_list *valist);
 void	apply_precision(char *str, char *format);
 void apply_width(t_flist *flist);
+char get_flag(t_flist *flist);
+void apply_flag(t_flist *flist);
 //format handlers:
 char	*apply_format_int(char *format, va_list *valist);
 char	*apply_format_str(char *format, va_list *valist);

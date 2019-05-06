@@ -78,4 +78,4 @@ add_executable(printf
         srcs/main.c
         srcs/parse_arguments.c
         srcs/printf.h
-        srcs/validation.c srcs/output.c srcs/flist.c srcs/apply_formats.c srcs/throw_error.c srcs/apply_specific_format.c srcs/apply_precision.c srcs/apply_width.c)
+        srcs/validation.c srcs/output.c srcs/flist.c srcs/apply_formats.c srcs/throw_error.c srcs/apply_specific_format.c srcs/apply_precision.c srcs/apply_width.c srcs/apply_flag.c)
