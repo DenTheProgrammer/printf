@@ -201,6 +201,10 @@ CMakeFiles/printf.dir/srcs/apply_specific_format.c.o: ../libft/libft.h
 CMakeFiles/printf.dir/srcs/apply_specific_format.c.o: ../srcs/apply_specific_format.c
 CMakeFiles/printf.dir/srcs/apply_specific_format.c.o: ../srcs/printf.h
 
+CMakeFiles/printf.dir/srcs/apply_width.c.o: ../libft/libft.h
+CMakeFiles/printf.dir/srcs/apply_width.c.o: ../srcs/apply_width.c
+CMakeFiles/printf.dir/srcs/apply_width.c.o: ../srcs/printf.h
+
 CMakeFiles/printf.dir/srcs/flist.c.o: ../libft/libft.h
 CMakeFiles/printf.dir/srcs/flist.c.o: ../srcs/flist.c
 CMakeFiles/printf.dir/srcs/flist.c.o: ../srcs/printf.h
