@@ -13,7 +13,7 @@ typedef struct s_flist
 {
 	char				*format;
 	int					parameter;
-	char 				flag;
+	char 				*flag;
 	int					width;
 	int 				precision;
 	char 				*length;
@@ -42,7 +42,7 @@ void apply_flag(t_flist *flist);
 //format handlers:
 char	*apply_format_int(char *format, va_list *valist);
 char	*apply_format_str(char *format, va_list *valist);
-char	*apply_format_char(char *format, va_list *valist);//todo other formats
+char	*apply_format_char(char *format, va_list *valist);
 char	*apply_format_oct(char *format, va_list *valist);
 char	*apply_format_hex(char *format, va_list *valist);
 char	*apply_format_ptr(char *format, va_list *valist);

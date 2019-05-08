@@ -19,7 +19,7 @@ t_flist *parse_input(const char *str)
 		if (str[i] == '%')
 		{
 			i++;
-			while (str[i] != 0 && !ft_strchr(types, str[i]))//todo ll, hh, etc..
+			while (str[i] != 0 && !ft_strchr(types, str[i]))
 				i++;
 			flist_push(&flist, flist_create(ft_strsub(str, w_start, i - w_start + 1), NULL));
 		}
@@ -32,4 +32,20 @@ t_flist *parse_input(const char *str)
 		i++;
 	}
 	return (flist);
+}
+
+
+void	parse_formats(t_flist *flist)
+{
+	int i;
+
+	i = 0;
+	while (flist->format)
+	{
+		while (flist->format[i])
+		{
+			while ()
+		}
+		flist = flist->next;
+	}
 }
