@@ -35,6 +35,12 @@ t_flist *flist_create(char *format, char *output)
 	new = (t_flist*)malloc(sizeof(t_flist));
 	new->format = format;
 	new->output = output;
+	new->width = -1;
+	new->precision = -1;
+	new->type = -1;
+	new->parameter = -1;
+	new->length = NULL;
+	new->flags = NULL;
 	new->next = NULL;
 	return (new);
 }

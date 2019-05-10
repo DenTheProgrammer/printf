@@ -39,19 +39,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /Users/mdebbi/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake
+CMAKE_COMMAND = /home/den/Programs/clion-2019.1.2/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /Users/mdebbi/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
+RM = /home/den/Programs/clion-2019.1.2/bin/cmake/linux/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/mdebbi/Desktop/printf
+CMAKE_SOURCE_DIR = /home/den/Desktop/printf
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/mdebbi/Desktop/printf/cmake-build-debug
+CMAKE_BINARY_DIR = /home/den/Desktop/printf/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /Users/mdebbi/Desktop/printf/cmake-build-debug
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/Users/mdebbi/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/home/den/Programs/clion-2019.1.2/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -70,7 +70,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/Users/mdebbi/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/home/den/Programs/clion-2019.1.2/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/mdebbi/Desktop/printf/cmake-build-debug/CMakeFiles /Users/mdebbi/Desktop/printf/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/den/Desktop/printf/cmake-build-debug/CMakeFiles /home/den/Desktop/printf/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/mdebbi/Desktop/printf/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/den/Desktop/printf/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -1554,6 +1554,33 @@ libft/ft_strlen.c.s:
 	$(MAKE) -f CMakeFiles/printf.dir/build.make CMakeFiles/printf.dir/libft/ft_strlen.c.s
 .PHONY : libft/ft_strlen.c.s
 
+libft/ft_strlen_safe.o: libft/ft_strlen_safe.c.o
+
+.PHONY : libft/ft_strlen_safe.o
+
+# target to build an object file
+libft/ft_strlen_safe.c.o:
+	$(MAKE) -f CMakeFiles/printf.dir/build.make CMakeFiles/printf.dir/libft/ft_strlen_safe.c.o
+.PHONY : libft/ft_strlen_safe.c.o
+
+libft/ft_strlen_safe.i: libft/ft_strlen_safe.c.i
+
+.PHONY : libft/ft_strlen_safe.i
+
+# target to preprocess a source file
+libft/ft_strlen_safe.c.i:
+	$(MAKE) -f CMakeFiles/printf.dir/build.make CMakeFiles/printf.dir/libft/ft_strlen_safe.c.i
+.PHONY : libft/ft_strlen_safe.c.i
+
+libft/ft_strlen_safe.s: libft/ft_strlen_safe.c.s
+
+.PHONY : libft/ft_strlen_safe.s
+
+# target to generate assembly for a file
+libft/ft_strlen_safe.c.s:
+	$(MAKE) -f CMakeFiles/printf.dir/build.make CMakeFiles/printf.dir/libft/ft_strlen_safe.c.s
+.PHONY : libft/ft_strlen_safe.c.s
+
 libft/ft_strmap.o: libft/ft_strmap.c.o
 
 .PHONY : libft/ft_strmap.o
@@ -1769,6 +1796,33 @@ libft/ft_strnstr.s: libft/ft_strnstr.c.s
 libft/ft_strnstr.c.s:
 	$(MAKE) -f CMakeFiles/printf.dir/build.make CMakeFiles/printf.dir/libft/ft_strnstr.c.s
 .PHONY : libft/ft_strnstr.c.s
+
+libft/ft_strpushchar.o: libft/ft_strpushchar.c.o
+
+.PHONY : libft/ft_strpushchar.o
+
+# target to build an object file
+libft/ft_strpushchar.c.o:
+	$(MAKE) -f CMakeFiles/printf.dir/build.make CMakeFiles/printf.dir/libft/ft_strpushchar.c.o
+.PHONY : libft/ft_strpushchar.c.o
+
+libft/ft_strpushchar.i: libft/ft_strpushchar.c.i
+
+.PHONY : libft/ft_strpushchar.i
+
+# target to preprocess a source file
+libft/ft_strpushchar.c.i:
+	$(MAKE) -f CMakeFiles/printf.dir/build.make CMakeFiles/printf.dir/libft/ft_strpushchar.c.i
+.PHONY : libft/ft_strpushchar.c.i
+
+libft/ft_strpushchar.s: libft/ft_strpushchar.c.s
+
+.PHONY : libft/ft_strpushchar.s
+
+# target to generate assembly for a file
+libft/ft_strpushchar.c.s:
+	$(MAKE) -f CMakeFiles/printf.dir/build.make CMakeFiles/printf.dir/libft/ft_strpushchar.c.s
+.PHONY : libft/ft_strpushchar.c.s
 
 libft/ft_strrchr.o: libft/ft_strrchr.c.o
 
@@ -2290,8 +2344,8 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... edit_cache"
 	@echo "... printf"
+	@echo "... edit_cache"
 	@echo "... libft/ft_abs.o"
 	@echo "... libft/ft_abs.i"
 	@echo "... libft/ft_abs.s"
@@ -2451,6 +2505,9 @@ help:
 	@echo "... libft/ft_strlen.o"
 	@echo "... libft/ft_strlen.i"
 	@echo "... libft/ft_strlen.s"
+	@echo "... libft/ft_strlen_safe.o"
+	@echo "... libft/ft_strlen_safe.i"
+	@echo "... libft/ft_strlen_safe.s"
 	@echo "... libft/ft_strmap.o"
 	@echo "... libft/ft_strmap.i"
 	@echo "... libft/ft_strmap.s"
@@ -2475,6 +2532,9 @@ help:
 	@echo "... libft/ft_strnstr.o"
 	@echo "... libft/ft_strnstr.i"
 	@echo "... libft/ft_strnstr.s"
+	@echo "... libft/ft_strpushchar.o"
+	@echo "... libft/ft_strpushchar.i"
+	@echo "... libft/ft_strpushchar.s"
 	@echo "... libft/ft_strrchr.o"
 	@echo "... libft/ft_strrchr.i"
 	@echo "... libft/ft_strrchr.s"

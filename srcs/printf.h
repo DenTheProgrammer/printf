@@ -13,18 +13,17 @@ typedef struct s_flist
 {
 	char				*format;
 	int					parameter;
-	char 				*flag;
+	char 				*flags;
 	int					width;
 	int 				precision;
 	char 				*length;
 	char 				type;
-//	void				*argument;//useless
 	char				*output;
 	struct s_flist		*next;
 } t_flist;
 
 t_flist *parse_input(const char *str);
-//void	fill_formats_list(t_flist *flist, va_list *valist);
+void	parse_formats(t_flist *flist);
 void	apply_formats(t_flist *flist, va_list *valist);
 int		printf_output(t_flist *flist);
 t_flist	*flist_create(char *format, char *output);

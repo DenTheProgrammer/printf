@@ -148,6 +148,9 @@ CMakeFiles/printf.dir/libft/ft_strlcat.c.o: ../libft/libft.h
 CMakeFiles/printf.dir/libft/ft_strlen.c.o: ../libft/ft_strlen.c
 CMakeFiles/printf.dir/libft/ft_strlen.c.o: ../libft/libft.h
 
+CMakeFiles/printf.dir/libft/ft_strlen_safe.c.o: ../libft/ft_strlen_safe.c
+CMakeFiles/printf.dir/libft/ft_strlen_safe.c.o: ../libft/libft.h
+
 CMakeFiles/printf.dir/libft/ft_strmap.c.o: ../libft/ft_strmap.c
 CMakeFiles/printf.dir/libft/ft_strmap.c.o: ../libft/libft.h
 
@@ -171,6 +174,9 @@ CMakeFiles/printf.dir/libft/ft_strnew.c.o: ../libft/libft.h
 
 CMakeFiles/printf.dir/libft/ft_strnstr.c.o: ../libft/ft_strnstr.c
 CMakeFiles/printf.dir/libft/ft_strnstr.c.o: ../libft/libft.h
+
+CMakeFiles/printf.dir/libft/ft_strpushchar.c.o: ../libft/ft_strpushchar.c
+CMakeFiles/printf.dir/libft/ft_strpushchar.c.o: ../libft/libft.h
 
 CMakeFiles/printf.dir/libft/ft_strrchr.c.o: ../libft/ft_strrchr.c
 CMakeFiles/printf.dir/libft/ft_strrchr.c.o: ../libft/libft.h

@@ -8,24 +8,19 @@ int		ft_printf(const char *str, ...)
 
 	va_start(valist, str);
 	t_flist *format_list = parse_input(str);
+	parse_formats(format_list);
 	apply_formats(format_list, &valist);
 	va_end(valist);
 	return (printf_output(format_list));
 }
-//todo float, rounding, Lflag?, Makefile for testing
-//todo better format parcing
-//todo parcing for all flags in structure fields
+//todo float, rounding//in progress
+// Makefile for testing//done
+//todo better format parcing//done
+//todo parcing for all flags in structure fields//done
+//todo multiple flags handling!//in progress
 
 int		main() {
-	int a = -544353756;
-	int b = 424242424;
-
-//	printf("%c\n", NULL);//???
-
-//	printf("%s\n", NULL);
-//	printf("%+20d test %#20x\n", 0, 285);
-//	ft_printf("%+20d test %#20x\n", 0, 285);
-	printf("%s\n", "Á±≥");
-	ft_printf("%s\n", "Á±≥");
+	printf("test %+05.4d\n", 3);
+	ft_printf("test %+05.4d\n", 3);
 	return 0;
 }

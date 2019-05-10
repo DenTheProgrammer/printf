@@ -7,7 +7,7 @@
 t_flist *parse_input(const char *str)
 {
 	int w_start;
-	char *types = "cspdiouxX%f";//todo f
+	char *types = "cspdiouxX%f";
 	t_flist *flist;
 
 	size_t len = ft_strlen(str);
@@ -34,17 +34,61 @@ t_flist *parse_input(const char *str)
 	return (flist);
 }
 
+static int 	get_width(char *str)
+{
+	int res;
+
+	res = -1;
+	if (ft_isdigit(*str))
+		res = 0;
+	while (ft_isdigit(*str))
+		res = (res * 10) + (*str++ - '0');
+	return (res);
+}
+
+static int get_precision(char *format)
+{
+	char *dotptr;
+
+	if (!(dotptr = ft_strchr(format, '.')))
+		return (-1);
+	return (ft_atoi(dotptr + 1));
+
+}
+
+static char *get_length(char *format)
+{
+	if (ft_strstr(format, "ll"))
+		return (ft_strdup("ll"));
+	else if(ft_strstr(format, "l"))
+		return (ft_strdup("l"));
+	else if(ft_strstr(format, "hh"))
+		return (ft_strdup("hh"));
+	else if(ft_strstr(format, "h"))
+		return (ft_strdup("h"));
+	else return (NULL);
+}
+
 
 void	parse_formats(t_flist *flist)
 {
 	int i;
 
-	i = 0;
-	while (flist->format)
+	static char *flags = "0+- #";
+
+	while (flist)
 	{
-		while (flist->format[i])
+		i = 1;
+		if (flist->format)
 		{
-			while ()
+			while (ft_strchr(flags, flist->format[i]))
+				ft_strpushchar(&flist->flags, flist->format[i++]);
+			flist->width = get_width(flist->format + i);
+			flist->precision = get_precision(flist->format);
+			flist->length = get_length(flist->format);
+			while (flist->format[i])
+				i++;
+			flist->type = flist->format[i - 1];
 		}
 		flist = flist->next;
 	}

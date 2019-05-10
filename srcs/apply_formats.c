@@ -4,10 +4,10 @@
 
 #include "printf.h"
 
-void validate_format(t_flist *flist)
-{
-	//todo
-}
+//void validate_format(t_flist *flist)
+//{
+//	//todo?
+//}
 
 void	apply_formats(t_flist *flist, va_list *valist)
 {
@@ -16,25 +16,25 @@ void	apply_formats(t_flist *flist, va_list *valist)
 		if (flist->format)
 		{
 			validate_format(flist);
-			if (ft_strchr(flist->format, 'd') || ft_strchr(flist->format, 'i'))
-				flist->output = apply_format_int(flist->format, valist);
-			else if (ft_strchr(flist->format, 's'))
+			if (flist->type == 'd' || flist->type == 'i')
+				flist->output = apply_format_int(flist->format, valist);//todo: refactor flist->format ----> flist
+			else if (flist->type == 's')
 				flist->output = apply_format_str(flist->format, valist);
-			else if (ft_strchr(flist->format, 'c'))
+			else if (flist->type == 'c')
 				flist->output = apply_format_char(flist->format, valist);
-			else if (ft_strchr(flist->format, 'o'))
-				flist->output = apply_format_oct(flist->format, valist);//?type?
-			else if (ft_strchr(flist->format, 'x'))
+			else if (flist->type == 'o')
+				flist->output = apply_format_oct(flist->format, valist);
+			else if (flist->type == 'x')
 				flist->output = apply_format_hex(flist->format, valist);
-			else if (ft_strchr(flist->format, 'X'))
+			else if (flist->type == 'X')
 				flist->output = apply_format_hex(flist->format, valist);
-			else if (ft_strchr(flist->format, 'f'))
+			else if (flist->type == 'f')
 				flist->output = apply_format_float(flist->format, valist);
-			else if (ft_strchr(flist->format, 'p'))
+			else if (flist->type == 'p')
 				flist->output = apply_format_ptr(flist->format, valist);
-			else if (ft_strchr(flist->format, 'u'))
+			else if (flist->type == 'u')
 				flist->output = apply_format_uns(flist->format, valist);
-			else if (ft_strchr(flist->format, '%'))
+			else if (flist->type == '%')
 				flist->output = ft_strdup("%");
 			apply_flag(flist);
 			apply_width(flist);
@@ -43,7 +43,7 @@ void	apply_formats(t_flist *flist, va_list *valist)
 	}
 }
 
-long long apply_length(char *format, va_list *valist)
+long long apply_length(char *format, va_list *valist)//todo: refactor for use new parsed length
 {
 	long long arg;
 

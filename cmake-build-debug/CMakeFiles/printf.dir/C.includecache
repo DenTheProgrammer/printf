@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/Users/mdebbi/Desktop/printf/libft/libft.h
+/home/den/Desktop/printf/libft/libft.h
 unistd.h
 -
 fcntl.h
@@ -16,51 +16,19 @@ stdlib.h
 string.h
 -
 
-/Users/mdebbi/Desktop/printf/srcs/apply_flag.c
+/home/den/Desktop/printf/srcs/apply_formats.c
 printf.h
-/Users/mdebbi/Desktop/printf/srcs/printf.h
+/home/den/Desktop/printf/srcs/printf.h
 
-/Users/mdebbi/Desktop/printf/srcs/apply_formats.c
+/home/den/Desktop/printf/srcs/ft_printf.c
 printf.h
-/Users/mdebbi/Desktop/printf/srcs/printf.h
+/home/den/Desktop/printf/srcs/printf.h
 
-/Users/mdebbi/Desktop/printf/srcs/apply_precision.c
-printf.h
-/Users/mdebbi/Desktop/printf/srcs/printf.h
-
-/Users/mdebbi/Desktop/printf/srcs/apply_specific_format.c
-printf.h
-/Users/mdebbi/Desktop/printf/srcs/printf.h
-
-/Users/mdebbi/Desktop/printf/srcs/apply_width.c
-printf.h
-/Users/mdebbi/Desktop/printf/srcs/printf.h
-
-/Users/mdebbi/Desktop/printf/srcs/flist.c
-printf.h
-/Users/mdebbi/Desktop/printf/srcs/printf.h
-
-/Users/mdebbi/Desktop/printf/srcs/ft_printf.c
-printf.h
-/Users/mdebbi/Desktop/printf/srcs/printf.h
-
-/Users/mdebbi/Desktop/printf/srcs/output.c
-printf.h
-/Users/mdebbi/Desktop/printf/srcs/printf.h
-
-/Users/mdebbi/Desktop/printf/srcs/parse_arguments.c
-printf.h
-/Users/mdebbi/Desktop/printf/srcs/printf.h
-
-/Users/mdebbi/Desktop/printf/srcs/printf.h
+/home/den/Desktop/printf/srcs/printf.h
 ../libft/libft.h
-/Users/mdebbi/Desktop/printf/libft/libft.h
+/home/den/Desktop/printf/libft/libft.h
 stdio.h
 -
 stdarg.h
 -
-
-/Users/mdebbi/Desktop/printf/srcs/throw_error.c
-printf.h
-/Users/mdebbi/Desktop/printf/srcs/printf.h
 

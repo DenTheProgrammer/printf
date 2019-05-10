@@ -106,4 +106,6 @@ char				*ft_itoa_long(long long  n);
 char				*ft_itoa_float(double nbr, int prec);
 char				*ft_strjoin_free(const char *s1, const char *s2);
 double				ft_abs(double nbr);
+void				ft_strpushchar(char **str, int chr);
+size_t				ft_strlen_safe(const char *s);
 #endif
