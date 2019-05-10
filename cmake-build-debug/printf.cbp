@@ -214,6 +214,9 @@
 		<Unit filename="/home/den/Desktop/printf/libft/ft_strcpy.c">
 			<Option target="printf"/>
 		</Unit>
+		<Unit filename="/home/den/Desktop/printf/libft/ft_strcpynoendl.c">
+			<Option target="printf"/>
+		</Unit>
 		<Unit filename="/home/den/Desktop/printf/libft/ft_strdel.c">
 			<Option target="printf"/>
 		</Unit>
@@ -301,7 +304,7 @@
 		<Unit filename="/home/den/Desktop/printf/libft/libft.h">
 			<Option target="printf"/>
 		</Unit>
-		<Unit filename="/home/den/Desktop/printf/srcs/apply_flag.c">
+		<Unit filename="/home/den/Desktop/printf/srcs/apply_flags.c">
 			<Option target="printf"/>
 		</Unit>
 		<Unit filename="/home/den/Desktop/printf/srcs/apply_formats.c">

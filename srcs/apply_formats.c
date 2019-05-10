@@ -15,7 +15,7 @@ void	apply_formats(t_flist *flist, va_list *valist)
 	{
 		if (flist->format)
 		{
-			validate_format(flist);
+//			validate_format(flist);
 			if (flist->type == 'd' || flist->type == 'i')
 				flist->output = apply_format_int(flist->format, valist);//todo: refactor flist->format ----> flist
 			else if (flist->type == 's')
@@ -36,8 +36,8 @@ void	apply_formats(t_flist *flist, va_list *valist)
 				flist->output = apply_format_uns(flist->format, valist);
 			else if (flist->type == '%')
 				flist->output = ft_strdup("%");
-			apply_flag(flist);
 			apply_width(flist);
+			apply_flags(flist);
 		}
 		flist = flist->next;
 	}

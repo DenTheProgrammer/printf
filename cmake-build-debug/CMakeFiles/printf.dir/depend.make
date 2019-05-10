@@ -123,6 +123,8 @@ CMakeFiles/printf.dir/libft/ft_strcmp.c.o: ../libft/ft_strcmp.c
 
 CMakeFiles/printf.dir/libft/ft_strcpy.c.o: ../libft/ft_strcpy.c
 
+CMakeFiles/printf.dir/libft/ft_strcpynoendl.c.o: ../libft/ft_strcpynoendl.c
+
 CMakeFiles/printf.dir/libft/ft_strdel.c.o: ../libft/ft_strdel.c
 CMakeFiles/printf.dir/libft/ft_strdel.c.o: ../libft/libft.h
 
@@ -203,9 +205,9 @@ CMakeFiles/printf.dir/libft/ft_tolower.c.o: ../libft/ft_tolower.c
 
 CMakeFiles/printf.dir/libft/ft_toupper.c.o: ../libft/ft_toupper.c
 
-CMakeFiles/printf.dir/srcs/apply_flag.c.o: ../libft/libft.h
-CMakeFiles/printf.dir/srcs/apply_flag.c.o: ../srcs/apply_flag.c
-CMakeFiles/printf.dir/srcs/apply_flag.c.o: ../srcs/printf.h
+CMakeFiles/printf.dir/srcs/apply_flags.c.o: ../libft/libft.h
+CMakeFiles/printf.dir/srcs/apply_flags.c.o: ../srcs/apply_flags.c
+CMakeFiles/printf.dir/srcs/apply_flags.c.o: ../srcs/printf.h
 
 CMakeFiles/printf.dir/srcs/apply_formats.c.o: ../libft/libft.h
 CMakeFiles/printf.dir/srcs/apply_formats.c.o: ../srcs/apply_formats.c

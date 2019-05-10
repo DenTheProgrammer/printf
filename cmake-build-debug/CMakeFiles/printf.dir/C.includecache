@@ -16,10 +16,6 @@ stdlib.h
 string.h
 -
 
-/home/den/Desktop/printf/srcs/apply_formats.c
-printf.h
-/home/den/Desktop/printf/srcs/printf.h
-
 /home/den/Desktop/printf/srcs/ft_printf.c
 printf.h
 /home/den/Desktop/printf/srcs/printf.h

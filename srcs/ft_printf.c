@@ -20,7 +20,7 @@ int		ft_printf(const char *str, ...)
 //todo multiple flags handling!//in progress
 
 int		main() {
-	printf("test %+05.4d\n", 3);
-	ft_printf("test %+05.4d\n", 3);
+	printf("test %0#x\n", 3);
+	ft_printf("test %0#x\n", 3);
 	return 0;
 }

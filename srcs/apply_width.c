@@ -12,15 +12,15 @@ void apply_width(t_flist *flist)
 	int outlen = ft_strlen(output);
 	int i = 0;
 
-	if (get_flag(flist) == '-')
+	if (ft_strchr(flist->flags, '-'))
 		return ;
-	width = ft_atoi(flist->format + (get_flag(flist) ? 2 : 1));
+	width = flist->width;
 	if (width > outlen)
 	{
 		free(flist->output);
 		flist->output = ft_strnew(width);
 		while (width - outlen++)
-			flist->output[i++] = (get_flag(flist) == '0') ? '0' : ' ';
+			flist->output[i++] = (ft_strchr(flist->flags, '0')) ? '0' : ' ';
 		ft_strcpy(flist->output + i, output);
 	}
 	free(output);

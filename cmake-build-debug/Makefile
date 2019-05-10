@@ -1311,6 +1311,33 @@ libft/ft_strcpy.c.s:
 	$(MAKE) -f CMakeFiles/printf.dir/build.make CMakeFiles/printf.dir/libft/ft_strcpy.c.s
 .PHONY : libft/ft_strcpy.c.s
 
+libft/ft_strcpynoendl.o: libft/ft_strcpynoendl.c.o
+
+.PHONY : libft/ft_strcpynoendl.o
+
+# target to build an object file
+libft/ft_strcpynoendl.c.o:
+	$(MAKE) -f CMakeFiles/printf.dir/build.make CMakeFiles/printf.dir/libft/ft_strcpynoendl.c.o
+.PHONY : libft/ft_strcpynoendl.c.o
+
+libft/ft_strcpynoendl.i: libft/ft_strcpynoendl.c.i
+
+.PHONY : libft/ft_strcpynoendl.i
+
+# target to preprocess a source file
+libft/ft_strcpynoendl.c.i:
+	$(MAKE) -f CMakeFiles/printf.dir/build.make CMakeFiles/printf.dir/libft/ft_strcpynoendl.c.i
+.PHONY : libft/ft_strcpynoendl.c.i
+
+libft/ft_strcpynoendl.s: libft/ft_strcpynoendl.c.s
+
+.PHONY : libft/ft_strcpynoendl.s
+
+# target to generate assembly for a file
+libft/ft_strcpynoendl.c.s:
+	$(MAKE) -f CMakeFiles/printf.dir/build.make CMakeFiles/printf.dir/libft/ft_strcpynoendl.c.s
+.PHONY : libft/ft_strcpynoendl.c.s
+
 libft/ft_strdel.o: libft/ft_strdel.c.o
 
 .PHONY : libft/ft_strdel.o
@@ -2067,32 +2094,32 @@ libft/ft_toupper.c.s:
 	$(MAKE) -f CMakeFiles/printf.dir/build.make CMakeFiles/printf.dir/libft/ft_toupper.c.s
 .PHONY : libft/ft_toupper.c.s
 
-srcs/apply_flag.o: srcs/apply_flag.c.o
+srcs/apply_flags.o: srcs/apply_flags.c.o
 
-.PHONY : srcs/apply_flag.o
+.PHONY : srcs/apply_flags.o
 
 # target to build an object file
-srcs/apply_flag.c.o:
-	$(MAKE) -f CMakeFiles/printf.dir/build.make CMakeFiles/printf.dir/srcs/apply_flag.c.o
-.PHONY : srcs/apply_flag.c.o
+srcs/apply_flags.c.o:
+	$(MAKE) -f CMakeFiles/printf.dir/build.make CMakeFiles/printf.dir/srcs/apply_flags.c.o
+.PHONY : srcs/apply_flags.c.o
 
-srcs/apply_flag.i: srcs/apply_flag.c.i
+srcs/apply_flags.i: srcs/apply_flags.c.i
 
-.PHONY : srcs/apply_flag.i
+.PHONY : srcs/apply_flags.i
 
 # target to preprocess a source file
-srcs/apply_flag.c.i:
-	$(MAKE) -f CMakeFiles/printf.dir/build.make CMakeFiles/printf.dir/srcs/apply_flag.c.i
-.PHONY : srcs/apply_flag.c.i
+srcs/apply_flags.c.i:
+	$(MAKE) -f CMakeFiles/printf.dir/build.make CMakeFiles/printf.dir/srcs/apply_flags.c.i
+.PHONY : srcs/apply_flags.c.i
 
-srcs/apply_flag.s: srcs/apply_flag.c.s
+srcs/apply_flags.s: srcs/apply_flags.c.s
 
-.PHONY : srcs/apply_flag.s
+.PHONY : srcs/apply_flags.s
 
 # target to generate assembly for a file
-srcs/apply_flag.c.s:
-	$(MAKE) -f CMakeFiles/printf.dir/build.make CMakeFiles/printf.dir/srcs/apply_flag.c.s
-.PHONY : srcs/apply_flag.c.s
+srcs/apply_flags.c.s:
+	$(MAKE) -f CMakeFiles/printf.dir/build.make CMakeFiles/printf.dir/srcs/apply_flags.c.s
+.PHONY : srcs/apply_flags.c.s
 
 srcs/apply_formats.o: srcs/apply_formats.c.o
 
@@ -2478,6 +2505,9 @@ help:
 	@echo "... libft/ft_strcpy.o"
 	@echo "... libft/ft_strcpy.i"
 	@echo "... libft/ft_strcpy.s"
+	@echo "... libft/ft_strcpynoendl.o"
+	@echo "... libft/ft_strcpynoendl.i"
+	@echo "... libft/ft_strcpynoendl.s"
 	@echo "... libft/ft_strdel.o"
 	@echo "... libft/ft_strdel.i"
 	@echo "... libft/ft_strdel.s"
@@ -2562,9 +2592,9 @@ help:
 	@echo "... libft/ft_toupper.o"
 	@echo "... libft/ft_toupper.i"
 	@echo "... libft/ft_toupper.s"
-	@echo "... srcs/apply_flag.o"
-	@echo "... srcs/apply_flag.i"
-	@echo "... srcs/apply_flag.s"
+	@echo "... srcs/apply_flags.o"
+	@echo "... srcs/apply_flags.i"
+	@echo "... srcs/apply_flags.s"
 	@echo "... srcs/apply_formats.o"
 	@echo "... srcs/apply_formats.i"
 	@echo "... srcs/apply_formats.s"

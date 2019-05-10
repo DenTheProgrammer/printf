@@ -123,6 +123,8 @@ CMakeFiles/printf.dir/libft/ft_strcmp.c.o
  /home/den/Desktop/printf/libft/ft_strcmp.c
 CMakeFiles/printf.dir/libft/ft_strcpy.c.o
  /home/den/Desktop/printf/libft/ft_strcpy.c
+CMakeFiles/printf.dir/libft/ft_strcpynoendl.c.o
+ /home/den/Desktop/printf/libft/ft_strcpynoendl.c
 CMakeFiles/printf.dir/libft/ft_strdel.c.o
  /home/den/Desktop/printf/libft/ft_strdel.c
  /home/den/Desktop/printf/libft/libft.h
@@ -203,9 +205,9 @@ CMakeFiles/printf.dir/libft/ft_tolower.c.o
  /home/den/Desktop/printf/libft/ft_tolower.c
 CMakeFiles/printf.dir/libft/ft_toupper.c.o
  /home/den/Desktop/printf/libft/ft_toupper.c
-CMakeFiles/printf.dir/srcs/apply_flag.c.o
+CMakeFiles/printf.dir/srcs/apply_flags.c.o
  /home/den/Desktop/printf/libft/libft.h
- /home/den/Desktop/printf/srcs/apply_flag.c
+ /home/den/Desktop/printf/srcs/apply_flags.c
  /home/den/Desktop/printf/srcs/printf.h
 CMakeFiles/printf.dir/srcs/apply_formats.c.o
  /home/den/Desktop/printf/libft/libft.h
