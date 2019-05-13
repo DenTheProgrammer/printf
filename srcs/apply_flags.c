@@ -4,15 +4,25 @@
 
 #include "printf.h"
 
-//char get_flag(t_flist *flist)
-//{
-//	if (flist->format[1] == '#' || flist->format[1] == '0' || flist->format[1] == '-' ||
-//		flist->format[1] == '+' || flist->format[1] == ' ')
-//		return (flist->format[1]);
-//	return (0);
-//}
+static void apply_flag_plus(t_flist *flist)
+{
+	size_t nbrlen;
+	char *tmp;
 
-void apply_flag_minus(t_flist *flist)
+	nbrlen = ft_strlen(flist->output);
+	if (ft_strchr(flist->flags, '0'))
+	{
+		tmp = ft_strjoin("+", ft_str_generate(flist->width - nbrlen - 1, '0'));
+		flist->output = ft_strjoin(tmp, flist->output);//leak
+	}
+	else {
+		tmp = ft_strjoin("+", flist->output);
+		free(flist->output);
+		flist->output = tmp;
+	}
+}
+
+static void apply_flag_minus(t_flist *flist)
 {
 	int width = ft_atoi(flist->format + 2);
 	int outlen = ft_strlen(flist->output);
@@ -30,25 +40,30 @@ void apply_flag_minus(t_flist *flist)
 
 void apply_flag_hash(t_flist *flist)
 {
-//	char *tmp_out;
+	char *tmp_out;
 
-//	tmp_out = ft_strdup(flist->output);
-//	free(flist->output);
-	if (ft_strchr(flist->format, 'o'))
-		ft_strcpynoendl(flist->output, "0");
-	else if (ft_strchr(flist->format, 'x'))
-		ft_strcpynoendl(flist->output, "0x");
-	else if (ft_strchr(flist->format, 'X'))
-		ft_strcpynoendl(flist->output, "0X");
-//	else
-//		flist->output = ft_strdup(tmp_out);
-//	free(tmp_out);
+	tmp_out = ft_strdup(flist->output);
+	free(flist->output);
+	if (flist->type == 'o')
+		flist->output = ft_strjoin("0", tmp_out);
+	else if (flist->type == 'x')
+		flist->output = ft_strjoin("0x", tmp_out);
+	else if (flist->type == 'X')
+		flist->output = ft_strjoin("0X", tmp_out);
+	else
+		flist->output = ft_strdup(tmp_out);
+	free(tmp_out);
 }
 
 void apply_flags(t_flist *flist)
 {
+	if (flist->precision >= flist->width)//precision > width fix
+	{
+		flist->width = flist->precision;
+		ft_strpushchar(&flist->flags, '0');
+	}
 	if (ft_strchr(flist->flags, '+') && flist->output[0] != '-')
-		ft_strcpynoendl(flist->output, "+");
+		 apply_flag_plus(flist);
 	if (ft_strchr(flist->flags, ' ') && flist->output[0] != '-')
 		flist->output = ft_strjoin(" ", flist->output);
 	if (ft_strchr(flist->flags, '-'))
