@@ -30,23 +30,23 @@ t_flist	*flist_create(char *format, char *output);
 //void	flist_push(t_flist *node);
 void	flist_push(t_flist **head, t_flist *node);
 //
-long long apply_length(char *format, va_list *valist);
-unsigned long long apply_length_uns(char *format, va_list *valist);
+long long apply_length(t_flist *flist, va_list *valist);
+unsigned long long apply_length_uns(t_flist *flist, va_list *valist);
 //void	apply_precision(char *str, char *format);
-int get_precision_float(char *format);
+int get_precision_float(t_flist *flist);
 void apply_width(t_flist *flist);
 //char get_flag(t_flist *flist);
-void	apply_precision_str(char *str, char *format);
+void	apply_precision_str(char *str, t_flist *flist);
 void apply_flags(t_flist *flist);
 //format handlers:
-char	*apply_format_int(char *format, va_list *valist);
-char	*apply_format_str(char *format, va_list *valist);
-char	*apply_format_char(char *format, va_list *valist);
-char	*apply_format_oct(char *format, va_list *valist);
-char	*apply_format_hex(char *format, va_list *valist);
-char	*apply_format_ptr(char *format, va_list *valist);
-char	*apply_format_uns(char *format, va_list *valist);
-char	*apply_format_float(char *format, va_list *valist);
+char	*apply_format_int(t_flist *flist, va_list *valist);
+char	*apply_format_str(t_flist *flist, va_list *valist);
+char	*apply_format_char(t_flist *flist, va_list *valist);
+char	*apply_format_oct(t_flist *flist, va_list *valist);
+char	*apply_format_hex(t_flist *flist, va_list *valist);
+char	*apply_format_ptr(t_flist *flist, va_list *valist);
+char	*apply_format_uns(t_flist *flist, va_list *valist);
+char	*apply_format_float(t_flist *flist, va_list *valist);
 
 //error
 int		throw_error(char *msg);

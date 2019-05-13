@@ -4,31 +4,16 @@
 
 #include "printf.h"
 
-int get_precision_float(char *format)
+int get_precision_float(t_flist *flist)
 {
-	char *dotptr;
-
-	if ((dotptr = ft_strchr(format, '.')))
-		return (ft_atoi(dotptr + 1));
-	else
-		return (0);
+	return (flist->precision < 0) ? 0 : flist->precision;//?
 }
 
-int get_precision_str(char *str, char *format)
-{
-	char *dotptr;
-
-	if ((dotptr = ft_strchr(format, '.')))
-		return (ft_atoi(dotptr + 1));
-	else
-		return ft_strlen(str);
-}
-
-void	apply_precision_str(char *str, char *format)
+void	apply_precision_str(char *str, t_flist *flist)
 {
 	int prec;
 
-	prec = get_precision_str(str, format);
+	prec = (flist->precision < 0) ? ft_strlen(str) : flist->precision;
 	if (prec < ft_strlen(str))
 		str[prec] = 0;
 }

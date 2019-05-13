@@ -24,16 +24,15 @@ static void apply_flag_plus(t_flist *flist)
 
 static void apply_flag_minus(t_flist *flist)
 {
-	int width = ft_atoi(flist->format + 2);
 	int outlen = ft_strlen(flist->output);
 	char *output = ft_strdup(flist->output);
 
-	if (width > outlen)
+	if (flist->width > outlen)
 	{
 		free(flist->output);
-		flist->output = ft_strnew(width);
+		flist->output = ft_strnew(flist->width);
 		ft_strcpy(flist->output, output);
-		while (width - outlen)
+		while (flist->width - outlen)
 			flist->output[outlen++] = ' ';
 	}
 }
@@ -57,9 +56,10 @@ void apply_flag_hash(t_flist *flist)
 
 void apply_flags(t_flist *flist)
 {
-	if (flist->precision >= flist->width)//precision > width fix
+	if (flist->precision >= flist->width && flist->type != 's')//precision > width fix
 	{
 		flist->width = flist->precision;
+		flist->flags = ft_str_removechar(flist->flags, '-');
 		ft_strpushchar(&flist->flags, '0');
 	}
 	if (ft_strchr(flist->flags, '+') && flist->output[0] != '-')

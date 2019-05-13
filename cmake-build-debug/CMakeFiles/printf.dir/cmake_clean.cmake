@@ -83,6 +83,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/printf.dir/srcs/parse_arguments.c.o"
   "CMakeFiles/printf.dir/srcs/throw_error.c.o"
   "CMakeFiles/printf.dir/libft/ft_str_generate.c.o"
+  "CMakeFiles/printf.dir/libft/ft_str_removechar.c.o"
   "printf.pdb"
   "printf"
 )

@@ -110,4 +110,5 @@ void				ft_strpushchar(char **str, int chr);
 size_t				ft_strlen_safe(const char *s);
 char				*ft_strcpynoendl(char *dest, const char *src);
 char				*ft_str_generate(int len, char chr);
+char 				*ft_str_removechar(char *str, char chr);
 #endif

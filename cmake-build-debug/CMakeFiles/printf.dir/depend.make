@@ -114,6 +114,9 @@ CMakeFiles/printf.dir/libft/ft_putstr_fd.c.o: ../libft/libft.h
 CMakeFiles/printf.dir/libft/ft_str_generate.c.o: ../libft/ft_str_generate.c
 CMakeFiles/printf.dir/libft/ft_str_generate.c.o: ../libft/libft.h
 
+CMakeFiles/printf.dir/libft/ft_str_removechar.c.o: ../libft/ft_str_removechar.c
+CMakeFiles/printf.dir/libft/ft_str_removechar.c.o: ../libft/libft.h
+
 CMakeFiles/printf.dir/libft/ft_strcat.c.o: ../libft/ft_strcat.c
 CMakeFiles/printf.dir/libft/ft_strcat.c.o: ../libft/libft.h
 

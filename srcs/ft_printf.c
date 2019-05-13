@@ -17,10 +17,11 @@ int		ft_printf(const char *str, ...)
 // Makefile for testing//done
 //todo better format parcing//done
 //todo parcing for all flags in structure fields//done
-//todo multiple flags handling!//in progress
+//todo multiple flags handling!//in progress//done?
+//todo 0x fix
 
 int		main() {
-	printf("test %3.4d\n", 42);
-	ft_printf("test %3.4d\n", 42);
+	ft_printf("test |%.15s| ing\n", "kek");
+	printf("test |%.15s| ing\n", "kek");
 	return 0;
 }

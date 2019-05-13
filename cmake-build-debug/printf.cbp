@@ -204,6 +204,9 @@
 		<Unit filename="/Users/mdebbi/Desktop/printf/libft/ft_str_generate.c">
 			<Option target="printf"/>
 		</Unit>
+		<Unit filename="/Users/mdebbi/Desktop/printf/libft/ft_str_removechar.c">
+			<Option target="printf"/>
+		</Unit>
 		<Unit filename="/Users/mdebbi/Desktop/printf/libft/ft_strcat.c">
 			<Option target="printf"/>
 		</Unit>

@@ -1203,6 +1203,33 @@ libft/ft_str_generate.c.s:
 	$(MAKE) -f CMakeFiles/printf.dir/build.make CMakeFiles/printf.dir/libft/ft_str_generate.c.s
 .PHONY : libft/ft_str_generate.c.s
 
+libft/ft_str_removechar.o: libft/ft_str_removechar.c.o
+
+.PHONY : libft/ft_str_removechar.o
+
+# target to build an object file
+libft/ft_str_removechar.c.o:
+	$(MAKE) -f CMakeFiles/printf.dir/build.make CMakeFiles/printf.dir/libft/ft_str_removechar.c.o
+.PHONY : libft/ft_str_removechar.c.o
+
+libft/ft_str_removechar.i: libft/ft_str_removechar.c.i
+
+.PHONY : libft/ft_str_removechar.i
+
+# target to preprocess a source file
+libft/ft_str_removechar.c.i:
+	$(MAKE) -f CMakeFiles/printf.dir/build.make CMakeFiles/printf.dir/libft/ft_str_removechar.c.i
+.PHONY : libft/ft_str_removechar.c.i
+
+libft/ft_str_removechar.s: libft/ft_str_removechar.c.s
+
+.PHONY : libft/ft_str_removechar.s
+
+# target to generate assembly for a file
+libft/ft_str_removechar.c.s:
+	$(MAKE) -f CMakeFiles/printf.dir/build.make CMakeFiles/printf.dir/libft/ft_str_removechar.c.s
+.PHONY : libft/ft_str_removechar.c.s
+
 libft/ft_strcat.o: libft/ft_strcat.c.o
 
 .PHONY : libft/ft_strcat.o
@@ -2520,6 +2547,9 @@ help:
 	@echo "... libft/ft_str_generate.o"
 	@echo "... libft/ft_str_generate.i"
 	@echo "... libft/ft_str_generate.s"
+	@echo "... libft/ft_str_removechar.o"
+	@echo "... libft/ft_str_removechar.i"
+	@echo "... libft/ft_str_removechar.s"
 	@echo "... libft/ft_strcat.o"
 	@echo "... libft/ft_strcat.i"
 	@echo "... libft/ft_strcat.s"

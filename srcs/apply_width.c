@@ -13,7 +13,7 @@ void apply_width(t_flist *flist)
 	int i = 0;
 
 	if (ft_strchr(flist->flags, '-'))
-		return ;
+		return ;//leak
 	width = flist->width;
 	if (width > outlen)
 	{
