@@ -34,6 +34,8 @@ char			*ft_itoa_Ubase(long long n, int base)
 	int		min;
 	char *barr;
 
+	if (n == 0)
+		return (ft_strdup("0"));
 	barr = "0123456789ABCDEF";
 	min = 1;
 	len = intlen(n, base);

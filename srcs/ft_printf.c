@@ -18,10 +18,10 @@ int		ft_printf(const char *str, ...)
 //todo better format parcing//done
 //todo parcing for all flags in structure fields//done
 //todo multiple flags handling!//in progress//done?
-//todo 0x fix
+//todo 0x and negative fix!
 
 int		main() {
-	ft_printf("test |%.15s| ing\n", "kek");
-	printf("test |%.15s| ing\n", "kek");
+	ft_printf("test |%x| ing\n", 0);
+	printf("test |%x| ing\n", 0);
 	return 0;
 }

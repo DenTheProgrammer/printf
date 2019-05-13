@@ -11,29 +11,14 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5d508d3a-e5f9-4807-9857-448bf8731f6d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/libft/ft_str_removechar.c" afterDir="false" />
+    <list default="true" id="5d508d3a-e5f9-4807-9857-448bf8731f6d" name="Default Changelist" comment="BIG refactor, string precision fix">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/printf.dir/C.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/printf.dir/C.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/printf.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/printf.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/printf.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/printf.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/printf.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/printf.dir/cmake_clean.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/printf.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/printf.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/printf.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/printf.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/printf.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/printf.dir/link.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/printf.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/printf.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/printf.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/printf.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/libft.h" beforeDir="false" afterPath="$PROJECT_DIR$/libft/libft.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/srcs/apply_flags.c" beforeDir="false" afterPath="$PROJECT_DIR$/srcs/apply_flags.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/srcs/apply_formats.c" beforeDir="false" afterPath="$PROJECT_DIR$/srcs/apply_formats.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/srcs/apply_precision.c" beforeDir="false" afterPath="$PROJECT_DIR$/srcs/apply_precision.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/srcs/apply_specific_format.c" beforeDir="false" afterPath="$PROJECT_DIR$/srcs/apply_specific_format.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/srcs/apply_width.c" beforeDir="false" afterPath="$PROJECT_DIR$/srcs/apply_width.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/printf.dir/libft/ft_strstr.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/printf.dir/libft/ft_strstr.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/ft_itoa_Ubase.c" beforeDir="false" afterPath="$PROJECT_DIR$/libft/ft_itoa_Ubase.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/ft_itoa_base.c" beforeDir="false" afterPath="$PROJECT_DIR$/libft/ft_itoa_base.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/ft_strstr.c" beforeDir="false" afterPath="$PROJECT_DIR$/libft/ft_strstr.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/srcs/basictest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/srcs/basictest.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/srcs/ft_printf.c" beforeDir="false" afterPath="$PROJECT_DIR$/srcs/ft_printf.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/srcs/printf.h" beforeDir="false" afterPath="$PROJECT_DIR$/srcs/printf.h" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -52,11 +37,47 @@
         <splitter split-orientation="horizontal" split-proportion="0.48433736">
           <split-first>
             <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-              <file pinned="false" current-in-tab="true">
+              <file pinned="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/srcs/ft_printf.c">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="300">
-                      <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+                    <state relative-caret-position="330">
+                      <caret line="22" selection-start-line="22" selection-end-line="26" selection-end-column="1" />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file pinned="false" current-in-tab="true">
+                <entry file="file://$PROJECT_DIR$/srcs/basictest.txt">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state relative-caret-position="3058">
+                      <caret line="207" column="20" lean-forward="true" selection-start-line="207" selection-start-column="20" selection-end-line="207" selection-end-column="20" />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/libft/ft_itoa_base.c">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state relative-caret-position="600">
+                      <caret line="40" column="15" selection-start-line="40" selection-start-column="15" selection-end-line="40" selection-end-column="15" />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/libft/ft_itoa_Ubase.c">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state relative-caret-position="457">
+                      <caret line="38" column="30" selection-start-line="38" selection-start-column="30" selection-end-line="38" selection-end-column="30" />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/libft/ft_strstr.c">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state relative-caret-position="495">
+                      <caret line="33" selection-start-line="33" selection-end-line="33" />
                     </state>
                   </provider>
                 </entry>
@@ -106,42 +127,6 @@
                   </provider>
                 </entry>
               </file>
-              <file pinned="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/srcs/apply_width.c">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="225">
-                      <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-              <file pinned="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/libft/ft_strdup.c">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="285">
-                      <caret line="19" selection-start-line="19" selection-end-line="19" />
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-              <file pinned="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/srcs/parse_arguments.c">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="1125">
-                      <caret line="75" selection-start-line="75" selection-end-line="75" />
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-              <file pinned="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/libft/ft_strchr.c">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="330">
-                      <caret line="22" selection-start-line="22" selection-end-line="22" />
-                    </state>
-                  </provider>
-                </entry>
-              </file>
             </leaf>
           </split-first>
           <split-second>
@@ -158,8 +143,8 @@
               <file pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/srcs/apply_formats.c">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="645">
-                      <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
+                    <state relative-caret-position="735">
+                      <caret line="49" selection-start-line="49" selection-end-line="49" />
                     </state>
                   </provider>
                 </entry>
@@ -168,7 +153,7 @@
                 <entry file="file://$PROJECT_DIR$/libft/libft.h">
                   <provider selected="true" editor-type-id="text-editor">
                     <state relative-caret-position="338">
-                      <caret line="80" column="2" lean-forward="true" selection-start-line="80" selection-start-column="2" selection-end-line="80" selection-end-column="2" />
+                      <caret line="80" column="2" selection-start-line="80" selection-start-column="2" selection-end-line="80" selection-end-column="2" />
                     </state>
                   </provider>
                 </entry>
@@ -237,25 +222,25 @@
             <entry file="file://$PROJECT_DIR$/srcs/printf.h">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="480">
-                  <caret line="39" column="33" lean-forward="true" selection-start-line="39" selection-start-column="33" selection-end-line="39" selection-end-column="33" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/srcs/apply_specific_format.c">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="435">
-                  <caret line="29" column="18" selection-start-line="29" selection-start-column="18" selection-end-line="29" selection-end-column="18" />
+                  <caret line="39" column="33" selection-start-line="39" selection-start-column="33" selection-end-line="39" selection-end-column="33" />
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/srcs/apply_specific_format.c">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="270">
+                  <caret line="18" column="42" selection-start-line="18" selection-start-column="42" selection-end-line="18" selection-end-column="42" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/srcs/apply_precision.c">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="285">
-                  <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+                  <caret line="19" selection-start-line="19" selection-end-line="19" />
                 </state>
               </provider>
             </entry>
@@ -283,9 +268,7 @@
         <option value="$PROJECT_DIR$/libft/ft_itoa.c" />
         <option value="$PROJECT_DIR$/srcs/throw_error.c" />
         <option value="$PROJECT_DIR$/libft/ft_itoa_long.c" />
-        <option value="$PROJECT_DIR$/libft/ft_itoa_Ubase.c" />
         <option value="$PROJECT_DIR$/libft/ft_itoa_uns.c" />
-        <option value="$PROJECT_DIR$/libft/ft_itoa_base.c" />
         <option value="$PROJECT_DIR$/libft/ft_strjoin_free.c" />
         <option value="$PROJECT_DIR$/libft/ft_abs.c" />
         <option value="$PROJECT_DIR$/srcs/main.c" />
@@ -293,7 +276,6 @@
         <option value="$PROJECT_DIR$/libft/ft_itoa_float.c" />
         <option value="$PROJECT_DIR$/Makefile" />
         <option value="$PROJECT_DIR$/srcs/moulitest.txt" />
-        <option value="$PROJECT_DIR$/srcs/basictest.txt" />
         <option value="$PROJECT_DIR$/libft/ft_strlen_safe.c" />
         <option value="$PROJECT_DIR$/libft/ft_strpushchar.c" />
         <option value="$PROJECT_DIR$/srcs/parse_arguments.c" />
@@ -312,7 +294,11 @@
         <option value="$PROJECT_DIR$/srcs/apply_specific_format.c" />
         <option value="$PROJECT_DIR$/srcs/apply_flags.c" />
         <option value="$PROJECT_DIR$/srcs/apply_formats.c" />
+        <option value="$PROJECT_DIR$/libft/ft_strstr.c" />
+        <option value="$PROJECT_DIR$/libft/ft_itoa_Ubase.c" />
+        <option value="$PROJECT_DIR$/libft/ft_itoa_base.c" />
         <option value="$PROJECT_DIR$/srcs/ft_printf.c" />
+        <option value="$PROJECT_DIR$/srcs/basictest.txt" />
       </list>
     </option>
   </component>
@@ -402,7 +388,7 @@
       <workItem from="1556975856420" duration="10888000" />
       <workItem from="1557322995614" duration="2497000" />
       <workItem from="1557481134766" duration="13939000" />
-      <workItem from="1557758312029" duration="8588000" />
+      <workItem from="1557758312029" duration="10291000" />
     </task>
     <task id="LOCAL-00001" summary="flist create &amp;&amp; push, main functions prototypes">
       <created>1556900328895</created>
@@ -467,11 +453,18 @@
       <option name="project" value="LOCAL" />
       <updated>1557761881178</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="BIG refactor, string precision fix">
+      <created>1557767358289</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1557767358289</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="83885000" />
+    <option name="totallyTimeSpent" value="85588000" />
   </component>
   <component name="TodoView" selected-index="4">
     <todo-panel id="selected-file">
@@ -498,8 +491,8 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32935324" />
       <window_info anchor="bottom" id="Database Changes" order="7" />
-      <window_info anchor="bottom" id="Messages" order="8" weight="0.35255474" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49960285" weight="0.42335767" />
+      <window_info anchor="bottom" id="Messages" order="8" weight="0.24817519" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49960285" weight="0.23284672" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50039715" side_tool="true" weight="0.22971888" />
       <window_info anchor="bottom" id="Version Control" order="11" weight="0.25839415" />
       <window_info anchor="bottom" id="CMake" order="12" weight="0.32537314" />
@@ -568,7 +561,13 @@
         </entry>
         <entry key="User">
           <value>
-            <list />
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="me" />
+                </option>
+              </RecentGroup>
+            </list>
           </value>
         </entry>
       </map>
@@ -585,7 +584,8 @@
     <MESSAGE value="errors for homework added" />
     <MESSAGE value="improved format parsing" />
     <MESSAGE value="multi flag fix(+0), and precision &gt; width fix!" />
-    <option name="LAST_COMMIT_MESSAGE" value="multi flag fix(+0), and precision &gt; width fix!" />
+    <MESSAGE value="BIG refactor, string precision fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="BIG refactor, string precision fix" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -688,32 +688,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/libft/ft_itoa_Ubase.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="29" column="17" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/libft/ft_strstr.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/srcs/validation.c" />
     <entry file="file://$PROJECT_DIR$/libft/ft_itoa_long.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="24" column="16" lean-forward="true" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/libft/ft_itoa_base.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="32" selection-start-line="32" selection-end-line="32" />
         </state>
       </provider>
     </entry>
@@ -726,13 +705,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/libftprintf.a" />
     <entry file="file://$PROJECT_DIR$/ft_toupper.o" />
-    <entry file="file://$PROJECT_DIR$/srcs/basictest.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2330">
-          <caret line="64" column="25" selection-start-line="64" selection-start-column="25" selection-end-line="64" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/srcs/moulitest.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="307">
@@ -857,8 +829,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/srcs/parse_arguments.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1125">
-          <caret line="75" selection-start-line="75" selection-end-line="75" />
+        <state relative-caret-position="51">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
         </state>
       </provider>
     </entry>
@@ -907,28 +879,14 @@
     <entry file="file://$PROJECT_DIR$/srcs/printf.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
-          <caret line="39" column="33" lean-forward="true" selection-start-line="39" selection-start-column="33" selection-end-line="39" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/srcs/apply_specific_format.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" column="18" selection-start-line="29" selection-start-column="18" selection-end-line="29" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/srcs/apply_precision.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+          <caret line="39" column="33" selection-start-line="39" selection-start-column="33" selection-end-line="39" selection-end-column="33" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/libft/libft.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="338">
-          <caret line="80" column="2" lean-forward="true" selection-start-line="80" selection-start-column="2" selection-end-line="80" selection-end-column="2" />
+          <caret line="80" column="2" selection-start-line="80" selection-start-column="2" selection-end-line="80" selection-end-column="2" />
         </state>
       </provider>
     </entry>
@@ -939,13 +897,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/srcs/flist.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="28" selection-start-line="25" selection-start-column="28" selection-end-line="25" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/libft/ft_str_removechar.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
@@ -953,17 +904,66 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/srcs/flist.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="28" selection-start-line="25" selection-start-column="28" selection-end-line="25" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/srcs/apply_formats.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="645">
-          <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
+        <state relative-caret-position="735">
+          <caret line="49" selection-start-line="49" selection-end-line="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libft/ft_strstr.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/srcs/apply_precision.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/srcs/apply_specific_format.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="42" selection-start-line="18" selection-start-column="42" selection-end-line="18" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libft/ft_itoa_Ubase.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="457">
+          <caret line="38" column="30" selection-start-line="38" selection-start-column="30" selection-end-line="38" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libft/ft_itoa_base.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="40" column="15" selection-start-line="40" selection-start-column="15" selection-end-line="40" selection-end-column="15" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/srcs/ft_printf.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+        <state relative-caret-position="330">
+          <caret line="22" selection-start-line="22" selection-end-line="26" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/srcs/basictest.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3058">
+          <caret line="207" column="20" lean-forward="true" selection-start-line="207" selection-start-column="20" selection-end-line="207" selection-end-column="20" />
         </state>
       </provider>
     </entry>

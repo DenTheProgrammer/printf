@@ -31,6 +31,8 @@ char			*ft_itoa_base(long long n, int base)
 	size_t	len;
 	char *barr;
 
+	if (n == 0)
+		return (ft_strdup("0"));
 	barr = "0123456789abcdef";
 	len = intlen(n, base);
 	res = ft_strnew(len);
