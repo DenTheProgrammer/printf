@@ -108,6 +108,7 @@ char				*ft_strjoin_free(const char *s1, const char *s2);
 double				ft_abs(double nbr);
 void				ft_strpushchar(char **str, int chr);
 size_t				ft_strlen_safe(const char *s);
+void				ft_stupid_putstr(char *s);
 char				*ft_strcpynoendl(char *dest, const char *src);
 char				*ft_str_generate(int len, char chr);
 char 				*ft_str_removechar(char *str, char chr);

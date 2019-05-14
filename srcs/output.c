@@ -17,8 +17,8 @@ int		printf_output(t_flist *flist)
 	res_len = 0;
 	while (flist)
 	{
-		ft_putstr(flist->output);
 		res_len += ft_strlen(flist->output);
+		ft_stupid_putstr(flist->output);
 		flist = flist->next;
 	}
 	free_flist(flist);

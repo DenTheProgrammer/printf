@@ -36,8 +36,15 @@ void	apply_format_char(t_flist *flist, va_list *valist)
 
 	char *c;
 
+	flist->precision = -1;
 	c = ft_strnew(2);
 	c[0] = va_arg(*valist, int);
+	if (c[0] == 0)
+	{
+		c[0] = -1;
+		free(flist->flags);
+		flist->flags = ft_strdup("");
+	}
 	flist->output = c;
 }
 

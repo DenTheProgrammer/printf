@@ -210,6 +210,9 @@ CMakeFiles/printf.dir/libft/ft_strtoupper.c.o
 CMakeFiles/printf.dir/libft/ft_strtrim.c.o
  /Users/mdebbi/Desktop/printf/libft/ft_strtrim.c
  /Users/mdebbi/Desktop/printf/libft/libft.h
+CMakeFiles/printf.dir/libft/ft_stupid_putstr.c.o
+ /Users/mdebbi/Desktop/printf/libft/ft_stupid_putstr.c
+ /Users/mdebbi/Desktop/printf/libft/libft.h
 CMakeFiles/printf.dir/libft/ft_tolower.c.o
  /Users/mdebbi/Desktop/printf/libft/ft_tolower.c
 CMakeFiles/printf.dir/libft/ft_toupper.c.o

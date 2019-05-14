@@ -306,6 +306,9 @@
 		<Unit filename="/Users/mdebbi/Desktop/printf/libft/ft_strtrim.c">
 			<Option target="printf"/>
 		</Unit>
+		<Unit filename="/Users/mdebbi/Desktop/printf/libft/ft_stupid_putstr.c">
+			<Option target="printf"/>
+		</Unit>
 		<Unit filename="/Users/mdebbi/Desktop/printf/libft/ft_tolower.c">
 			<Option target="printf"/>
 		</Unit>

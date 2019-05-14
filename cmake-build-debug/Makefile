@@ -2121,6 +2121,33 @@ libft/ft_strtrim.c.s:
 	$(MAKE) -f CMakeFiles/printf.dir/build.make CMakeFiles/printf.dir/libft/ft_strtrim.c.s
 .PHONY : libft/ft_strtrim.c.s
 
+libft/ft_stupid_putstr.o: libft/ft_stupid_putstr.c.o
+
+.PHONY : libft/ft_stupid_putstr.o
+
+# target to build an object file
+libft/ft_stupid_putstr.c.o:
+	$(MAKE) -f CMakeFiles/printf.dir/build.make CMakeFiles/printf.dir/libft/ft_stupid_putstr.c.o
+.PHONY : libft/ft_stupid_putstr.c.o
+
+libft/ft_stupid_putstr.i: libft/ft_stupid_putstr.c.i
+
+.PHONY : libft/ft_stupid_putstr.i
+
+# target to preprocess a source file
+libft/ft_stupid_putstr.c.i:
+	$(MAKE) -f CMakeFiles/printf.dir/build.make CMakeFiles/printf.dir/libft/ft_stupid_putstr.c.i
+.PHONY : libft/ft_stupid_putstr.c.i
+
+libft/ft_stupid_putstr.s: libft/ft_stupid_putstr.c.s
+
+.PHONY : libft/ft_stupid_putstr.s
+
+# target to generate assembly for a file
+libft/ft_stupid_putstr.c.s:
+	$(MAKE) -f CMakeFiles/printf.dir/build.make CMakeFiles/printf.dir/libft/ft_stupid_putstr.c.s
+.PHONY : libft/ft_stupid_putstr.c.s
+
 libft/ft_tolower.o: libft/ft_tolower.c.o
 
 .PHONY : libft/ft_tolower.o
@@ -2676,6 +2703,9 @@ help:
 	@echo "... libft/ft_strtrim.o"
 	@echo "... libft/ft_strtrim.i"
 	@echo "... libft/ft_strtrim.s"
+	@echo "... libft/ft_stupid_putstr.o"
+	@echo "... libft/ft_stupid_putstr.i"
+	@echo "... libft/ft_stupid_putstr.s"
 	@echo "... libft/ft_tolower.o"
 	@echo "... libft/ft_tolower.i"
 	@echo "... libft/ft_tolower.s"

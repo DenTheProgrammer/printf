@@ -78,6 +78,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/mdebbi/Desktop/printf/libft/ft_strtolower.c" "/Users/mdebbi/Desktop/printf/cmake-build-debug/CMakeFiles/printf.dir/libft/ft_strtolower.c.o"
   "/Users/mdebbi/Desktop/printf/libft/ft_strtoupper.c" "/Users/mdebbi/Desktop/printf/cmake-build-debug/CMakeFiles/printf.dir/libft/ft_strtoupper.c.o"
   "/Users/mdebbi/Desktop/printf/libft/ft_strtrim.c" "/Users/mdebbi/Desktop/printf/cmake-build-debug/CMakeFiles/printf.dir/libft/ft_strtrim.c.o"
+  "/Users/mdebbi/Desktop/printf/libft/ft_stupid_putstr.c" "/Users/mdebbi/Desktop/printf/cmake-build-debug/CMakeFiles/printf.dir/libft/ft_stupid_putstr.c.o"
   "/Users/mdebbi/Desktop/printf/libft/ft_tolower.c" "/Users/mdebbi/Desktop/printf/cmake-build-debug/CMakeFiles/printf.dir/libft/ft_tolower.c.o"
   "/Users/mdebbi/Desktop/printf/libft/ft_toupper.c" "/Users/mdebbi/Desktop/printf/cmake-build-debug/CMakeFiles/printf.dir/libft/ft_toupper.c.o"
   "/Users/mdebbi/Desktop/printf/srcs/apply_flags.c" "/Users/mdebbi/Desktop/printf/cmake-build-debug/CMakeFiles/printf.dir/srcs/apply_flags.c.o"

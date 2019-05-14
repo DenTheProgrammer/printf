@@ -44,6 +44,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/printf.dir/libft/ft_strchr.c.o"
   "CMakeFiles/printf.dir/libft/ft_strclr.c.o"
   "CMakeFiles/printf.dir/libft/ft_strcmp.c.o"
+  "CMakeFiles/printf.dir/libft/ft_stupid_putstr.c.o"
   "CMakeFiles/printf.dir/libft/ft_strcpy.c.o"
   "CMakeFiles/printf.dir/libft/ft_strcpynoendl.c.o"
   "CMakeFiles/printf.dir/libft/ft_strdel.c.o"

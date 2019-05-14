@@ -21,8 +21,8 @@ int		ft_printf(const char *str, ...)
 //todo 0x and negative fix!
 
 int		main() {
-	ft_printf("% 51%\n", "test");
-	printf("%51 %\n", "test");
+	ft_printf("%c\n", 0);
+	printf("%c\n", 0);
 
 //	printf("%s\n", ft_strinsert(ft_strdup("0x25"), ft_str_generate(3, '0'), 2));
 	return 0;
