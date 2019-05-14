@@ -38,6 +38,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/printf.dir/libft/ft_putnbr_fd.c.o"
   "CMakeFiles/printf.dir/libft/ft_putstr.c.o"
   "CMakeFiles/printf.dir/libft/ft_putstr_fd.c.o"
+  "CMakeFiles/printf.dir/libft/ft_str_generate.c.o"
+  "CMakeFiles/printf.dir/libft/ft_str_removechar.c.o"
   "CMakeFiles/printf.dir/libft/ft_strcat.c.o"
   "CMakeFiles/printf.dir/libft/ft_strchr.c.o"
   "CMakeFiles/printf.dir/libft/ft_strclr.c.o"
@@ -82,8 +84,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/printf.dir/srcs/output.c.o"
   "CMakeFiles/printf.dir/srcs/parse_arguments.c.o"
   "CMakeFiles/printf.dir/srcs/throw_error.c.o"
-  "CMakeFiles/printf.dir/libft/ft_str_generate.c.o"
-  "CMakeFiles/printf.dir/libft/ft_str_removechar.c.o"
+  "CMakeFiles/printf.dir/libft/ft_strinsert.c.o"
   "printf.pdb"
   "printf"
 )

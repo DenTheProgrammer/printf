@@ -8,344 +8,345 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/Users/mdebbi/Desktop/printf/cmake-build-debug"/>
+				<Option working_dir="/home/den/Desktop/printf/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/mdebbi/Desktop/printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/mdebbi/Desktop/printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/mdebbi/Desktop/printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/mdebbi/Desktop/printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/den/Desktop/printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/den/Desktop/printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/den/Desktop/printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/den/Desktop/printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/Users/mdebbi/Desktop/printf/cmake-build-debug"/>
+				<Option working_dir="/home/den/Desktop/printf/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/mdebbi/Desktop/printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/mdebbi/Desktop/printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/mdebbi/Desktop/printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/mdebbi/Desktop/printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="edit_cache">
-				<Option working_dir="/Users/mdebbi/Desktop/printf/cmake-build-debug"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/mdebbi/Desktop/printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/mdebbi/Desktop/printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/mdebbi/Desktop/printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/mdebbi/Desktop/printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/den/Desktop/printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/den/Desktop/printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/den/Desktop/printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/den/Desktop/printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="printf">
-				<Option output="/Users/mdebbi/Desktop/printf/cmake-build-debug/printf" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/mdebbi/Desktop/printf/cmake-build-debug"/>
+				<Option output="/home/den/Desktop/printf/cmake-build-debug/printf" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/den/Desktop/printf/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Users/mdebbi/Desktop/printf/libft"/>
-					<Add directory="/Users/mdebbi/Desktop/printf/srcs"/>
+					<Add directory="/home/den/Desktop/printf/libft"/>
+					<Add directory="/home/den/Desktop/printf/srcs"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/mdebbi/Desktop/printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 printf"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/mdebbi/Desktop/printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/mdebbi/Desktop/printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/mdebbi/Desktop/printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/den/Desktop/printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 printf"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/den/Desktop/printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/den/Desktop/printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/den/Desktop/printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="printf/fast">
-				<Option output="/Users/mdebbi/Desktop/printf/cmake-build-debug/printf" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/mdebbi/Desktop/printf/cmake-build-debug"/>
+				<Option output="/home/den/Desktop/printf/cmake-build-debug/printf" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/den/Desktop/printf/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Users/mdebbi/Desktop/printf/libft"/>
-					<Add directory="/Users/mdebbi/Desktop/printf/srcs"/>
+					<Add directory="/home/den/Desktop/printf/libft"/>
+					<Add directory="/home/den/Desktop/printf/srcs"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/mdebbi/Desktop/printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 printf/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/mdebbi/Desktop/printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/mdebbi/Desktop/printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/mdebbi/Desktop/printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/den/Desktop/printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 printf/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/den/Desktop/printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/den/Desktop/printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/den/Desktop/printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/den/Desktop/printf/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/den/Desktop/printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/den/Desktop/printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/den/Desktop/printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/den/Desktop/printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/mdebbi/Desktop/printf/libft/ft_abs.c">
+		<Unit filename="/home/den/Desktop/printf/libft/ft_abs.c">
 			<Option target="printf"/>
 		</Unit>
-		<Unit filename="/Users/mdebbi/Desktop/printf/libft/ft_atoi.c">
+		<Unit filename="/home/den/Desktop/printf/libft/ft_atoi.c">
 			<Option target="printf"/>
 		</Unit>
-		<Unit filename="/Users/mdebbi/Desktop/printf/libft/ft_bzero.c">
+		<Unit filename="/home/den/Desktop/printf/libft/ft_bzero.c">
 			<Option target="printf"/>
 		</Unit>
-		<Unit filename="/Users/mdebbi/Desktop/printf/libft/ft_isalnum.c">
+		<Unit filename="/home/den/Desktop/printf/libft/ft_isalnum.c">
 			<Option target="printf"/>
 		</Unit>
-		<Unit filename="/Users/mdebbi/Desktop/printf/libft/ft_isalpha.c">
+		<Unit filename="/home/den/Desktop/printf/libft/ft_isalpha.c">
 			<Option target="printf"/>
 		</Unit>
-		<Unit filename="/Users/mdebbi/Desktop/printf/libft/ft_isascii.c">
+		<Unit filename="/home/den/Desktop/printf/libft/ft_isascii.c">
 			<Option target="printf"/>
 		</Unit>
-		<Unit filename="/Users/mdebbi/Desktop/printf/libft/ft_isdigit.c">
+		<Unit filename="/home/den/Desktop/printf/libft/ft_isdigit.c">
 			<Option target="printf"/>
 		</Unit>
-		<Unit filename="/Users/mdebbi/Desktop/printf/libft/ft_isprint.c">
+		<Unit filename="/home/den/Desktop/printf/libft/ft_isprint.c">
 			<Option target="printf"/>
 		</Unit>
-		<Unit filename="/Users/mdebbi/Desktop/printf/libft/ft_isspace.c">
+		<Unit filename="/home/den/Desktop/printf/libft/ft_isspace.c">
 			<Option target="printf"/>
 		</Unit>
-		<Unit filename="/Users/mdebbi/Desktop/printf/libft/ft_itoa.c">
+		<Unit filename="/home/den/Desktop/printf/libft/ft_itoa.c">
 			<Option target="printf"/>
 		</Unit>
-		<Unit filename="/Users/mdebbi/Desktop/printf/libft/ft_itoa_Ubase.c">
+		<Unit filename="/home/den/Desktop/printf/libft/ft_itoa_Ubase.c">
 			<Option target="printf"/>
 		</Unit>
-		<Unit filename="/Users/mdebbi/Desktop/printf/libft/ft_itoa_base.c">
+		<Unit filename="/home/den/Desktop/printf/libft/ft_itoa_base.c">
 			<Option target="printf"/>
 		</Unit>
-		<Unit filename="/Users/mdebbi/Desktop/printf/libft/ft_itoa_float.c">
+		<Unit filename="/home/den/Desktop/printf/libft/ft_itoa_float.c">
 			<Option target="printf"/>
 		</Unit>
-		<Unit filename="/Users/mdebbi/Desktop/printf/libft/ft_itoa_long.c">
+		<Unit filename="/home/den/Desktop/printf/libft/ft_itoa_long.c">
 			<Option target="printf"/>
 		</Unit>
-		<Unit filename="/Users/mdebbi/Desktop/printf/libft/ft_itoa_uns.c">
+		<Unit filename="/home/den/Desktop/printf/libft/ft_itoa_uns.c">
 			<Option target="printf"/>
 		</Unit>
-		<Unit filename="/Users/mdebbi/Desktop/printf/libft/ft_lstadd.c">
+		<Unit filename="/home/den/Desktop/printf/libft/ft_lstadd.c">
 			<Option target="printf"/>
 		</Unit>
-		<Unit filename="/Users/mdebbi/Desktop/printf/libft/ft_lstdel.c">
+		<Unit filename="/home/den/Desktop/printf/libft/ft_lstdel.c">
 			<Option target="printf"/>
 		</Unit>
-		<Unit filename="/Users/mdebbi/Desktop/printf/libft/ft_lstdelone.c">
+		<Unit filename="/home/den/Desktop/printf/libft/ft_lstdelone.c">
 			<Option target="printf"/>
 		</Unit>
-		<Unit filename="/Users/mdebbi/Desktop/printf/libft/ft_lstiter.c">
+		<Unit filename="/home/den/Desktop/printf/libft/ft_lstiter.c">
 			<Option target="printf"/>
 		</Unit>
-		<Unit filename="/Users/mdebbi/Desktop/printf/libft/ft_lstlen.c">
+		<Unit filename="/home/den/Desktop/printf/libft/ft_lstlen.c">
 			<Option target="printf"/>
 		</Unit>
-		<Unit filename="/Users/mdebbi/Desktop/printf/libft/ft_lstmap.c">
+		<Unit filename="/home/den/Desktop/printf/libft/ft_lstmap.c">
 			<Option target="printf"/>
 		</Unit>
-		<Unit filename="/Users/mdebbi/Desktop/printf/libft/ft_lstnew.c">
+		<Unit filename="/home/den/Desktop/printf/libft/ft_lstnew.c">
 			<Option target="printf"/>
 		</Unit>
-		<Unit filename="/Users/mdebbi/Desktop/printf/libft/ft_lstpush.c">
+		<Unit filename="/home/den/Desktop/printf/libft/ft_lstpush.c">
 			<Option target="printf"/>
 		</Unit>
-		<Unit filename="/Users/mdebbi/Desktop/printf/libft/ft_memalloc.c">
+		<Unit filename="/home/den/Desktop/printf/libft/ft_memalloc.c">
 			<Option target="printf"/>
 		</Unit>
-		<Unit filename="/Users/mdebbi/Desktop/printf/libft/ft_memccpy.c">
+		<Unit filename="/home/den/Desktop/printf/libft/ft_memccpy.c">
 			<Option target="printf"/>
 		</Unit>
-		<Unit filename="/Users/mdebbi/Desktop/printf/libft/ft_memchr.c">
+		<Unit filename="/home/den/Desktop/printf/libft/ft_memchr.c">
 			<Option target="printf"/>
 		</Unit>
-		<Unit filename="/Users/mdebbi/Desktop/printf/libft/ft_memcmp.c">
+		<Unit filename="/home/den/Desktop/printf/libft/ft_memcmp.c">
 			<Option target="printf"/>
 		</Unit>
-		<Unit filename="/Users/mdebbi/Desktop/printf/libft/ft_memcpy.c">
+		<Unit filename="/home/den/Desktop/printf/libft/ft_memcpy.c">
 			<Option target="printf"/>
 		</Unit>
-		<Unit filename="/Users/mdebbi/Desktop/printf/libft/ft_memdel.c">
+		<Unit filename="/home/den/Desktop/printf/libft/ft_memdel.c">
 			<Option target="printf"/>
 		</Unit>
-		<Unit filename="/Users/mdebbi/Desktop/printf/libft/ft_memmove.c">
+		<Unit filename="/home/den/Desktop/printf/libft/ft_memmove.c">
 			<Option target="printf"/>
 		</Unit>
-		<Unit filename="/Users/mdebbi/Desktop/printf/libft/ft_memset.c">
+		<Unit filename="/home/den/Desktop/printf/libft/ft_memset.c">
 			<Option target="printf"/>
 		</Unit>
-		<Unit filename="/Users/mdebbi/Desktop/printf/libft/ft_putchar.c">
+		<Unit filename="/home/den/Desktop/printf/libft/ft_putchar.c">
 			<Option target="printf"/>
 		</Unit>
-		<Unit filename="/Users/mdebbi/Desktop/printf/libft/ft_putchar_fd.c">
+		<Unit filename="/home/den/Desktop/printf/libft/ft_putchar_fd.c">
 			<Option target="printf"/>
 		</Unit>
-		<Unit filename="/Users/mdebbi/Desktop/printf/libft/ft_putendl.c">
+		<Unit filename="/home/den/Desktop/printf/libft/ft_putendl.c">
 			<Option target="printf"/>
 		</Unit>
-		<Unit filename="/Users/mdebbi/Desktop/printf/libft/ft_putendl_fd.c">
+		<Unit filename="/home/den/Desktop/printf/libft/ft_putendl_fd.c">
 			<Option target="printf"/>
 		</Unit>
-		<Unit filename="/Users/mdebbi/Desktop/printf/libft/ft_putnbr.c">
+		<Unit filename="/home/den/Desktop/printf/libft/ft_putnbr.c">
 			<Option target="printf"/>
 		</Unit>
-		<Unit filename="/Users/mdebbi/Desktop/printf/libft/ft_putnbr_fd.c">
+		<Unit filename="/home/den/Desktop/printf/libft/ft_putnbr_fd.c">
 			<Option target="printf"/>
 		</Unit>
-		<Unit filename="/Users/mdebbi/Desktop/printf/libft/ft_putstr.c">
+		<Unit filename="/home/den/Desktop/printf/libft/ft_putstr.c">
 			<Option target="printf"/>
 		</Unit>
-		<Unit filename="/Users/mdebbi/Desktop/printf/libft/ft_putstr_fd.c">
+		<Unit filename="/home/den/Desktop/printf/libft/ft_putstr_fd.c">
 			<Option target="printf"/>
 		</Unit>
-		<Unit filename="/Users/mdebbi/Desktop/printf/libft/ft_str_generate.c">
+		<Unit filename="/home/den/Desktop/printf/libft/ft_str_generate.c">
 			<Option target="printf"/>
 		</Unit>
-		<Unit filename="/Users/mdebbi/Desktop/printf/libft/ft_str_removechar.c">
+		<Unit filename="/home/den/Desktop/printf/libft/ft_str_removechar.c">
 			<Option target="printf"/>
 		</Unit>
-		<Unit filename="/Users/mdebbi/Desktop/printf/libft/ft_strcat.c">
+		<Unit filename="/home/den/Desktop/printf/libft/ft_strcat.c">
 			<Option target="printf"/>
 		</Unit>
-		<Unit filename="/Users/mdebbi/Desktop/printf/libft/ft_strchr.c">
+		<Unit filename="/home/den/Desktop/printf/libft/ft_strchr.c">
 			<Option target="printf"/>
 		</Unit>
-		<Unit filename="/Users/mdebbi/Desktop/printf/libft/ft_strclr.c">
+		<Unit filename="/home/den/Desktop/printf/libft/ft_strclr.c">
 			<Option target="printf"/>
 		</Unit>
-		<Unit filename="/Users/mdebbi/Desktop/printf/libft/ft_strcmp.c">
+		<Unit filename="/home/den/Desktop/printf/libft/ft_strcmp.c">
 			<Option target="printf"/>
 		</Unit>
-		<Unit filename="/Users/mdebbi/Desktop/printf/libft/ft_strcpy.c">
+		<Unit filename="/home/den/Desktop/printf/libft/ft_strcpy.c">
 			<Option target="printf"/>
 		</Unit>
-		<Unit filename="/Users/mdebbi/Desktop/printf/libft/ft_strcpynoendl.c">
+		<Unit filename="/home/den/Desktop/printf/libft/ft_strcpynoendl.c">
 			<Option target="printf"/>
 		</Unit>
-		<Unit filename="/Users/mdebbi/Desktop/printf/libft/ft_strdel.c">
+		<Unit filename="/home/den/Desktop/printf/libft/ft_strdel.c">
 			<Option target="printf"/>
 		</Unit>
-		<Unit filename="/Users/mdebbi/Desktop/printf/libft/ft_strdup.c">
+		<Unit filename="/home/den/Desktop/printf/libft/ft_strdup.c">
 			<Option target="printf"/>
 		</Unit>
-		<Unit filename="/Users/mdebbi/Desktop/printf/libft/ft_strequ.c">
+		<Unit filename="/home/den/Desktop/printf/libft/ft_strequ.c">
 			<Option target="printf"/>
 		</Unit>
-		<Unit filename="/Users/mdebbi/Desktop/printf/libft/ft_striter.c">
+		<Unit filename="/home/den/Desktop/printf/libft/ft_strinsert.c">
 			<Option target="printf"/>
 		</Unit>
-		<Unit filename="/Users/mdebbi/Desktop/printf/libft/ft_striteri.c">
+		<Unit filename="/home/den/Desktop/printf/libft/ft_striter.c">
 			<Option target="printf"/>
 		</Unit>
-		<Unit filename="/Users/mdebbi/Desktop/printf/libft/ft_strjoin.c">
+		<Unit filename="/home/den/Desktop/printf/libft/ft_striteri.c">
 			<Option target="printf"/>
 		</Unit>
-		<Unit filename="/Users/mdebbi/Desktop/printf/libft/ft_strjoin_free.c">
+		<Unit filename="/home/den/Desktop/printf/libft/ft_strjoin.c">
 			<Option target="printf"/>
 		</Unit>
-		<Unit filename="/Users/mdebbi/Desktop/printf/libft/ft_strlcat.c">
+		<Unit filename="/home/den/Desktop/printf/libft/ft_strjoin_free.c">
 			<Option target="printf"/>
 		</Unit>
-		<Unit filename="/Users/mdebbi/Desktop/printf/libft/ft_strlen.c">
+		<Unit filename="/home/den/Desktop/printf/libft/ft_strlcat.c">
 			<Option target="printf"/>
 		</Unit>
-		<Unit filename="/Users/mdebbi/Desktop/printf/libft/ft_strlen_safe.c">
+		<Unit filename="/home/den/Desktop/printf/libft/ft_strlen.c">
 			<Option target="printf"/>
 		</Unit>
-		<Unit filename="/Users/mdebbi/Desktop/printf/libft/ft_strmap.c">
+		<Unit filename="/home/den/Desktop/printf/libft/ft_strlen_safe.c">
 			<Option target="printf"/>
 		</Unit>
-		<Unit filename="/Users/mdebbi/Desktop/printf/libft/ft_strmapi.c">
+		<Unit filename="/home/den/Desktop/printf/libft/ft_strmap.c">
 			<Option target="printf"/>
 		</Unit>
-		<Unit filename="/Users/mdebbi/Desktop/printf/libft/ft_strncat.c">
+		<Unit filename="/home/den/Desktop/printf/libft/ft_strmapi.c">
 			<Option target="printf"/>
 		</Unit>
-		<Unit filename="/Users/mdebbi/Desktop/printf/libft/ft_strncmp.c">
+		<Unit filename="/home/den/Desktop/printf/libft/ft_strncat.c">
 			<Option target="printf"/>
 		</Unit>
-		<Unit filename="/Users/mdebbi/Desktop/printf/libft/ft_strncpy.c">
+		<Unit filename="/home/den/Desktop/printf/libft/ft_strncmp.c">
 			<Option target="printf"/>
 		</Unit>
-		<Unit filename="/Users/mdebbi/Desktop/printf/libft/ft_strnequ.c">
+		<Unit filename="/home/den/Desktop/printf/libft/ft_strncpy.c">
 			<Option target="printf"/>
 		</Unit>
-		<Unit filename="/Users/mdebbi/Desktop/printf/libft/ft_strnew.c">
+		<Unit filename="/home/den/Desktop/printf/libft/ft_strnequ.c">
 			<Option target="printf"/>
 		</Unit>
-		<Unit filename="/Users/mdebbi/Desktop/printf/libft/ft_strnstr.c">
+		<Unit filename="/home/den/Desktop/printf/libft/ft_strnew.c">
 			<Option target="printf"/>
 		</Unit>
-		<Unit filename="/Users/mdebbi/Desktop/printf/libft/ft_strpushchar.c">
+		<Unit filename="/home/den/Desktop/printf/libft/ft_strnstr.c">
 			<Option target="printf"/>
 		</Unit>
-		<Unit filename="/Users/mdebbi/Desktop/printf/libft/ft_strrchr.c">
+		<Unit filename="/home/den/Desktop/printf/libft/ft_strpushchar.c">
 			<Option target="printf"/>
 		</Unit>
-		<Unit filename="/Users/mdebbi/Desktop/printf/libft/ft_strsplit.c">
+		<Unit filename="/home/den/Desktop/printf/libft/ft_strrchr.c">
 			<Option target="printf"/>
 		</Unit>
-		<Unit filename="/Users/mdebbi/Desktop/printf/libft/ft_strstr.c">
+		<Unit filename="/home/den/Desktop/printf/libft/ft_strsplit.c">
 			<Option target="printf"/>
 		</Unit>
-		<Unit filename="/Users/mdebbi/Desktop/printf/libft/ft_strsub.c">
+		<Unit filename="/home/den/Desktop/printf/libft/ft_strstr.c">
 			<Option target="printf"/>
 		</Unit>
-		<Unit filename="/Users/mdebbi/Desktop/printf/libft/ft_strtolower.c">
+		<Unit filename="/home/den/Desktop/printf/libft/ft_strsub.c">
 			<Option target="printf"/>
 		</Unit>
-		<Unit filename="/Users/mdebbi/Desktop/printf/libft/ft_strtoupper.c">
+		<Unit filename="/home/den/Desktop/printf/libft/ft_strtolower.c">
 			<Option target="printf"/>
 		</Unit>
-		<Unit filename="/Users/mdebbi/Desktop/printf/libft/ft_strtrim.c">
+		<Unit filename="/home/den/Desktop/printf/libft/ft_strtoupper.c">
 			<Option target="printf"/>
 		</Unit>
-		<Unit filename="/Users/mdebbi/Desktop/printf/libft/ft_tolower.c">
+		<Unit filename="/home/den/Desktop/printf/libft/ft_strtrim.c">
 			<Option target="printf"/>
 		</Unit>
-		<Unit filename="/Users/mdebbi/Desktop/printf/libft/ft_toupper.c">
+		<Unit filename="/home/den/Desktop/printf/libft/ft_tolower.c">
 			<Option target="printf"/>
 		</Unit>
-		<Unit filename="/Users/mdebbi/Desktop/printf/libft/libft.h">
+		<Unit filename="/home/den/Desktop/printf/libft/ft_toupper.c">
 			<Option target="printf"/>
 		</Unit>
-		<Unit filename="/Users/mdebbi/Desktop/printf/srcs/apply_flags.c">
+		<Unit filename="/home/den/Desktop/printf/libft/libft.h">
 			<Option target="printf"/>
 		</Unit>
-		<Unit filename="/Users/mdebbi/Desktop/printf/srcs/apply_formats.c">
+		<Unit filename="/home/den/Desktop/printf/srcs/apply_flags.c">
 			<Option target="printf"/>
 		</Unit>
-		<Unit filename="/Users/mdebbi/Desktop/printf/srcs/apply_precision.c">
+		<Unit filename="/home/den/Desktop/printf/srcs/apply_formats.c">
 			<Option target="printf"/>
 		</Unit>
-		<Unit filename="/Users/mdebbi/Desktop/printf/srcs/apply_specific_format.c">
+		<Unit filename="/home/den/Desktop/printf/srcs/apply_precision.c">
 			<Option target="printf"/>
 		</Unit>
-		<Unit filename="/Users/mdebbi/Desktop/printf/srcs/apply_width.c">
+		<Unit filename="/home/den/Desktop/printf/srcs/apply_specific_format.c">
 			<Option target="printf"/>
 		</Unit>
-		<Unit filename="/Users/mdebbi/Desktop/printf/srcs/flist.c">
+		<Unit filename="/home/den/Desktop/printf/srcs/apply_width.c">
 			<Option target="printf"/>
 		</Unit>
-		<Unit filename="/Users/mdebbi/Desktop/printf/srcs/ft_printf.c">
+		<Unit filename="/home/den/Desktop/printf/srcs/flist.c">
 			<Option target="printf"/>
 		</Unit>
-		<Unit filename="/Users/mdebbi/Desktop/printf/srcs/output.c">
+		<Unit filename="/home/den/Desktop/printf/srcs/ft_printf.c">
 			<Option target="printf"/>
 		</Unit>
-		<Unit filename="/Users/mdebbi/Desktop/printf/srcs/parse_arguments.c">
+		<Unit filename="/home/den/Desktop/printf/srcs/output.c">
 			<Option target="printf"/>
 		</Unit>
-		<Unit filename="/Users/mdebbi/Desktop/printf/srcs/printf.h">
+		<Unit filename="/home/den/Desktop/printf/srcs/parse_arguments.c">
 			<Option target="printf"/>
 		</Unit>
-		<Unit filename="/Users/mdebbi/Desktop/printf/srcs/throw_error.c">
+		<Unit filename="/home/den/Desktop/printf/srcs/printf.h">
 			<Option target="printf"/>
 		</Unit>
-		<Unit filename="/Users/mdebbi/Desktop/printf/CMakeLists.txt">
+		<Unit filename="/home/den/Desktop/printf/srcs/throw_error.c">
+			<Option target="printf"/>
+		</Unit>
+		<Unit filename="/home/den/Desktop/printf/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>
