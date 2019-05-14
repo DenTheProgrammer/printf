@@ -53,7 +53,6 @@ static int get_precision(char *format)
 	if (!(dotptr = ft_strchr(format, '.')))
 		return (-1);
 	return (ft_atoi(dotptr + 1));
-
 }
 
 static char *get_length(char *format)

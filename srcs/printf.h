@@ -48,6 +48,7 @@ void	apply_format_oct(t_flist *flist, va_list *valist);
 void	apply_format_hex(t_flist *flist, va_list *valist);
 void	apply_format_ptr(t_flist *flist, va_list *valist);
 void	apply_format_float(t_flist *flist, va_list *valist);
+void	apply_format_percent(t_flist *flist, va_list *valist);//kek
 
 //error
 int		throw_error(char *msg);

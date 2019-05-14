@@ -28,8 +28,8 @@ void	apply_precision(t_flist *flist)//normal??
 	{
 		free(flist->output);
 		flist->output = ft_strdup("");
-		free(flist->flags);
-		flist->flags = ft_strdup("");
+		if (flist->type != 'o')
+			ft_str_removechar(flist->flags, '#');
 		return ;
 	}
 	if (flist->type == 'd' || flist->type == 'i')

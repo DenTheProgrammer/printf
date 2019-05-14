@@ -34,7 +34,7 @@ void	apply_formats(t_flist *flist, va_list *valist)
 			else if (flist->type == 'u')
 				apply_format_uns(flist, valist);
 			else if (flist->type == '%')
-				flist->output = ft_strdup("%");
+				apply_format_percent(flist, valist);
 			apply_precision(flist);
 			apply_flags(flist);
 			apply_width(flist);
@@ -48,13 +48,13 @@ long long apply_length(t_flist *flist, va_list *valist)
 	long long arg;
 
 	arg = va_arg(*valist, long long);
-	if (ft_strstr(flist->length, "ll"))
+	if (ft_strequ(flist->length, "ll"))
 		arg = (long long)arg;
-	else if (ft_strstr(flist->length, "l"))
+	else if (ft_strequ(flist->length, "l"))
 		arg = (long)arg;
-	else if (ft_strstr(flist->length, "hh"))
+	else if (ft_strequ(flist->length, "hh"))
 		arg = (char)arg;
-	else if (ft_strstr(flist->length, "h"))
+	else if (ft_strequ(flist->length, "h"))
 		arg = (short)arg;
 	else
 		arg = (int)arg;
@@ -65,13 +65,13 @@ unsigned long long apply_length_uns(t_flist *flist, va_list *valist)
 	unsigned long long arg;
 
 	arg = va_arg(*valist, long long);
-	if (ft_strstr(flist->length, "ll"))
+	if (ft_strequ(flist->length, "ll"))
 		arg = (unsigned long long)arg;
-	else if (ft_strstr(flist->length, "l"))
+	else if (ft_strequ(flist->length, "l"))
 		arg = (unsigned long)arg;
-	else if (ft_strstr(flist->length, "hh"))
+	else if (ft_strequ(flist->length, "hh"))
 		arg = (unsigned char)arg;
-	else if (ft_strstr(flist->length, "h"))
+	else if (ft_strequ(flist->length, "h"))
 		arg = (unsigned short)arg;
 	else
 		arg = (unsigned int)arg;

@@ -16,6 +16,8 @@ static	size_t	intlen(unsigned long long n)
 {
 	size_t len;
 
+	if (n == 0)
+		return (1);
 	len = 0;
 	while (n)
 	{

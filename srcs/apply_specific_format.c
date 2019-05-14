@@ -16,6 +16,8 @@ void	apply_format_uns(t_flist *flist, va_list *valist)
 {
 	unsigned long int arg;
 
+	flist->flags = ft_str_removechar(flist->flags, '+');
+	flist->flags = ft_str_removechar(flist->flags, ' ');
 	arg = apply_length_uns(flist, valist);
 	flist->output = ft_itoa_uns(arg);
 }
@@ -67,4 +69,10 @@ void	apply_format_float(t_flist *flist, va_list *valist)
 
 	arg = va_arg(*valist, double);
 	flist->output = ft_itoa_float(arg, get_precision_float(flist));
+}
+
+void	apply_format_percent(t_flist *flist, va_list *valist)
+{
+	flist->output = ft_strdup("%");
+	flist->flags = ft_str_removechar(flist->flags, ' ');
 }
