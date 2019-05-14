@@ -24,12 +24,20 @@ void	apply_precision(t_flist *flist)//normal??
 
 	if (flist->precision > 0)
 		flist->flags = ft_str_removechar(flist->flags, '0');
+	if (flist->precision == 0 && ft_strequ(flist->output, "0"))
+	{
+		free(flist->output);
+		flist->output = ft_strdup("");
+		free(flist->flags);
+		flist->flags = ft_strdup("");
+		return ;
+	}
 	if (flist->type == 'd' || flist->type == 'i')
 	{
 		is_signed = flist->output[0] == '-' ? 1 : 0;
 		flist->output = ft_strinsert(flist->output, ft_str_generate(flist->precision - ft_strlen(flist->output) + is_signed, '0'), is_signed);
 	} else if (flist->type == 's')
 		apply_precision_str(flist);
-	else if (flist->type == 'x' || flist->type == 'X')
+	else if (flist->type == 'x' || flist->type == 'o' || flist->type == 'X')
 		flist->output = ft_strinsert(flist->output, ft_str_generate(flist->precision - ft_strlen(flist->output), '0'), 0);
 }

@@ -64,9 +64,9 @@ void apply_flags(t_flist *flist)
 	}
 	if (ft_strchr(flist->flags, '+') && flist->output[0] != '-')
 		 apply_flag_plus(flist);
-	if (ft_strchr(flist->flags, ' ') && flist->output[0] != '-')
+	else if (ft_strchr(flist->flags, ' ') && flist->output[0] != '-')
 		flist->output = ft_strjoin(" ", flist->output);
-	if (ft_strchr(flist->flags, '#'))
+	if (ft_strchr(flist->flags, '#') && !ft_strequ(flist->output, "0"))
 		apply_flag_hash(flist);
 	if (ft_strchr(flist->flags, '-'))
 		apply_flag_minus(flist);

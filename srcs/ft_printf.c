@@ -21,8 +21,8 @@ int		ft_printf(const char *str, ...)
 //todo 0x and negative fix!
 
 int		main() {
-	ft_printf("%015.5d\n", -42);
-	printf("%015.5d\n", -42);
+	ft_printf("@moulitest: %.x %#.0x\n", 0, 0);
+	printf("@moulitest: %.x %#.0x\n", 0, 0);
 
 //	printf("%s\n", ft_strinsert(ft_strdup("0x25"), ft_str_generate(3, '0'), 2));
 	return 0;
