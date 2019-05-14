@@ -5,23 +5,20 @@
 
 #include "printf.h"
 
-void apply_width(t_flist *flist)
+void	apply_width(t_flist *flist)
 {
-	int width;
-	char *output = ft_strdup(flist->output);
-	int outlen = ft_strlen(output);
-	int i = 0;
+	int shift;
+	char chr;
 
 	if (ft_strchr(flist->flags, '-'))
 		return ;//leak
-	width = flist->width;
-	if (width > outlen)
+	if (ft_strchr(flist->flags, '0'))
 	{
-		free(flist->output);
-		flist->output = ft_strnew(width);
-		while (width - outlen++)
-			flist->output[i++] = (ft_strchr(flist->flags, '0')) ? '0' : ' ';
-		ft_strcpy(flist->output + i, output);
-	}
-	free(output);
+		if (ft_strchr(flist->flags, '#') && (flist->type == 'x' || flist->type == 'X'))
+			shift = 2;
+		else shift = flist->output[0] == '-' ? 1 : 0;
+	} else shift = 0;
+
+	chr = ft_strchr(flist->flags, '0') ? '0' : ' ';
+	flist->output = ft_strinsert(flist->output, ft_str_generate(flist->width - ft_strlen(flist->output), chr), shift);
 }
