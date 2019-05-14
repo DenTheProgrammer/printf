@@ -140,6 +140,9 @@ CMakeFiles/printf.dir/libft/ft_strdup.c.o: ../libft/libft.h
 CMakeFiles/printf.dir/libft/ft_strequ.c.o: ../libft/ft_strequ.c
 CMakeFiles/printf.dir/libft/ft_strequ.c.o: ../libft/libft.h
 
+CMakeFiles/printf.dir/libft/ft_strinsert.c.o: ../libft/ft_strinsert.c
+CMakeFiles/printf.dir/libft/ft_strinsert.c.o: ../libft/libft.h
+
 CMakeFiles/printf.dir/libft/ft_striter.c.o: ../libft/ft_striter.c
 
 CMakeFiles/printf.dir/libft/ft_striteri.c.o: ../libft/ft_striteri.c

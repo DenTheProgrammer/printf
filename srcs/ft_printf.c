@@ -21,9 +21,9 @@ int		ft_printf(const char *str, ...)
 //todo 0x and negative fix!
 
 int		main() {
-//	ft_printf("test |%x| ing\n", 0);
-//	printf("test |%x| ing\n", 0);
+	ft_printf("test |%-10.3s| ing\n", "test");
+	printf("test |%-10.3s| ing\n", "test");
 
-	printf("%s\n", ft_strinsert(ft_strdup("     0x25"), ft_str_generate(3, '0'), 7));
+//	printf("%s\n", ft_strinsert(ft_strdup("0x25"), ft_str_generate(3, '0'), 2));
 	return 0;
 }

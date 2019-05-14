@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/den/Desktop/printf/libft/libft.h
+/Users/mdebbi/Desktop/printf/libft/libft.h
 unistd.h
 -
 fcntl.h
@@ -16,13 +16,13 @@ stdlib.h
 string.h
 -
 
-/home/den/Desktop/printf/srcs/ft_printf.c
+/Users/mdebbi/Desktop/printf/srcs/ft_printf.c
 printf.h
-/home/den/Desktop/printf/srcs/printf.h
+/Users/mdebbi/Desktop/printf/srcs/printf.h
 
-/home/den/Desktop/printf/srcs/printf.h
+/Users/mdebbi/Desktop/printf/srcs/printf.h
 ../libft/libft.h
-/home/den/Desktop/printf/libft/libft.h
+/Users/mdebbi/Desktop/printf/libft/libft.h
 stdio.h
 -
 stdarg.h

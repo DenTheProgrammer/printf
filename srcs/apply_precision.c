@@ -9,11 +9,23 @@ int get_precision_float(t_flist *flist)
 	return (flist->precision < 0) ? 0 : flist->precision;//?
 }
 
-void	apply_precision_str(char *str, t_flist *flist)
+void	apply_precision_str(t_flist *flist)
 {
 	int prec;
 
-	prec = (flist->precision < 0) ? ft_strlen(str) : flist->precision;
-	if (prec < ft_strlen(str))
-		str[prec] = 0;
+	prec = (flist->precision < 0) ? ft_strlen(flist->output) : flist->precision;
+	if (prec < ft_strlen(flist->output))
+		flist->output[prec] = 0;
+}
+
+void	apply_precision(t_flist *flist)//normal??
+{
+	int is_signed;
+
+	if (flist->type == 'd' || flist->type == 'i')
+	{
+		is_signed = flist->output[0] == '-' ? 1 : 0;
+		flist->output = ft_strinsert(flist->output, ft_str_generate(flist->precision - ft_strlen(flist->output) + is_signed, '0'), is_signed);
+	} else if (flist->type == 's')
+		apply_precision_str(flist);
 }
