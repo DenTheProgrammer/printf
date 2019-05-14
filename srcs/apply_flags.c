@@ -12,14 +12,11 @@ static void apply_flag_plus(t_flist *flist)
 	nbrlen = ft_strlen(flist->output);
 	if (ft_strchr(flist->flags, '0'))
 	{
-		tmp = ft_strjoin("+", ft_str_generate(flist->width - nbrlen - 1, '0'));
-		flist->output = ft_strjoin(tmp, flist->output);//leak
+		tmp = ft_strjoin_free("+", ft_str_generate(flist->width - nbrlen - 1, '0'), 2);
+		flist->output = ft_strjoin_free(tmp, flist->output, 3);
 	}
-	else {
-		tmp = ft_strjoin("+", flist->output);
-		free(flist->output);
-		flist->output = tmp;
-	}
+	else
+		flist->output = ft_strjoin_free("+", flist->output, 2);
 }
 
 static void apply_flag_minus(t_flist *flist)
@@ -35,6 +32,7 @@ static void apply_flag_minus(t_flist *flist)
 		while (flist->width - outlen)
 			flist->output[outlen++] = ' ';
 	}
+	free(output);
 }
 
 void apply_flag_hash(t_flist *flist)

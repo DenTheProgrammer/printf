@@ -17,13 +17,12 @@ int		ft_printf(const char *str, ...)
 // Makefile for testing//done
 //todo better format parcing//done
 //todo parcing for all flags in structure fields//done
-//todo multiple flags handling!//in progress//done?
-//todo 0x and negative fix!
+//todo multiple flags handling!//in progress//done
+//todo 0x and negative fix!//done
 
 int		main() {
-	ft_printf("%c\n", 0);
-	printf("%c\n", 0);
+	ft_printf("test %+020d\n", 42);
+	printf("test %+020d\n", 42);
 
-//	printf("%s\n", ft_strinsert(ft_strdup("0x25"), ft_str_generate(3, '0'), 2));
 	return 0;
 }

@@ -15,9 +15,9 @@ char *ft_itoa_float(double nbr, int prec)
 	res = ft_itoa(mod);
 
 	prec = (!prec) ? 6 : prec;
-	res = ft_strjoin_free(res, ".");
+	res = ft_strjoin_free(res, ".", 1);
 	while (prec--)
 		div *= 10;
-	res = ft_strjoin_free(res, ft_itoa_long((long long int)div));
+	res = ft_strjoin_free(res, ft_itoa_long((long long int)div), 3);
 	return (res);
 }

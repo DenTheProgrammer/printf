@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-char	*ft_strjoin_free(const char *s1, const char *s2)
+char	*ft_strjoin_free(const char *s1, const char *s2, int tofree)
 {
 	char	*res;
 	size_t	len1;
@@ -26,7 +26,10 @@ char	*ft_strjoin_free(const char *s1, const char *s2)
 	if (!res)
 		return (NULL);
 	ft_strcpy(res, s1);
-	free((char*)s1);
+	if (tofree == 1 || tofree > 2)
+		free((char*)s1);
 	ft_strcpy(res + len1, s2);
+	if (tofree >=2)
+		free((char*)s2);
 	return (res);
 }
