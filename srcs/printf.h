@@ -7,6 +7,7 @@
 # include "../libft/libft.h"
 # include <stdio.h>//
 # include <stdarg.h>
+# include "ft_float.h"
 
 int		ft_printf(const char *str, ...);
 typedef struct s_flist
