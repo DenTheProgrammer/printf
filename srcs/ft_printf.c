@@ -21,8 +21,8 @@ int		ft_printf(const char *str, ...)
 //todo 0x and negative fix!//done
 
 int		main() {
-	ft_printf("test %+020d\n", 42);
-	printf("test %+020d\n", 42);
+	ft_printf("test {%.0f}\n", 3.14);
+	printf("test {%.0f}\n", 3.14);
 
 	return 0;
 }
