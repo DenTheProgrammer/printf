@@ -4,6 +4,9 @@
 
 #ifndef PRINTF_PRINTF_H
 # define PRINTF_PRINTF_H
+# define ARR_SIZE 100
+# define BASE 10
+# define FIRST_BIT_M (unsigned long)1 << 63u
 # include "../libft/libft.h"
 # include <stdio.h>//
 # include <stdarg.h>
@@ -22,6 +25,29 @@ typedef struct s_flist
 	char				*output;
 	struct s_flist		*next;
 } t_flist;
+
+typedef	struct	s_formlfb
+{
+	unsigned long int mantisa : 64;
+	unsigned long int exponent : 15;
+	unsigned long int sign : 1;
+}				t_formlfb;
+
+typedef	union	s_form_lf
+{
+	long double	f;
+	t_formlfb	bytes;
+}				t_form_lf;
+
+typedef	struct	s_wholenumb
+{
+	int			*whole;
+	int			*fract;
+	char		sign;
+	long		wh_b;
+	long		fr_b;
+	char		*res;
+}				t_wholenumb;
 
 t_flist *parse_input(const char *str);
 void	parse_formats(t_flist *flist);
@@ -50,6 +76,14 @@ void	apply_format_hex(t_flist *flist, va_list *valist);
 void	apply_format_ptr(t_flist *flist, va_list *valist);
 void	apply_format_float(t_flist *flist, va_list *valist);
 void	apply_format_percent(t_flist *flist, va_list *valist);//kek
+int				*addit(int *a, int *b);
+int				*power(int nb, int power, int *res);
+int				*mult(int *a, int b);
+char			*print_f(long double var, t_flist *flist);
+int				*work_fract(int exp, t_wholenumb *n, t_flist *flist, int sign);
+int				*work_whole(int exp, long wh_b, int *whole);
+char			*print_float(long double var, t_flist *flist);
+char			*parse_result(t_wholenumb *n, t_flist *flist);
 
 //error
 int		throw_error(char *msg);

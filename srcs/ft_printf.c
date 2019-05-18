@@ -20,9 +20,13 @@ int		ft_printf(const char *str, ...)
 //todo multiple flags handling!//in progress//done
 //todo 0x and negative fix!//done
 
-int		main() {
-	ft_printf("test {%.0f}\n", 3.14);
-	printf("test {%.0f}\n", 3.14);
+#include <math.h>
 
+int		main() {
+
+
+
+	ft_printf("test {%.2f}\n", NAN);
+	printf("test {%-.LF}\n", (long double)(INFINITY));
 	return 0;
 }

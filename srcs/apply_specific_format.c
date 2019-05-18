@@ -75,7 +75,7 @@ void	apply_format_float(t_flist *flist, va_list *valist)
 	double arg;
 
 	arg = va_arg(*valist, double);
-	flist->output = print_f(arg);
+	flist->output = print_float(arg, flist);
 }
 
 void	apply_format_percent(t_flist *flist, va_list *valist)
