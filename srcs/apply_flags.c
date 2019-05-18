@@ -54,6 +54,8 @@ void apply_flag_hash(t_flist *flist)
 
 void apply_flags(t_flist *flist)
 {
+	if (ft_strchr(flist->flags, '-'))
+		flist->flags = ft_str_removechar(flist->flags, '0');
 	if (flist->precision >= flist->width && flist->type != 's')//precision > width fix
 	{
 		flist->width = flist->precision;

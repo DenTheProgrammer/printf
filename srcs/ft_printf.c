@@ -26,7 +26,7 @@ int		main() {
 
 
 
-	ft_printf("test {%.2f}\n", NAN);
-	printf("test {%-.LF}\n", (long double)(INFINITY));
+	ft_printf("|%#.2o|\n", 1);//todo
+	printf("|%#.2o|\n", 1);
 	return 0;
 }

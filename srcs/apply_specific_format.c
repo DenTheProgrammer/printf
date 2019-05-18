@@ -42,8 +42,8 @@ void	apply_format_char(t_flist *flist, va_list *valist)
 	if (c[0] == 0)
 	{
 		c[0] = -1;
-		free(flist->flags);
-		flist->flags = ft_strdup("");
+		flist->flags = ft_str_removechar(flist->flags, '+');
+		flist->flags = ft_str_removechar(flist->flags, ' ');
 	}
 	flist->output = c;
 }

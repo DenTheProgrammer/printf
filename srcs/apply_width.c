@@ -16,7 +16,7 @@ void	apply_width(t_flist *flist)
 	{
 		if (ft_strchr(flist->flags, '#') && (flist->type == 'x' || flist->type == 'X'))
 			shift = 2;
-		else shift = flist->output[0] == '-' ? 1 : 0;
+		else shift = (flist->output[0] == '-' || ft_strchr(flist->flags, ' ')) ? 1 : 0;
 	} else shift = 0;
 
 	chr = ft_strchr(flist->flags, '0') ? '0' : ' ';

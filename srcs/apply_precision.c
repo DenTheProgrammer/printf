@@ -22,17 +22,19 @@ void	apply_precision(t_flist *flist)//normal??
 {
 	int is_signed;
 
-	if (flist->precision > 0)
+	if (ft_strequ(flist->output, "0"))
+		flist->flags = ft_str_removechar(flist->flags, '#');
+	if (flist->precision >= 0)
 		flist->flags = ft_str_removechar(flist->flags, '0');
 	if (flist->precision == 0 && ft_strequ(flist->output, "0"))
 	{
 		free(flist->output);
 		flist->output = ft_strdup("");
 		if (flist->type != 'o')
-			ft_str_removechar(flist->flags, '#');
+			flist->flags = ft_str_removechar(flist->flags, '#');
 		return ;
 	}
-	if (flist->type == 'd' || flist->type == 'i')
+	if (flist->type == 'd' || flist->type == 'i'  || flist->type == 'u')
 	{
 		is_signed = flist->output[0] == '-' ? 1 : 0;
 		flist->output = ft_strinsert(flist->output, ft_str_generate(flist->precision - ft_strlen(flist->output) + is_signed, '0'), is_signed);
