@@ -24,15 +24,22 @@ int		ft_reslen(int *numb)
 	return (i);
 }
 
-char 		*check_inf_nan(t_wholenumb *n, char *flags)
+char 		*check_inf_nan(t_wholenumb *n, t_flist *flist)
 {
 	n->res = ft_strnew(5);
 	if (n->wh_b == -4611686018427387904)
+	{
 		ft_strcpy(n->res, "nan");
+		flist->flags = ft_str_removechar(flist->flags, '+');
+		flist->flags = ft_str_removechar(flist->flags, ' ');
+	}
 	else if (n->sign == '-')
 		ft_strcpy(n->res, "-inf");
 	else if (n->sign == '0')
 		ft_strcpy(n->res, "inf");
+	flist->flags = ft_str_removechar(flist->flags, '#');
+	flist->flags = ft_str_removechar(flist->flags, '0');
+	flist->precision = -1;
 	ft_memdel((void **)&(n->whole));
 	ft_memdel((void **)&(n->fract));
 	return (n->res);
@@ -52,7 +59,7 @@ char		*print_float(long double var, t_flist *flist)
 	n.fr_b = bit.bytes.mantisa;
 	n.wh_b = bit.bytes.mantisa;
 	if (exp == 16384)
-		return (check_inf_nan(&n, flist->flags));
+		return (check_inf_nan(&n, flist));
 	if (flist->precision == -1)
 		flist->precision = 6;
 	if (exp >= 0 && exp < 63)

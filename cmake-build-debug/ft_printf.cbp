@@ -345,9 +345,6 @@
 		<Unit filename="/Users/ashari/Desktop/ft_printf/srcs/fract.c">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/Users/ashari/Desktop/ft_printf/srcs/ft_float.h">
-			<Option target="ft_printf"/>
-		</Unit>
 		<Unit filename="/Users/ashari/Desktop/ft_printf/srcs/ft_printf.c">
 			<Option target="ft_printf"/>
 		</Unit>
