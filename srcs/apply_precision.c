@@ -24,9 +24,9 @@ void	apply_precision(t_flist *flist)//normal??
 
 	if ((ft_strequ(flist->output, "0") && (flist->type != 'o')) || (flist->precision > 0 && ft_strequ(flist->output, "0")))
 		flist->flags = ft_str_removechar(flist->flags, '#');
-	if (flist->precision >= 0)
+	if (flist->precision >= 0 && (flist->type != 'f'))
 		flist->flags = ft_str_removechar(flist->flags, '0');
-	if (flist->precision == 0 && ft_strequ(flist->output, "0"))
+	if (flist->precision == 0 && ft_strequ(flist->output, "0") && flist->type != 'f')
 	{
 		free(flist->output);
 		flist->output = ft_strdup("");

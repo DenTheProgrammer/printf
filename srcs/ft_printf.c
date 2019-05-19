@@ -33,7 +33,7 @@ int		ft_printf(const char *str, ...)
 int		main() {
 //	ft_printf(STR);//todo
 //	printf(STR);
-	ft_printf("");
-	printf("");
+	ft_printf("%.8f|%-.8f|%+.8f|% .8f|%#.8f|%0.8f\n", INFINITY, INFINITY, INFINITY, INFINITY, INFINITY, INFINITY);
+	printf("%.8f|%-.8f|%+.8f|% .8f|%#.8f|%0.8f\n", INFINITY, INFINITY, INFINITY, INFINITY, INFINITY, INFINITY);
 	return 0;
 }
