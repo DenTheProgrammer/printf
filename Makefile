@@ -10,22 +10,8 @@
 #                                                                              #
 # **************************************************************************** #
 
-NAME = libftprintf.a
-LIBFT_DIR = ./libft
+NAME = ft_printf
 
-$(NAME):
-	@make -C $(LIBFT_DIR)
-	gcc -c srcs/*.c libft/*.c -I ./libft -I ./srcs
-	ar -rc $(NAME) *.o
-
-all: $(NAME)
-
-clean:
-	rm -f *.o
-	@make -C $(LIBFT_DIR) clean
-
-fclean: clean
-	rm -f $(NAME)
-	@make -C $(LIBFT_DIR) fclean
-
-re: fclean all
+SRC_PATH = ./srcs/
+INCL_PATH = ./includes/
+LIBFT_PATH = 

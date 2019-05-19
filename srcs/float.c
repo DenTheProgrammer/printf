@@ -11,60 +11,88 @@
 /* ************************************************************************** */
 
 #include "printf.h"
+#define TMP_SIZE 100
 
-static int		parse_fract(int j, char *res, int pres, int *src)
+static char		*parse_fract(char *res, int pres, int *src)
 {
 	int		i;
+	int 	j;
+	char 	tmp[TMP_SIZE];
 
 	i = ARR_SIZE - 1;
-	while (!src[i])
+	j = 0;
+	tmp[j++] = '.';
+	while (!src[i] && i)
 		i--;
 	i--;
 	while (i >= 0 && pres--)
 	{
-		res[j] = src[i--] + '0';
+		tmp[j] = src[i--] + '0';
 		j++;
 	}
-	while (pres--)
-		res[j++] = '0';
+	while (pres-- > 0)
+	{
+		if (j >= (TMP_SIZE - 2))
+		{
+			tmp[j] = '\0';
+			res = ft_strjoin_free(res, tmp, 0);
+			ft_bzero(&tmp, TMP_SIZE);
+			j = 0;
+		}
+		tmp[j++] = '0';
+	}
+	tmp[j] = '\0';
+	res = ft_strjoin_free(res, tmp, 0);
 	ft_memdel((void **)&src);
-	return (j);
+	return (res);
 }
 
-static int		parse_whole(int j, char *res, int *src)
+static char		*parse_whole(char *res, int *src, char sign)
 {
 	int		i;
+	int 	j;
+	char 	tmp[TMP_SIZE];
 
 	i = ARR_SIZE - 1;
-	while (!src[i])
+	j = 0;
+	while (!src[i] && i)
 		i--;
+	if (sign == '-')
+		tmp[j++] = '-';
 	while (i >= 0)
 	{
-		res[j] = src[i--] + '0';
+		if (j >= (TMP_SIZE - 2))
+		{
+			tmp[j] = '\0';
+			res = ft_strjoin_free(res, tmp, 0);
+			ft_bzero(&tmp, TMP_SIZE);
+			j = 0;
+		}
+		tmp[j] = src[i--] + '0';
 		j++;
 	}
+	tmp[j] = '\0';
+	res = ft_strdup(tmp);
 	ft_memdel((void **)&src);
-	return (j);
+	return (res);
 }
 
 char		*parse_result(t_wholenumb *n, t_flist *flist)
 {
-	int		j;
-
-	j = 0;
-	if (n->sign == '-')
-		n->res[j++] = '-';
 	if (n->wh_b == 0)
-		n->res[j++] = '0';
-	else
-		j = parse_whole(j, n->res, n->whole);
-	if (flist->precision != 0)
 	{
-		n->res[j++] = '.';
-		j = parse_fract(j, n->res, flist->precision, n->fract);
+		n->res = (n->sign == '-') ? ft_strdup("-0") : ft_strdup("0");
+		ft_memdel((void **)&(n->whole));
 	}
 	else
-		ft_memdel((void **)n->fract);
-	n->res[j] = '\0';
+		n->res = parse_whole(n->res, n->whole, n->sign);
+	if (flist->precision != 0)
+		n->res = parse_fract(n->res, flist->precision, n->fract);
+	else
+		{
+		ft_memdel((void **) n->fract);
+		if (ft_strchr(flist->flags, '#'))
+			n->res = ft_strjoin(n->res, ".");
+	}
 	return (n->res);
 }

@@ -10,6 +10,8 @@ static void apply_flag_plus(t_flist *flist)
 	char *tmp;
 
 	nbrlen = ft_strlen(flist->output);
+	if (ft_strequ(flist->output, "nan") == 1)
+		return ;
 	if (ft_strchr(flist->flags, '0'))
 	{
 		tmp = ft_strjoin_free("+", ft_str_generate(flist->width - nbrlen - 1, '0'), 2);
@@ -54,8 +56,10 @@ void apply_flag_hash(t_flist *flist)
 
 void apply_flags(t_flist *flist)
 {
-	if (ft_strchr(flist->flags, '-'))
+	if (ft_strchr(flist->flags, '-') || (ft_strequ(flist->output, "nan") == 1))
 		flist->flags = ft_str_removechar(flist->flags, '0');
+	if (ft_strequ(flist->output, "nan") == 1)
+		flist->flags = ft_str_removechar(flist->flags, ' ');
 	if (flist->precision >= flist->width && flist->type != 's')//precision > width fix
 	{
 		flist->width = flist->precision;

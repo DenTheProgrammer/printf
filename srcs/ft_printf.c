@@ -1,5 +1,6 @@
 #include "printf.h"
-
+#include <limits.h>
+#define STR "%.f|\n", 0.000099
 //    %[parameter][flags][width][.precision][length]type
 
 int		ft_printf(const char *str, ...)
@@ -20,13 +21,17 @@ int		ft_printf(const char *str, ...)
 //todo multiple flags handling!//in progress//done
 //todo 0x and negative fix!//done
 
+//todo Parse_res strdup 6 bytes lost //fix needed
+//todo "%15.8f|%-15.8f|%+15.8f|% 15.8f|%#15.8f|%015.8f", 0., 0., 0., 0., 0., 0.: [1;31m[KO] //flags
+//todo "|%015.8lf\n", 38546.5849 //flags
+//todo "%1lf|%-1lf|%+1lf|% 1lf|%#1lf|%01lf", 38546.5849, 38546.5849, 38546.5849, 38546.5849, 38546.5849, 38546.5849 //why exp = 0?
+
+
+
 #include <math.h>
 
 int		main() {
-
-
-
-	ft_printf("|%#.2o|\n", 1);//todo
-	printf("|%#.2o|\n", 1);
+	ft_printf(STR);//todo
+	printf(STR);
 	return 0;
 }

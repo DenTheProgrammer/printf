@@ -17,6 +17,11 @@ int			*work_whole(int exp, long wh_b, int *whole)
 	int		*pow_two;
 	int		iter;
 
+	if (wh_b == 0)
+	{
+		whole = mult(whole, 0);
+		return (whole);
+	}
 	pow_two = ft_memalloc(sizeof(int) * ARR_SIZE);
 	pow_two[0] = 1;
 	iter = (exp < 63) ? exp + 1 : 64;

@@ -17,12 +17,14 @@ int		ft_reslen(int *numb)
 	int i;
 
 	i = ARR_SIZE - 1;
-	while (numb[i] == 0 && i >= 0)
+	if (!numb)
+		return (1);
+	while (numb[i] == 0 && i > 0)
 		i--;
 	return (i);
 }
 
-char 		*check_inf_nan(t_wholenumb *n)
+char 		*check_inf_nan(t_wholenumb *n, char *flags)
 {
 	n->res = ft_strnew(5);
 	if (n->wh_b == -4611686018427387904)
@@ -50,7 +52,7 @@ char		*print_float(long double var, t_flist *flist)
 	n.fr_b = bit.bytes.mantisa;
 	n.wh_b = bit.bytes.mantisa;
 	if (exp == 16384)
-		return (check_inf_nan(&n));
+		return (check_inf_nan(&n, flist->flags));
 	if (flist->precision == -1)
 		flist->precision = 6;
 	if (exp >= 0 && exp < 63)
@@ -63,9 +65,7 @@ char		*print_float(long double var, t_flist *flist)
 	else
 		n.wh_b = 0;
 	n.whole = work_whole(exp, n.wh_b, n.whole);
-	n.fract = (flist->precision != 0) ? work_fract((exp >= 0 ? exp : exp * (-1)),
-	&n, flist, (exp >= 0) ? 1 : 0) : 0;
-	n.res = ft_strnew((flist->precision + ft_reslen(n.whole)));
+	n.fract = work_fract((exp >= 0 ? exp : exp * (-1)), &n, flist, (exp >= 0));
 	parse_result(&n, flist);
 	return (n.res);
 }
