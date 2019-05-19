@@ -61,6 +61,8 @@ static char *get_length(char *format)
 		return (ft_strdup("ll"));
 	else if(ft_strstr(format, "l"))
 		return (ft_strdup("l"));
+	else if(ft_strstr(format, "L"))
+		return (ft_strdup("L"));
 	else if(ft_strstr(format, "hh"))
 		return (ft_strdup("hh"));
 	else if(ft_strstr(format, "h"))

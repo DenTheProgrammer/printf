@@ -101,7 +101,7 @@ int			*work_fract(int exp, t_wholenumb *n, t_flist *flist, int sign)
 		pow_five = power(5, exp - 1, pow_five);
 	}
 	mask = FIRST_BIT_M;
-	while (iter--)
+	while (iter-- >= 0)
 	{
 		pow_five = mult(pow_five, 5);
 		n->fract = mult(n->fract, 10);

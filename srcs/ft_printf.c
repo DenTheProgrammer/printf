@@ -1,6 +1,6 @@
 #include "printf.h"
 #include <limits.h>
-#define STR "%.1150f|%.1150f|%.1150f|%.1150f\n", 0x1p-1074, 0x1.ffffffffffffep-1023, 0x1.4e46p-1058, 0x1.59a8b0c3dp-1037
+#define STR "%eLf\n", 12.847
 //    %[parameter][flags][width][.precision][length]type
 
 int		ft_printf(const char *str, ...)
@@ -22,18 +22,15 @@ int		ft_printf(const char *str, ...)
 //todo 0x and negative fix!//done
 
 //todo Parse_res strdup 6 bytes lost //fix needed
-//todo "%15.8f|%-15.8f|%+15.8f|% 15.8f|%#15.8f|%015.8f", 0., 0., 0., 0., 0., 0.: [1;31m[KO] //flags
-//todo "|%015.8lf\n", 38546.5849 //flags
 //todo "%1lf|%-1lf|%+1lf|% 1lf|%#1lf|%01lf", 38546.5849, 38546.5849, 38546.5849, 38546.5849, 38546.5849, 38546.5849 //why exp = 0?
 
 
-
-#include <math.h>
-
-int		main() {
-	ft_printf(STR);//todo
-	printf(STR);
-//	ft_printf("%0.8f|%-.8f|%+.8f|%08f|%#f|%0f\n", INFINITY, INFINITY, INFINITY, INFINITY, INFINITY, INFINITY);
-//	printf("%0.8f|%-.8f|%+.8f|%08f|%#f|%0f\n", INFINITY, INFINITY, INFINITY, INFINITY, INFINITY, INFINITY);
-	return 0;
-}
+//
+//#include <math.h>
+//
+//int		main()
+//{
+//	ft_printf(STR);//todo
+//	printf(STR);
+//	return 0;
+//}

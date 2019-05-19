@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../libft/libft.h
+unistd.h
+-
+fcntl.h
+-
+stdlib.h
+-
+string.h
+-
+
+/Users/ashari/Desktop/ft_printf/srcs/ft_printf.c
+printf.h
+/Users/ashari/Desktop/ft_printf/srcs/printf.h
+limits.h
+-
+math.h
+-
+
+/Users/ashari/Desktop/ft_printf/srcs/printf.h
+libft.h
+/Users/ashari/Desktop/ft_printf/srcs/libft.h
+stdio.h
+-
+stdarg.h
+-
+

@@ -12,6 +12,16 @@
 
 #include "printf.h"
 
+void		print_int_arr(int *n)
+{
+	int i = 0;
+
+	printf("\n");
+	while (i < ARR_SIZE - 1)
+		printf("%d", n[i++]);
+	printf("\n");
+}
+
 int			*work_whole(int exp, long wh_b, int *whole)
 {
 	int		*pow_two;
@@ -27,7 +37,7 @@ int			*work_whole(int exp, long wh_b, int *whole)
 	iter = (exp < 63) ? exp + 1 : 64;
 	if (exp >= 63)
 		pow_two = power(2, exp - 63, pow_two);
-	while (iter-- && wh_b)
+	while (iter-- >= 0)
 	{
 		if (wh_b & 1)
 			whole = addit(whole, pow_two);

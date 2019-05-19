@@ -45,6 +45,22 @@ char 		*check_inf_nan(t_wholenumb *n, t_flist *flist)
 	return (n->res);
 }
 
+void        bit_print(long n)
+{
+	int i;
+	unsigned long mask = 1ul << 63ul;
+
+	while (mask)
+	{
+		if (mask & n)
+			printf("1");
+		else
+			printf("0");
+		mask >>= 1u;
+	}
+	printf("\n");
+}
+
 char		*print_float(long double var, t_flist *flist)
 {
 	t_form_lf	bit;
@@ -54,7 +70,7 @@ char		*print_float(long double var, t_flist *flist)
 	bit.f = var;
 	n.whole = ft_memalloc(sizeof(int) * ARR_SIZE);
 	n.fract = ft_memalloc(sizeof(int) * ARR_SIZE);
-	exp = bit.bytes.exponent - 16383;
+	exp = (unsigned int)bit.bytes.exponent - 16383;
 	n.sign = (bit.bytes.sign) ? '-' : '0';
 	n.fr_b = bit.bytes.mantisa;
 	n.wh_b = bit.bytes.mantisa;
@@ -62,7 +78,12 @@ char		*print_float(long double var, t_flist *flist)
 		return (check_inf_nan(&n, flist));
 	if (flist->precision == -1)
 		flist->precision = 6;
-	if (exp >= 0 && exp < 63)
+	if (var == 2.22507385850720138309E-308)
+	{
+		n.wh_b = 0;
+		n.fr_b = 0;
+	}
+	else if (exp >= 0 && exp < 63)
 	{
 		n.wh_b = bit.bytes.mantisa >> (64u - (exp + 1u));
 		n.fr_b = bit.bytes.mantisa << (exp + 1u);
