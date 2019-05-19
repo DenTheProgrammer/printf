@@ -7,10 +7,9 @@
 # define ARR_SIZE 100
 # define BASE 10
 # define FIRST_BIT_M (unsigned long)1 << 63u
-# include "../libft/libft.h"
+# include "libft.h"
 # include <stdio.h>//
 # include <stdarg.h>
-# include "ft_float.h"
 
 int		ft_printf(const char *str, ...);
 typedef struct s_flist

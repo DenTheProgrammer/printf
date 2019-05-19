@@ -31,7 +31,9 @@ int		ft_printf(const char *str, ...)
 #include <math.h>
 
 int		main() {
-	ft_printf(STR);//todo
-	printf(STR);
+//	ft_printf(STR);//todo
+//	printf(STR);
+	ft_printf("");
+	printf("");
 	return 0;
 }

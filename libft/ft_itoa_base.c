@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-static	size_t	intlen(long long n, int base)
+static	size_t	intlen(unsigned long long n, int base)
 {
 	size_t len;
 
@@ -25,7 +25,7 @@ static	size_t	intlen(long long n, int base)
 	return (len);
 }
 
-char			*ft_itoa_base(long long n, int base)
+char			*ft_itoa_base(unsigned long long n, int base)
 {
 	char	*res;
 	size_t	len;

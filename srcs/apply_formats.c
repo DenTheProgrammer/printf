@@ -64,7 +64,7 @@ unsigned long long apply_length_uns(t_flist *flist, va_list *valist)
 {
 	unsigned long long arg;
 
-	arg = va_arg(*valist, long long);
+	arg = va_arg(*valist, unsigned long long);
 	if (ft_strequ(flist->length, "ll"))
 		arg = (unsigned long long)arg;
 	else if (ft_strequ(flist->length, "l"))

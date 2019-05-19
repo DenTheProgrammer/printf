@@ -12,13 +12,11 @@
 
 #include "libft.h"
 
-static	size_t	intlen(long long n, int base)
+static	size_t	intlen(unsigned long long n, int base)
 {
 	size_t len;
 
 	len = 0;
-	if (n <= 0)
-		len++;
 	while (n)
 	{
 		len++;
@@ -27,31 +25,22 @@ static	size_t	intlen(long long n, int base)
 	return (len);
 }
 
-char			*ft_itoa_Ubase(long long n, int base)
+char			*ft_itoa_Ubase(unsigned long long n, int base)
 {
 	char	*res;
 	size_t	len;
-	int		min;
 	char *barr;
 
 	if (n == 0)
 		return (ft_strdup("0"));
 	barr = "0123456789ABCDEF";
-	min = 1;
 	len = intlen(n, base);
 	res = ft_strnew(len);
 	if (!res)
 		return (NULL);
-	if (n < 0)
-	{
-		res[0] = '-';
-		min = -1;
-	}
 	while (len)
 	{
-		if (min == -1 && len == 1)
-			break ;
-		res[--len] = barr[min * (n % base)];
+		res[--len] = barr[(n % base)];
 		n /= base;
 	}
 	return (res);
