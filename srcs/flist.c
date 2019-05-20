@@ -37,7 +37,6 @@ t_flist	*flist_create(char *format, char *output)
 	new->width = -1;
 	new->precision = -1;
 	new->type = -1;
-	new->parameter = -1;
 	new->length = NULL;
 	new->flags = NULL;
 	new->next = NULL;

@@ -20,6 +20,8 @@ int		ft_printf(const char *str, ...)
 	va_list valist;
 	t_flist *format_list;
 
+	if (!str)
+		return (0);
 	va_start(valist, str);
 	format_list = parse_input((char*)str);
 	parse_formats(format_list);

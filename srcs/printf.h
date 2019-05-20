@@ -15,7 +15,7 @@
 # define ARR_SIZE 400
 # define BASE 10
 # define FIRST_BIT_M (unsigned long)1 << 63u
-# include "libft.h"
+# include "../libft/libft.h"
 # include <stdarg.h>
 
 int						ft_printf(const char *str, ...);
