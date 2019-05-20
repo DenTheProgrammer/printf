@@ -6,30 +6,35 @@
 /*   By: ashari <ashari@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/16 11:39:04 by ashari            #+#    #+#             */
-/*   Updated: 2019/05/17 21:20:04 by ashari           ###   ########.fr       */
+/*   Updated: 2019/05/20 18:54:16 by ashari           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "printf.h"
 #define TMP_SIZE 100
 
-static char		*parse_fract(char *res, int pres, int *src)
+static int		*skip_chars(int *src)
 {
 	int		i;
-	int 	j;
-	char 	tmp[TMP_SIZE];
 
 	i = ARR_SIZE - 1;
-	j = 0;
-	tmp[j++] = '.';
 	while (!src[i] && i >= 0)
 		i--;
 	i--;
+	return (i);
+}
+
+static char		*parse_fract(char *res, int pres, int *src)
+{
+	int		i;
+	int		j;
+	char	tmp[TMP_SIZE];
+
+	j = 0;
+	tmp[j++] = '.';
+	i = skip_chars(src);
 	while (i >= 0 && pres--)
-	{
-		tmp[j] = src[i--] + '0';
-		j++;
-	}
+		tmp[j++] = src[i--] + '0';
 	while (pres-- > 0)
 	{
 		if (j >= (TMP_SIZE - 2))
@@ -42,16 +47,15 @@ static char		*parse_fract(char *res, int pres, int *src)
 		tmp[j++] = '0';
 	}
 	tmp[j] = '\0';
-	res = ft_strjoin_free(res, tmp, 1);
 	ft_memdel((void **)&src);
-	return (res);
+	return (ft_strjoin_free(res, tmp, 1));
 }
 
 static char		*parse_whole(char *res, int *src, char sign)
 {
 	int		i;
-	int 	j;
-	char 	tmp[TMP_SIZE];
+	int		j;
+	char	tmp[TMP_SIZE];
 
 	i = ARR_SIZE - 1;
 	j = 0;
@@ -65,20 +69,18 @@ static char		*parse_whole(char *res, int *src, char sign)
 		if (j >= (TMP_SIZE - 2))
 		{
 			tmp[j] = '\0';
-			res = ft_strjoin_free(res, tmp, 0);
+			res = ft_strjoin_free(res, tmp, 1);
 			ft_bzero(&tmp, TMP_SIZE);
 			j = 0;
 		}
-		tmp[j] = src[i--] + '0';
-		j++;
+		tmp[j++] = src[i--] + '0';
 	}
 	tmp[j] = '\0';
-	res = ft_strjoin_free(res, tmp, 0);
 	ft_memdel((void **)&src);
-	return (res);
+	return (ft_strjoin_free(res, tmp, 1));
 }
 
-char		*parse_result(t_wholenumb *n, t_flist *flist)
+char			*parse_result(t_wholenumb *n, t_flist *flist)
 {
 	if (n->wh_b == 0)
 	{
@@ -90,7 +92,7 @@ char		*parse_result(t_wholenumb *n, t_flist *flist)
 	if (flist->precision != 0)
 		n->res = parse_fract(n->res, flist->precision, n->fract);
 	else
-		{
+	{
 		ft_memdel((void **)&(n->fract));
 		if (ft_strchr(flist->flags, '#'))
 			n->res = ft_strjoin(n->res, ".");

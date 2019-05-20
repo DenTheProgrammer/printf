@@ -59,22 +59,26 @@ void	flist_push(t_flist **head, t_flist *node);
 long long apply_length(t_flist *flist, va_list *valist);
 unsigned long long apply_length_uns(t_flist *flist, va_list *valist);
 
-int get_precision_float(t_flist *flist);
-void	apply_precision(t_flist *flist);
-void apply_width(t_flist *flist);
+int				get_precision_float(t_flist *flist);
+void			apply_precision(t_flist *flist);
+void			apply_width(t_flist *flist);
 //char get_flag(t_flist *flist);
-void	apply_precision_str(t_flist *flist);
-void apply_flags(t_flist *flist);
+void			apply_precision_str(t_flist *flist);
+void			apply_flags(t_flist *flist);
+int				add_one_whole(int *whole, int i);
+int				add_one_fract(int *fract, int i, int pres);
+int				five_and_numbs(const int *fract, int i);
 //format handlers:
-void	apply_format_uns(t_flist *flist, va_list *valist);
-void	apply_format_int(t_flist *flist, va_list *valist);
-void	apply_format_str(t_flist *flist, va_list *valist);
-void	apply_format_char(t_flist *flist, va_list *valist);
-void	apply_format_oct(t_flist *flist, va_list *valist);
-void	apply_format_hex(t_flist *flist, va_list *valist);
-void	apply_format_ptr(t_flist *flist, va_list *valist);
-void	apply_format_float(t_flist *flist, va_list *valist);
-void	apply_format_percent(t_flist *flist, va_list *valist);//kek
+void			apply_format_uns(t_flist *flist, va_list *valist);
+void			apply_format_int(t_flist *flist, va_list *valist);
+void			apply_format_str(t_flist *flist, va_list *valist);
+void			apply_format_char(t_flist *flist, va_list *valist);
+void			apply_format_oct(t_flist *flist, va_list *valist);
+void			apply_format_hex(t_flist *flist, va_list *valist);
+void			apply_format_ptr(t_flist *flist, va_list *valist);
+void			apply_format_float(t_flist *flist, va_list *valist);
+void			apply_pres_f(int pres, int *fract, int *whole);
+void			apply_format_percent(t_flist *flist, va_list *valist);//kek
 int				*addit(int *a, int *b);
 int				*power(int nb, int power, int *res);
 int				*mult(int *a, int b);

@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.14)
-project(printf C)
+project(ft_prin C)
 
 set(CMAKE_C_STANDARD 11)
 
@@ -7,7 +7,8 @@ include_directories(includes)
 include_directories(libft)
 include_directories(srcs)
 
-add_executable(printf
+add_executable(ft_prin
+        includes/printf.h
         libft/ft_abs.c
         libft/ft_atoi.c
         libft/ft_bzero.c
@@ -90,7 +91,9 @@ add_executable(printf
         srcs/apply_flags.c
         srcs/apply_formats.c
         srcs/apply_precision.c
+        srcs/apply_pres_f.c
         srcs/apply_specific_format.c
+        srcs/apply_specific_format2.c
         srcs/apply_width.c
         srcs/flist.c
         srcs/float.c
@@ -102,4 +105,4 @@ add_executable(printf
         srcs/power.c
         srcs/printf.h
         srcs/start.c
-        srcs/whole.c srcs/apply_specific_format2.c)
+        srcs/whole.c)

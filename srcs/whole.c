@@ -6,27 +6,17 @@
 /*   By: ashari <ashari@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/17 20:25:56 by ashari            #+#    #+#             */
-/*   Updated: 2019/05/17 20:26:05 by ashari           ###   ########.fr       */
+/*   Updated: 2019/05/20 18:19:33 by ashari           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "printf.h"
 
-void		print_int_arr(int *n)
-{
-	int i = ARR_SIZE - 1;
-
-	printf("\n");
-	while (i >= 0)
-		printf("%d", n[i--]);
-	printf("\n");
-}
-
 int			*work_whole(int exp, unsigned long wh_b, int *whole)
 {
 	int				*pow_two;
 	int				iter;
-	unsigned long 	mask;
+	unsigned long	mask;
 
 	mask = 1;
 	if (wh_b == 0)

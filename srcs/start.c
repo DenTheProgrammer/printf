@@ -6,14 +6,14 @@
 /*   By: ashari <ashari@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/17 20:26:45 by ashari            #+#    #+#             */
-/*   Updated: 2019/05/17 21:16:25 by ashari           ###   ########.fr       */
+/*   Updated: 2019/05/20 18:18:26 by ashari           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "printf.h"
 #include <float.h>
 
-int		ft_reslen(const int *numb)
+int				ft_reslen(const int *numb)
 {
 	int i;
 
@@ -25,7 +25,7 @@ int		ft_reslen(const int *numb)
 	return (i);
 }
 
-char 		*check_inf_nan(t_wholenumb *n, t_flist *flist)
+char			*check_inf_nan(t_wholenumb *n, t_flist *flist)
 {
 	n->res = ft_strnew(5);
 	if (n->wh_b == -4611686018427387904)
@@ -46,7 +46,25 @@ char 		*check_inf_nan(t_wholenumb *n, t_flist *flist)
 	return (n->res);
 }
 
-char		*print_float(long double var, t_flist *flist)
+static void		struct_init(t_wholenumb *n, t_flist *flist, t_form_lf bit)
+{
+	n->sign = (bit.bytes.sign) ? '-' : '0';
+	n->fr_b = bit.bytes.mantisa;
+	n->wh_b = bit.bytes.mantisa;
+	n->whole = ft_memalloc(sizeof(int) * (ARR_SIZE + 1));
+	n->fract = ft_memalloc(sizeof(int) * (ARR_SIZE + 1));
+	if (flist->precision == -1)
+		flist->precision = 6;
+}
+
+static void		bytes_init(t_wholenumb *n, t_form_lf bit,
+							unsigned long a, unsigned long b)
+{
+	n->wh_b = a;
+	n->fr_b = b;
+}
+
+char			*print_float(long double var, t_flist *flist)
 {
 	t_form_lf	bit;
 	t_wholenumb	n;
@@ -54,25 +72,15 @@ char		*print_float(long double var, t_flist *flist)
 
 	bit.f = var;
 	exp = bit.bytes.exponent - 16383;
-	n.sign = (bit.bytes.sign) ? '-' : '0';
-	n.fr_b = bit.bytes.mantisa;
-	n.wh_b = bit.bytes.mantisa;
-	n.whole = ft_memalloc(sizeof(int) * (ARR_SIZE + 1));
-	n.fract = ft_memalloc(sizeof(int) * (ARR_SIZE + 1));
-	if (flist->precision == -1)
-		flist->precision = 6;
+
+	struct_init(&n, flist, bit);
 	if (exp == 16384)
 		return (check_inf_nan(&n, flist));
 	else if (var == LDBL_MIN || var == DBL_MIN)
-	{
-		n.wh_b = 0;
-		n.fr_b = 0;
-	}
+		bytes_init(&n, bit, 0, 0);
 	else if (exp >= 0 && exp < 63)
-	{
-		n.wh_b = bit.bytes.mantisa >> (64u - (exp + 1u));
-		n.fr_b = bit.bytes.mantisa << (exp + 1u);
-	}
+		bytes_init(&n, bit, bit.bytes.mantisa >> (64u - (exp + 1u)),
+		bit.bytes.mantisa << (exp + 1u));
 	else if (exp >= 63)
 		n.fr_b = 0;
 	else
