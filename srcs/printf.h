@@ -12,7 +12,7 @@
 
 #ifndef PRINTF_PRINTF_H
 # define PRINTF_PRINTF_H
-# define ARR_SIZE 400
+# define ARR_SIZE 500
 # define BASE 10
 # define FIRST_BIT_M (unsigned long)1 << 63u
 # include "../libft/libft.h"
@@ -35,8 +35,8 @@ typedef struct			s_flist
 typedef	struct			s_formlfb
 {
 	unsigned long int	mantisa : 64;
-	short				exponent : 15;
-	short				sign : 1;
+	unsigned			exponent : 15;
+	unsigned			sign : 1;
 }						t_formlfb;
 
 typedef	union			u_formlf

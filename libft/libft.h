@@ -16,6 +16,8 @@
 # include <fcntl.h>
 # include <stdlib.h>
 # include <string.h>
+# define LAST_BIT 0x01010101L
+# define FIRST_BIT 0x80808080L
 
 /*
 ** additional
