@@ -33,7 +33,7 @@ void	apply_format_oct(t_flist *flist, va_list *valist)
 	unsigned long long arg;
 
 	arg = apply_length_uns(flist, valist);
-	flist->output = ft_itoa_base(arg, 8);
+	flist->output = ft_itoa_base(arg, 8, 0);
 }
 
 void	apply_format_hex(t_flist *flist, va_list *valist)
@@ -41,8 +41,8 @@ void	apply_format_hex(t_flist *flist, va_list *valist)
 	unsigned long long arg;
 
 	arg = apply_length_uns(flist, valist);
-	flist->output = (flist->type == 'x') ? ft_itoa_base(arg, 16)
-			: ft_itoa_Ubase(arg, 16);
+	flist->output = (flist->type == 'x') ? ft_itoa_base(arg, 16, 0)
+			: ft_itoa_base(arg, 16, 1);
 }
 
 void	apply_format_ptr(t_flist *flist, va_list *valist)
@@ -53,5 +53,5 @@ void	apply_format_ptr(t_flist *flist, va_list *valist)
 	if (arg == 0)
 		flist->output = ft_strdup("0x");
 	else
-		flist->output = ft_strjoin_free("0x", ft_itoa_base(arg, 16), 2);
+		flist->output = ft_strjoin_free("0x", ft_itoa_base(arg, 16, 0), 2);
 }

@@ -1,13 +1,21 @@
-//
-// Created by Maybell Debbi on 2019-05-13.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_str_removechar.c                                :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mdebbi <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/05/20 23:01:52 by mdebbi            #+#    #+#             */
+/*   Updated: 2019/05/20 23:02:26 by mdebbi           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "libft.h"
 
-char 	*ft_str_removechar(char *str, char chr)
+char	*ft_str_removechar(char *str, char chr)
 {
-	char *new;
-	int i;
+	char	*new;
+	int		i;
 
 	if (!str)
 		return (0);
