@@ -2,7 +2,7 @@ NAME = libftprintf.a
 
 # compiling
 
-CPP = gcc -g -c
+GCC = gcc -g -c
 
 # paths
 
@@ -40,7 +40,7 @@ $(OBJ_DIR):
 	mkdir -p obj
 
 $(OBJ_DIR)%.o: $(SRC_DIR)%.c
-	$(CPP) $< -o $@ $(HEADER) -I $(LIB_DIR)
+	$(GCC) $< -o $@ $(HEADER) -I $(LIB_DIR)
 	make -C $(LIB_DIR)
 
 fclean: clean

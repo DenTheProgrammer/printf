@@ -12,7 +12,46 @@
 
 #include "printf.h"
 
-void		apply_pres_f(int pres, int *fract, int *whole)
+static int				add_one_whole(int *whole, int i)
+{
+	whole[0] += 1;
+	while (whole[i] >= BASE && i < (ARR_SIZE - 1))
+	{
+		whole[i + 1] += whole[i] / BASE;
+		whole[i] %= BASE;
+		i++;
+	}
+	return (i);
+}
+
+static int				add_one_fract(int *fract, int i, int pres)
+{
+	fract[++i] += 1;
+	while (fract[i] >= BASE && --pres > 0)
+	{
+		fract[i + 1] += fract[i] / BASE;
+		fract[i] %= BASE;
+		i++;
+	}
+	return (i);
+}
+
+static int				five_and_numbs(const int *fract, int i)
+{
+	if (fract[i] != 5)
+		return (0);
+	i--;
+	while (i > 0)
+	{
+		if (fract[i] == 0)
+			i--;
+		else
+			return (1);
+	}
+	return (0);
+}
+
+void					apply_pres_f(int pres, int *fract, int *whole)
 {
 	int		i;
 	int		tmp_i;
