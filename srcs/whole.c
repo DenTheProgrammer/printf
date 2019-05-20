@@ -12,11 +12,23 @@
 
 #include "printf.h"
 
-int			*work_whole(int exp, long wh_b, int *whole)
+void		print_int_arr(int *n)
 {
-	int		*pow_two;
-	int		iter;
+	int i = ARR_SIZE - 1;
 
+	printf("\n");
+	while (i >= 0)
+		printf("%d", n[i--]);
+	printf("\n");
+}
+
+int			*work_whole(int exp, unsigned long wh_b, int *whole)
+{
+	int				*pow_two;
+	int				iter;
+	unsigned long 	mask;
+
+	mask = 1;
 	if (wh_b == 0)
 	{
 		whole = mult(whole, 0);
@@ -27,12 +39,12 @@ int			*work_whole(int exp, long wh_b, int *whole)
 	iter = (exp < 63) ? exp + 1 : 64;
 	if (exp >= 63)
 		pow_two = power(2, exp - 63, pow_two);
-	while (iter-- && wh_b)
+	while (iter-- >= 0)
 	{
-		if (wh_b & 1)
+		if (wh_b & mask)
 			whole = addit(whole, pow_two);
 		pow_two = mult(pow_two, 2);
-		wh_b >>= 1;
+		mask <<= 1u;
 	}
 	ft_memdel((void **)&pow_two);
 	return (whole);

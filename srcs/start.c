@@ -11,8 +11,9 @@
 /* ************************************************************************** */
 
 #include "printf.h"
+#include <float.h>
 
-int		ft_reslen(int *numb)
+int		ft_reslen(const int *numb)
 {
 	int i;
 
@@ -52,17 +53,22 @@ char		*print_float(long double var, t_flist *flist)
 	int			exp;
 
 	bit.f = var;
-	n.whole = ft_memalloc(sizeof(int) * ARR_SIZE);
-	n.fract = ft_memalloc(sizeof(int) * ARR_SIZE);
 	exp = bit.bytes.exponent - 16383;
 	n.sign = (bit.bytes.sign) ? '-' : '0';
 	n.fr_b = bit.bytes.mantisa;
 	n.wh_b = bit.bytes.mantisa;
-	if (exp == 16384)
-		return (check_inf_nan(&n, flist));
+	n.whole = ft_memalloc(sizeof(int) * (ARR_SIZE + 1));
+	n.fract = ft_memalloc(sizeof(int) * (ARR_SIZE + 1));
 	if (flist->precision == -1)
 		flist->precision = 6;
-	if (exp >= 0 && exp < 63)
+	if (exp == 16384)
+		return (check_inf_nan(&n, flist));
+	else if (var == LDBL_MIN || var == DBL_MIN)
+	{
+		n.wh_b = 0;
+		n.fr_b = 0;
+	}
+	else if (exp >= 0 && exp < 63)
 	{
 		n.wh_b = bit.bytes.mantisa >> (64u - (exp + 1u));
 		n.fr_b = bit.bytes.mantisa << (exp + 1u);

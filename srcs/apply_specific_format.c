@@ -72,9 +72,12 @@ void	apply_format_ptr(t_flist *flist, va_list *valist)
 }
 void	apply_format_float(t_flist *flist, va_list *valist)
 {
-	double arg;
+	long double arg;
 
-	arg = va_arg(*valist, double);
+	if (ft_strequ(flist->length, "L"))
+		arg = va_arg(*valist, long double);
+	else
+		arg = va_arg(*valist, double);
 	flist->output = print_float(arg, flist);
 }
 

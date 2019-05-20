@@ -22,7 +22,7 @@ static char		*parse_fract(char *res, int pres, int *src)
 	i = ARR_SIZE - 1;
 	j = 0;
 	tmp[j++] = '.';
-	while (!src[i] && i)
+	while (!src[i] && i >= 0)
 		i--;
 	i--;
 	while (i >= 0 && pres--)
@@ -35,14 +35,14 @@ static char		*parse_fract(char *res, int pres, int *src)
 		if (j >= (TMP_SIZE - 2))
 		{
 			tmp[j] = '\0';
-			res = ft_strjoin_free(res, tmp, 0);
+			res = ft_strjoin_free(res, tmp, 1);
 			ft_bzero(&tmp, TMP_SIZE);
 			j = 0;
 		}
 		tmp[j++] = '0';
 	}
 	tmp[j] = '\0';
-	res = ft_strjoin_free(res, tmp, 0);
+	res = ft_strjoin_free(res, tmp, 1);
 	ft_memdel((void **)&src);
 	return (res);
 }
@@ -57,6 +57,7 @@ static char		*parse_whole(char *res, int *src, char sign)
 	j = 0;
 	while (!src[i] && i)
 		i--;
+	res = ft_strnew(ARR_SIZE);
 	if (sign == '-')
 		tmp[j++] = '-';
 	while (i >= 0)
@@ -72,7 +73,7 @@ static char		*parse_whole(char *res, int *src, char sign)
 		j++;
 	}
 	tmp[j] = '\0';
-	res = ft_strdup(tmp);
+	res = ft_strjoin_free(res, tmp, 0);
 	ft_memdel((void **)&src);
 	return (res);
 }
@@ -90,7 +91,7 @@ char		*parse_result(t_wholenumb *n, t_flist *flist)
 		n->res = parse_fract(n->res, flist->precision, n->fract);
 	else
 		{
-		ft_memdel((void **) n->fract);
+		ft_memdel((void **)&(n->fract));
 		if (ft_strchr(flist->flags, '#'))
 			n->res = ft_strjoin(n->res, ".");
 	}
