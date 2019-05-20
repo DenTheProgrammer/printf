@@ -15,7 +15,7 @@ int		ft_printf(const char *str, ...)
 	va_list valist;
 
 	va_start(valist, str);
-	t_flist *format_list = parse_input(str);
+	t_flist *format_list = parse_input((char*)str);
 	parse_formats(format_list);
 	apply_formats(format_list, &valist);
 	va_end(valist);
@@ -39,7 +39,13 @@ int		main()
 {
 	int ft, lib;
 
-	test("|%.300f\n", 1.234);
-	printf("|%.30F\n", 1.234);
+//	test("%s%p%d%d%p%s%p%p%s\n", "a", &free, 1, 2, &malloc, "b", &free, &malloc, "c");
+//	test("%s%p%d%d%p%s%p%p%s\n", "a", &free, 1, 2, &malloc, "b", &free, &malloc, "c");
+	//printf("|%.30F\n", 1.234);
+//	printf("{% c}\n", 'a');
+	ft_printf("{% c}\n", 'a');
+	ft_printf("test\n");
+	ft_printf("test2\n");
+	ft_printf("test3\n");
 	return 0;
 }

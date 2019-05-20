@@ -19,11 +19,11 @@ void	apply_format_char(t_flist *flist, va_list *valist)
 	flist->precision = -1;
 	c = ft_strnew(2);
 	c[0] = va_arg(*valist, int);
+	flist->flags = ft_str_removechar(flist->flags, ' ');
 	if (c[0] == 0)
 	{
 		c[0] = -1;
 		flist->flags = ft_str_removechar(flist->flags, '+');
-		flist->flags = ft_str_removechar(flist->flags, ' ');
 	}
 	flist->output = c;
 }
@@ -50,5 +50,8 @@ void	apply_format_ptr(t_flist *flist, va_list *valist)
 	long int arg;
 
 	arg = va_arg(*valist, long int);
-	flist->output = ft_strjoin("0x", ft_itoa_base(arg, 16));
+	if (arg == 0)
+		flist->output = ft_strdup("0x");
+	else
+		flist->output = ft_strjoin_free("0x", ft_itoa_base(arg, 16), 2);
 }

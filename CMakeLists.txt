@@ -105,4 +105,4 @@ add_executable(ft_prin
         srcs/power.c
         srcs/printf.h
         srcs/start.c
-        srcs/whole.c)
+        srcs/whole.c srcs/parse_format.c)

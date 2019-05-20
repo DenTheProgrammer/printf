@@ -48,7 +48,7 @@ typedef	struct	s_wholenumb
 	char		*res;
 }				t_wholenumb;
 
-t_flist *parse_input(const char *str);
+t_flist *parse_input(char *str);
 void	parse_formats(t_flist *flist);
 void	apply_formats(t_flist *flist, va_list *valist);
 int		printf_output(t_flist *flist);
