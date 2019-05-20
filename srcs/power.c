@@ -24,7 +24,7 @@ int		*power(int nb, int power, int *res)
 		while (j < ARR_SIZE)
 			res[j++] *= nb;
 		j = 0;
-		while (j < ARR_SIZE - 1)
+		while (j < ARR_SIZE)
 		{
 			if (res[j] >= BASE)
 			{

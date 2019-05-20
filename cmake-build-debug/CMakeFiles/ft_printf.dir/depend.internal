@@ -218,7 +218,9 @@ CMakeFiles/ft_printf.dir/libft/ft_tolower.c.o
 CMakeFiles/ft_printf.dir/libft/ft_toupper.c.o
  /Users/ashari/Desktop/ft_printf/libft/ft_toupper.c
 CMakeFiles/ft_printf.dir/srcs/addit.c.o
+ ../libft/libft.h
  /Users/ashari/Desktop/ft_printf/srcs/addit.c
+ /Users/ashari/Desktop/ft_printf/srcs/printf.h
 CMakeFiles/ft_printf.dir/srcs/apply_flags.c.o
  /Users/ashari/Desktop/ft_printf/srcs/apply_flags.c
 CMakeFiles/ft_printf.dir/srcs/apply_formats.c.o
@@ -226,21 +228,29 @@ CMakeFiles/ft_printf.dir/srcs/apply_formats.c.o
 CMakeFiles/ft_printf.dir/srcs/apply_precision.c.o
  /Users/ashari/Desktop/ft_printf/srcs/apply_precision.c
 CMakeFiles/ft_printf.dir/srcs/apply_specific_format.c.o
+ ../libft/libft.h
  /Users/ashari/Desktop/ft_printf/srcs/apply_specific_format.c
+ /Users/ashari/Desktop/ft_printf/srcs/printf.h
 CMakeFiles/ft_printf.dir/srcs/apply_width.c.o
  /Users/ashari/Desktop/ft_printf/srcs/apply_width.c
 CMakeFiles/ft_printf.dir/srcs/flist.c.o
  /Users/ashari/Desktop/ft_printf/srcs/flist.c
 CMakeFiles/ft_printf.dir/srcs/float.c.o
+ ../libft/libft.h
  /Users/ashari/Desktop/ft_printf/srcs/float.c
+ /Users/ashari/Desktop/ft_printf/srcs/printf.h
 CMakeFiles/ft_printf.dir/srcs/fract.c.o
+ ../libft/libft.h
  /Users/ashari/Desktop/ft_printf/srcs/fract.c
+ /Users/ashari/Desktop/ft_printf/srcs/printf.h
 CMakeFiles/ft_printf.dir/srcs/ft_printf.c.o
  ../libft/libft.h
  /Users/ashari/Desktop/ft_printf/srcs/ft_printf.c
  /Users/ashari/Desktop/ft_printf/srcs/printf.h
 CMakeFiles/ft_printf.dir/srcs/mult.c.o
+ ../libft/libft.h
  /Users/ashari/Desktop/ft_printf/srcs/mult.c
+ /Users/ashari/Desktop/ft_printf/srcs/printf.h
 CMakeFiles/ft_printf.dir/srcs/output.c.o
  ../libft/libft.h
  /Users/ashari/Desktop/ft_printf/srcs/output.c
@@ -248,10 +258,16 @@ CMakeFiles/ft_printf.dir/srcs/output.c.o
 CMakeFiles/ft_printf.dir/srcs/parse_arguments.c.o
  /Users/ashari/Desktop/ft_printf/srcs/parse_arguments.c
 CMakeFiles/ft_printf.dir/srcs/power.c.o
+ ../libft/libft.h
  /Users/ashari/Desktop/ft_printf/srcs/power.c
+ /Users/ashari/Desktop/ft_printf/srcs/printf.h
 CMakeFiles/ft_printf.dir/srcs/start.c.o
+ ../libft/libft.h
+ /Users/ashari/Desktop/ft_printf/srcs/printf.h
  /Users/ashari/Desktop/ft_printf/srcs/start.c
 CMakeFiles/ft_printf.dir/srcs/throw_error.c.o
  /Users/ashari/Desktop/ft_printf/srcs/throw_error.c
 CMakeFiles/ft_printf.dir/srcs/whole.c.o
+ ../libft/libft.h
+ /Users/ashari/Desktop/ft_printf/srcs/printf.h
  /Users/ashari/Desktop/ft_printf/srcs/whole.c

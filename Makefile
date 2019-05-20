@@ -1,12 +1,16 @@
 NAME = libftprintf.a
 
+# compiling
+
 CPP = gcc -g -c
 
+# paths
+
 SRC_DIR	= srcs/
-
 OBJ_DIR = obj/
+LIB_DIR = libft/
 
-LIB = libft/libft.a
+# files
 
 SRC =	addit.c                                         output.c            \
             apply_flags.c           flist.c                 parse_arguments.c   \
@@ -16,11 +20,12 @@ SRC =	addit.c                                         output.c            \
             apply_width.c           mult.c                  whole.c
 
 OBJ = $(patsubst %.c, %.o, $(SRC))
-
 HEADER = -I includes
+LIB = libft/libft.a
+
+# files with dir
 
 C_PATH = $(addprefix $(SRC_DIR), $(SRC))
-
 O_PATH = $(addprefix $(OBJ_DIR), $(OBJ))
 
 all: $(NAME)
@@ -34,7 +39,7 @@ $(OBJ_DIR):
 	mkdir -p obj
 
 $(OBJ_DIR)%.o: $(SRC_DIR)%.c
-	$(CPP) $< -o $@ $(HEADER) -I libft/
+	$(CPP) $< -o $@ $(HEADER) -I $(LIB_DIR)
 
 fclean: clean
 	rm -f $(NAME)
@@ -43,3 +48,5 @@ clean:
 	rm -rf $(OBJ_DIR)
 
 re: fclean all
+
+.PHONY: all fclean clean re

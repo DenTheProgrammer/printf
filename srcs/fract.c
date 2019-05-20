@@ -36,7 +36,7 @@ static int		add_one_fract(int *fract, int i, int pres)
 	return (i);
 }
 
-static int 		five_and_numbs(int *fract, int i)
+static int 		five_and_numbs(const int *fract, int i)
 {
 	if (fract[i] != 5)
 		return (0);
@@ -87,7 +87,7 @@ int			*work_fract(int exp, t_wholenumb *n, t_flist *flist, int sign)
 	int		i;
 	unsigned long	mask;
 
-	pow_five = ft_memalloc(sizeof(int) * ARR_SIZE);
+	pow_five = ft_memalloc(sizeof(int) * (ARR_SIZE + 1));
 	pow_five[0] = 1;
 	n->fract[0] = 1;
 	i = 0;

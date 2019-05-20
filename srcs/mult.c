@@ -14,15 +14,13 @@
 
 int		*mult(int *a, int b)
 {
-	int			carry;
-	long long	cur;
 	size_t		i;
 
 	i = 0;
 	while (i < ARR_SIZE)
 		a[i++] *= b;
 	i = 0;
-	while (i < ARR_SIZE - 1)
+	while (i <= ARR_SIZE)
 	{
 		if (a[i] >= BASE)
 		{

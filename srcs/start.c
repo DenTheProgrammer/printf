@@ -11,8 +11,9 @@
 /* ************************************************************************** */
 
 #include "printf.h"
+#include <float.h>
 
-int		ft_reslen(int *numb)
+int		ft_reslen(const int *numb)
 {
 	int i;
 
@@ -45,22 +46,6 @@ char 		*check_inf_nan(t_wholenumb *n, t_flist *flist)
 	return (n->res);
 }
 
-void        bit_print(long n)
-{
-	int i;
-	unsigned long mask = 1ul << 63ul;
-
-	while (mask)
-	{
-		if (mask & n)
-			printf("1");
-		else
-			printf("0");
-		mask >>= 1u;
-	}
-	printf("\n");
-}
-
 char		*print_float(long double var, t_flist *flist)
 {
 	t_form_lf	bit;
@@ -68,17 +53,17 @@ char		*print_float(long double var, t_flist *flist)
 	int			exp;
 
 	bit.f = var;
-	n.whole = ft_memalloc(sizeof(int) * ARR_SIZE);
-	n.fract = ft_memalloc(sizeof(int) * ARR_SIZE);
-	exp = (unsigned int)bit.bytes.exponent - 16383;
+	exp = bit.bytes.exponent - 16383;
 	n.sign = (bit.bytes.sign) ? '-' : '0';
 	n.fr_b = bit.bytes.mantisa;
 	n.wh_b = bit.bytes.mantisa;
-	if (exp == 16384)
-		return (check_inf_nan(&n, flist));
+	n.whole = ft_memalloc(sizeof(int) * (ARR_SIZE + 1));
+	n.fract = ft_memalloc(sizeof(int) * (ARR_SIZE + 1));
 	if (flist->precision == -1)
 		flist->precision = 6;
-	if (var == 2.22507385850720138309E-308)
+	if (exp == 16384)
+		return (check_inf_nan(&n, flist));
+	else if (var == LDBL_MIN || var == DBL_MIN)
 	{
 		n.wh_b = 0;
 		n.fr_b = 0;

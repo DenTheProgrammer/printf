@@ -217,7 +217,9 @@ CMakeFiles/ft_printf.dir/libft/ft_tolower.c.o: ../libft/ft_tolower.c
 
 CMakeFiles/ft_printf.dir/libft/ft_toupper.c.o: ../libft/ft_toupper.c
 
+CMakeFiles/ft_printf.dir/srcs/addit.c.o: ../libft/libft.h
 CMakeFiles/ft_printf.dir/srcs/addit.c.o: ../srcs/addit.c
+CMakeFiles/ft_printf.dir/srcs/addit.c.o: ../srcs/printf.h
 
 CMakeFiles/ft_printf.dir/srcs/apply_flags.c.o: ../srcs/apply_flags.c
 
@@ -225,21 +227,29 @@ CMakeFiles/ft_printf.dir/srcs/apply_formats.c.o: ../srcs/apply_formats.c
 
 CMakeFiles/ft_printf.dir/srcs/apply_precision.c.o: ../srcs/apply_precision.c
 
+CMakeFiles/ft_printf.dir/srcs/apply_specific_format.c.o: ../libft/libft.h
 CMakeFiles/ft_printf.dir/srcs/apply_specific_format.c.o: ../srcs/apply_specific_format.c
+CMakeFiles/ft_printf.dir/srcs/apply_specific_format.c.o: ../srcs/printf.h
 
 CMakeFiles/ft_printf.dir/srcs/apply_width.c.o: ../srcs/apply_width.c
 
 CMakeFiles/ft_printf.dir/srcs/flist.c.o: ../srcs/flist.c
 
+CMakeFiles/ft_printf.dir/srcs/float.c.o: ../libft/libft.h
 CMakeFiles/ft_printf.dir/srcs/float.c.o: ../srcs/float.c
+CMakeFiles/ft_printf.dir/srcs/float.c.o: ../srcs/printf.h
 
+CMakeFiles/ft_printf.dir/srcs/fract.c.o: ../libft/libft.h
 CMakeFiles/ft_printf.dir/srcs/fract.c.o: ../srcs/fract.c
+CMakeFiles/ft_printf.dir/srcs/fract.c.o: ../srcs/printf.h
 
 CMakeFiles/ft_printf.dir/srcs/ft_printf.c.o: ../libft/libft.h
 CMakeFiles/ft_printf.dir/srcs/ft_printf.c.o: ../srcs/ft_printf.c
 CMakeFiles/ft_printf.dir/srcs/ft_printf.c.o: ../srcs/printf.h
 
+CMakeFiles/ft_printf.dir/srcs/mult.c.o: ../libft/libft.h
 CMakeFiles/ft_printf.dir/srcs/mult.c.o: ../srcs/mult.c
+CMakeFiles/ft_printf.dir/srcs/mult.c.o: ../srcs/printf.h
 
 CMakeFiles/ft_printf.dir/srcs/output.c.o: ../libft/libft.h
 CMakeFiles/ft_printf.dir/srcs/output.c.o: ../srcs/output.c
@@ -247,11 +257,17 @@ CMakeFiles/ft_printf.dir/srcs/output.c.o: ../srcs/printf.h
 
 CMakeFiles/ft_printf.dir/srcs/parse_arguments.c.o: ../srcs/parse_arguments.c
 
+CMakeFiles/ft_printf.dir/srcs/power.c.o: ../libft/libft.h
 CMakeFiles/ft_printf.dir/srcs/power.c.o: ../srcs/power.c
+CMakeFiles/ft_printf.dir/srcs/power.c.o: ../srcs/printf.h
 
+CMakeFiles/ft_printf.dir/srcs/start.c.o: ../libft/libft.h
+CMakeFiles/ft_printf.dir/srcs/start.c.o: ../srcs/printf.h
 CMakeFiles/ft_printf.dir/srcs/start.c.o: ../srcs/start.c
 
 CMakeFiles/ft_printf.dir/srcs/throw_error.c.o: ../srcs/throw_error.c
 
+CMakeFiles/ft_printf.dir/srcs/whole.c.o: ../libft/libft.h
+CMakeFiles/ft_printf.dir/srcs/whole.c.o: ../srcs/printf.h
 CMakeFiles/ft_printf.dir/srcs/whole.c.o: ../srcs/whole.c
 
