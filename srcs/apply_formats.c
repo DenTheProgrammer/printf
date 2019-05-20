@@ -1,49 +1,55 @@
-//
-// Created by Maybell Debbi on 2019-05-04.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   apply_formats.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mdebbi <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/05/20 17:05:51 by mdebbi            #+#    #+#             */
+/*   Updated: 2019/05/20 17:05:53 by mdebbi           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "printf.h"
 
-//void validate_format(t_flist *flist)
-//{
-//	//todo?
-//}
+static void			apply_format_helper(t_flist *flist, va_list *valist)
+{
+	if (flist->type == 'd' || flist->type == 'i')
+		apply_format_int(flist, valist);
+	else if (flist->type == 's')
+		apply_format_str(flist, valist);
+	else if (flist->type == 'c')
+		apply_format_char(flist, valist);
+	else if (flist->type == 'o')
+		apply_format_oct(flist, valist);
+	else if (flist->type == 'x')
+		apply_format_hex(flist, valist);
+	else if (flist->type == 'X')
+		apply_format_hex(flist, valist);
+	else if (flist->type == 'f')
+		apply_format_float(flist, valist);
+	else if (flist->type == 'p')
+		apply_format_ptr(flist, valist);
+	else if (flist->type == 'u')
+		apply_format_uns(flist, valist);
+	else if (flist->type == '%')
+		apply_format_percent(flist, valist);
+	apply_precision(flist);
+	apply_flags(flist);
+	apply_width(flist);
+}
 
-void	apply_formats(t_flist *flist, va_list *valist)
+void				apply_formats(t_flist *flist, va_list *valist)
 {
 	while (flist)
 	{
 		if (flist->format)
-		{
-			if (flist->type == 'd' || flist->type == 'i')
-				apply_format_int(flist, valist);
-			else if (flist->type == 's')
-				apply_format_str(flist, valist);
-			else if (flist->type == 'c')
-				apply_format_char(flist, valist);
-			else if (flist->type == 'o')
-				apply_format_oct(flist, valist);
-			else if (flist->type == 'x')
-				apply_format_hex(flist, valist);
-			else if (flist->type == 'X')
-				apply_format_hex(flist, valist);
-			else if (flist->type == 'f')
-				apply_format_float(flist, valist);
-			else if (flist->type == 'p')
-				apply_format_ptr(flist, valist);
-			else if (flist->type == 'u')
-				apply_format_uns(flist, valist);
-			else if (flist->type == '%')
-				apply_format_percent(flist, valist);
-			apply_precision(flist);
-			apply_flags(flist);
-			apply_width(flist);
-		}
+			apply_format_helper(flist, valist);
 		flist = flist->next;
 	}
 }
 
-long long apply_length(t_flist *flist, va_list *valist)
+long long			apply_length(t_flist *flist, va_list *valist)
 {
 	long long arg;
 
@@ -60,7 +66,8 @@ long long apply_length(t_flist *flist, va_list *valist)
 		arg = (int)arg;
 	return (arg);
 }
-unsigned long long apply_length_uns(t_flist *flist, va_list *valist)
+
+unsigned long long	apply_length_uns(t_flist *flist, va_list *valist)
 {
 	unsigned long long arg;
 

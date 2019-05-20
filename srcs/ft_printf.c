@@ -35,10 +35,11 @@ int		ft_printf(const char *str, ...)
 
 #include <math.h>
 
-int		main()
-{
-	int ft, lib;
-
-	test("|%.350f\n", 1.e-201);
-	return 0;
-}
+//int		main()
+//{
+//	int ft, lib;
+//
+////	test("|%.350f\n", 1.e-2);
+//	test("%0+20.10d\n", 42);
+//	return 0;
+//}

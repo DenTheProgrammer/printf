@@ -1,19 +1,18 @@
-//
-// Created by Maybell Debbi on 2019-05-03.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   flist.c                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mdebbi <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/05/20 16:41:10 by mdebbi            #+#    #+#             */
+/*   Updated: 2019/05/20 16:41:12 by mdebbi           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "printf.h"
 
-//void flist_push(t_flist *node)
-//{
-//	static t_flist *last_node = NULL;
-//
-//	if (last_node)
-//		last_node->next = node;
-//	last_node = node;
-//}
-
-void flist_push(t_flist **head, t_flist *node)
+void	flist_push(t_flist **head, t_flist *node)
 {
 	t_flist *tmp;
 
@@ -28,7 +27,7 @@ void flist_push(t_flist **head, t_flist *node)
 	}
 }
 
-t_flist *flist_create(char *format, char *output)
+t_flist	*flist_create(char *format, char *output)
 {
 	t_flist *new;
 

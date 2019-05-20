@@ -102,5 +102,4 @@ add_executable(printf
         srcs/power.c
         srcs/printf.h
         srcs/start.c
-        srcs/throw_error.c
-        srcs/whole.c)
+        srcs/whole.c srcs/apply_specific_format2.c)

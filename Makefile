@@ -16,7 +16,8 @@ SRC =	addit.c                                         output.c            \
             apply_flags.c           flist.c                 parse_arguments.c   \
             apply_formats.c         float.c                 power.c             \
             apply_precision.c       fract.c                 start.c             \
-            apply_specific_format.c ft_printf.c             throw_error.c       \
+            apply_specific_format.c \
+			apply_specific_format2.c ft_printf.c                    \
             apply_width.c           mult.c                  whole.c
 
 OBJ = $(patsubst %.c, %.o, $(SRC))
@@ -40,12 +41,16 @@ $(OBJ_DIR):
 
 $(OBJ_DIR)%.o: $(SRC_DIR)%.c
 	$(CPP) $< -o $@ $(HEADER) -I $(LIB_DIR)
+	make -C $(LIB_DIR)
 
 fclean: clean
 	rm -f $(NAME)
+	make fclean -C $(LIB_DIR)
 
 clean:
+	rm -f $(OBJ_PATH)
 	rm -rf $(OBJ_DIR)
+	make clean -C $(LIB_DIR)
 
 re: fclean all
 

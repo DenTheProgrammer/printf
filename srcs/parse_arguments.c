@@ -1,19 +1,31 @@
-//
-// Created by Maybell Debbi on 2019-05-02.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   parse_arguments.c                                  :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mdebbi <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/05/20 16:41:40 by mdebbi            #+#    #+#             */
+/*   Updated: 2019/05/20 16:41:42 by mdebbi           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "printf.h"
 
-t_flist *parse_input(const char *str)
-{
-	int w_start;
-	char *types = "cspdiouxX%f";
-	t_flist *flist;
+#define PUSH flist_push
+#define CREATE flist_create
+#define SUB ft_strsub
 
-	size_t len = ft_strlen(str);
-	flist = NULL;
-	size_t i = 0;
-	while (i < len)
+t_flist		*parse_input(const char *str)
+{
+	int				w_start;
+	static char		*types = "cspdiouxX%f";
+	static t_flist	*flist = NULL;
+	size_t			len;
+	static size_t	i = -1;
+
+	len = ft_strlen(str);
+	while (++i < len)
 	{
 		w_start = i;
 		if (str[i] == '%')
@@ -21,20 +33,19 @@ t_flist *parse_input(const char *str)
 			i++;
 			while (str[i] != 0 && !ft_strchr(types, str[i]))
 				i++;
-			flist_push(&flist, flist_create(ft_strsub(str, w_start, i - w_start + 1), NULL));
+			PUSH(&flist, CREATE(SUB(str, w_start, i - w_start + 1), NULL));
 		}
 		else
 		{
 			while (str[i + 1] != '%' && str[i + 1] != 0)
 				i++;
-			flist_push(&flist, flist_create(NULL, ft_strsub(str, w_start, i - w_start + 1)));
+			PUSH(&flist, CREATE(NULL, SUB(str, w_start, i - w_start + 1)));
 		}
-		i++;
 	}
 	return (flist);
 }
 
-static int 	get_width(char *str)
+static int	get_width(char *str)
 {
 	int res;
 
@@ -46,7 +57,7 @@ static int 	get_width(char *str)
 	return (res);
 }
 
-static int get_precision(char *format)
+static int	get_precision(char *format)
 {
 	char *dotptr;
 
@@ -55,26 +66,25 @@ static int get_precision(char *format)
 	return (ft_atoi(dotptr + 1));
 }
 
-static char *get_length(char *format)
+static char	*get_length(char *format)
 {
 	if (ft_strstr(format, "ll"))
 		return (ft_strdup("ll"));
-	else if(ft_strstr(format, "l"))
+	else if (ft_strstr(format, "l"))
 		return (ft_strdup("l"));
-	else if(ft_strstr(format, "L"))
+	else if (ft_strstr(format, "L"))
 		return (ft_strdup("L"));
-	else if(ft_strstr(format, "hh"))
+	else if (ft_strstr(format, "hh"))
 		return (ft_strdup("hh"));
-	else if(ft_strstr(format, "h"))
+	else if (ft_strstr(format, "h"))
 		return (ft_strdup("h"));
-	else return (NULL);
+	else
+		return (NULL);
 }
 
-
-void	parse_formats(t_flist *flist)
+void		parse_formats(t_flist *flist)
 {
-	int i;
-
+	int			i;
 	static char *flags = "0+- #";
 
 	while (flist)

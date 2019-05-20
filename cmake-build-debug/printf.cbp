@@ -335,6 +335,9 @@
 		<Unit filename="/Users/mdebbi/Desktop/printf/srcs/apply_specific_format.c">
 			<Option target="printf"/>
 		</Unit>
+		<Unit filename="/Users/mdebbi/Desktop/printf/srcs/apply_specific_format2.c">
+			<Option target="printf"/>
+		</Unit>
 		<Unit filename="/Users/mdebbi/Desktop/printf/srcs/apply_width.c">
 			<Option target="printf"/>
 		</Unit>
@@ -366,9 +369,6 @@
 			<Option target="printf"/>
 		</Unit>
 		<Unit filename="/Users/mdebbi/Desktop/printf/srcs/start.c">
-			<Option target="printf"/>
-		</Unit>
-		<Unit filename="/Users/mdebbi/Desktop/printf/srcs/throw_error.c">
 			<Option target="printf"/>
 		</Unit>
 		<Unit filename="/Users/mdebbi/Desktop/printf/srcs/whole.c">
