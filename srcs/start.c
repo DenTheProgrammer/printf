@@ -72,7 +72,6 @@ char			*print_float(long double var, t_flist *flist)
 
 	bit.f = var;
 	exp = bit.bytes.exponent - 16383;
-
 	struct_init(&n, flist, bit);
 	if (exp == 16384)
 		return (check_inf_nan(&n, flist));
