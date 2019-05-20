@@ -25,19 +25,15 @@ int		printf_output(t_flist *flist)
 {
 	size_t	res_len;
 	t_flist	*tmp;
-	char	*output;
 
-	output = ft_strnew(0);
 	res_len = 0;
 	while (flist)
 	{
 		res_len += ft_strlen(flist->output);
-		output = ft_strjoin_free(output, flist->output, 1);
+		ft_stupid_putstr(flist->output);
 		tmp = flist;
 		flist = flist->next;
 		free_flist(tmp);
 	}
-	ft_stupid_putstr(output);
-	free(output);
 	return (res_len);
 }
