@@ -40,6 +40,6 @@ int		main()
 	int ft, lib;
 
 	test("|%.300f\n", 1.234);
-//	test("%0+20.10d\n", 42);
+	printf("|%.30F\n", 1.234);
 	return 0;
 }

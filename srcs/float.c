@@ -13,7 +13,7 @@
 #include "printf.h"
 #define TMP_SIZE 100
 
-static int		*skip_chars(int *src)
+static int		skip_chars(int *src)
 {
 	int		i;
 

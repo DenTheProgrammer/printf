@@ -12,7 +12,7 @@ LIB_DIR = libft/
 
 # files
 
-SRC =	addit.c       apply_pres_f.c         §          output.c            \
+SRC =	addit.c       apply_pres_f.c                 output.c            \
             apply_flags.c           flist.c                 parse_arguments.c   \
             apply_formats.c         float.c                 power.c             \
             apply_precision.c       fract.c                 start.c             \

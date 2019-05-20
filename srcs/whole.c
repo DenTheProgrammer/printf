@@ -24,7 +24,7 @@ int			*work_whole(int exp, unsigned long wh_b, int *whole)
 		whole = mult(whole, 0);
 		return (whole);
 	}
-	pow_two = ft_memalloc(sizeof(int) * ARR_SIZE);
+	pow_two = ft_memalloc(sizeof(int) * (ARR_SIZE + 1));
 	pow_two[0] = 1;
 	iter = (exp < 63) ? exp + 1 : 64;
 	if (exp >= 63)
