@@ -11,29 +11,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5d508d3a-e5f9-4807-9857-448bf8731f6d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/libft.a" beforeDir="false" afterPath="$PROJECT_DIR$/libft/libft.a" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/libft.h.gch" beforeDir="false" afterPath="$PROJECT_DIR$/libft/libft.h.gch" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/srcs/float.c" beforeDir="false" afterPath="$PROJECT_DIR$/srcs/float.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/srcs/fract.c" beforeDir="false" afterPath="$PROJECT_DIR$/srcs/fract.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/srcs/ft_printf.c" beforeDir="false" afterPath="$PROJECT_DIR$/srcs/ft_printf.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/srcs/printf.h" beforeDir="false" afterPath="$PROJECT_DIR$/srcs/printf.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/srcs/start.c" beforeDir="false" afterPath="$PROJECT_DIR$/srcs/start.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/srcs/whole.c" beforeDir="false" afterPath="$PROJECT_DIR$/srcs/whole.c" afterDir="false" />
-    </list>
+    <list default="true" id="5d508d3a-e5f9-4807-9857-448bf8731f6d" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -466,7 +444,7 @@
       <workItem from="1558279615797" duration="1717000" />
       <workItem from="1558281702493" duration="60000" />
       <workItem from="1558356991437" duration="5036000" />
-      <workItem from="1558365944602" duration="717000" />
+      <workItem from="1558365944602" duration="1022000" />
     </task>
     <task id="LOCAL-00001" summary="flist create &amp;&amp; push, main functions prototypes">
       <created>1556900328895</created>
@@ -594,11 +572,18 @@
       <option name="project" value="LOCAL" />
       <updated>1558359379387</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Float Norminette">
+      <created>1558367688787</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1558367688787</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="144545000" />
+    <option name="totallyTimeSpent" value="144850000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -611,15 +596,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="2560" height="1440" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12192216" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12192216" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info id="Repositories" order="3" weight="0.32962668" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.27372262" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.27372262" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39270073" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -725,7 +709,8 @@
     <MESSAGE value="some lil fixes" />
     <MESSAGE value="Merge fixed" />
     <MESSAGE value="All types except float passing tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="All types except float passing tests" />
+    <MESSAGE value="Float Norminette" />
+    <option name="LAST_COMMIT_MESSAGE" value="Float Norminette" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
