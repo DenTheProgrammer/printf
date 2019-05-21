@@ -50,17 +50,17 @@ static char		*parse_fract(char *res, int pres, char *src)
 	return (ft_strjoin_free(res, tmp, 1));
 }
 
-static char		*parse_whole(char *res, char *src, char sign)
+static char		*parse_whole(char *res, char *src, char sign, int wh_size)
 {
 	int		i;
 	int		j;
 	char	tmp[TMP_SIZE];
 
-	i = ARR_SIZE - 1;
+	i = wh_size - 1;
 	j = 0;
 	while (!src[i] && i)
 		i--;
-	res = ft_strnew(ARR_SIZE);
+	res = ft_strnew(wh_size);
 	if (sign == '-')
 		tmp[j++] = '-';
 	while (i >= 0)
@@ -83,7 +83,7 @@ char			*parse_result(t_wholenumb *n, t_flist *flist)
 	if (n->wh_b == 0)
 		n->res = (n->sign == '-') ? ft_strdup("-0") : ft_strdup("0");
 	else
-		n->res = parse_whole(n->res, n->whole, n->sign);
+		n->res = parse_whole(n->res, n->whole, n->sign, n->wh_size);
 	if (flist->precision != 0)
 		n->res = parse_fract(n->res, flist->precision, n->fract);
 	else

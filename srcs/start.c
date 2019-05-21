@@ -72,8 +72,8 @@ char			*print_float(long double var, t_flist *flist)
 		n.fr_b = 0;
 	else
 		n.wh_b = 0;
-	work_whole(exp, n.wh_b, n.whole, n.wh_size);
-	work_fract((exp >= 0 ? exp : exp * (-1)), &n, flist, (exp >= 0));
+	work_whole(exp, n.wh_b, n.whole, &(n.wh_size));
+	work_fract((exp >= (-51)) ? (int)ft_abs(exp) : 0, &n, flist, (exp >= 0));
 	parse_result(&n, flist);
 	return (n.res);
 }

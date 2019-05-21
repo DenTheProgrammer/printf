@@ -12,7 +12,8 @@
 
 #include "printf.h"
 #include <stdio.h>
-#define SRC "%Lf|%-Lf|%+Lf|% Lf|%#Lf|%0Lf\n", 12.847e451L, 12.847e451L, 12.847e451L, 12.847e451L, 12.847e451L, 12.847e451L
+#include <float.h>
+#define SRC "%.350f|%.350f|%.350f|%.350f|%.350f", 1.e-1, 1.e-2, 1.e-18, 1.e-57, 1.e-201
 
 int		main(void)
 {

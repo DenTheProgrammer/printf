@@ -12,7 +12,7 @@
 
 #ifndef PRINTF_PRINTF_H
 # define PRINTF_PRINTF_H
-# define ARR_SIZE 500
+# define ARR_SIZE 5000
 # define BASE 10
 # define STACK_SIZE 5002
 # define FIRST_BIT_M (unsigned long)1 << 63u
@@ -86,7 +86,7 @@ void					apply_pres_f(int pres, char *fract, char *whole);
 char					*work_fract(int exp, t_wholenumb *n, t_flist *flist,
 						int sign);
 char					*work_whole(int exp, unsigned long wh_b, char *whole,
-							int wh_size);
+							int *wh_size);
 char					*print_float(long double var, t_flist *flist);
 char					*parse_result(t_wholenumb *n, t_flist *flist);
 

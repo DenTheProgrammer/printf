@@ -30,5 +30,6 @@ char	*mult(char *a, int b, int *size)
 		}
 		i++;
 	}
+	(*size) = i;
 	return (a);
 }

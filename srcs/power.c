@@ -45,6 +45,6 @@ char		*power(int nb, int power, char *res, int *size)
 			j++;
 		}
 	}
-	(*size) = ft_numblen(res) + 10;
+	(*size) = j;
 	return (res);
 }
