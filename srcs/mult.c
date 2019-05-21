@@ -6,13 +6,13 @@
 /*   By: ashari <ashari@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/17 20:21:23 by ashari            #+#    #+#             */
-/*   Updated: 2019/05/17 20:21:43 by ashari           ###   ########.fr       */
+/*   Updated: 2019/05/21 05:10:57 by ashari           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "printf.h"
 
-int		*mult(int *a, int b)
+char	*mult(char *a, int b)
 {
 	size_t		i;
 

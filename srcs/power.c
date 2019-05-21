@@ -6,17 +6,17 @@
 /*   By: ashari <ashari@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/17 20:20:26 by ashari            #+#    #+#             */
-/*   Updated: 2019/05/21 03:14:33 by ashari           ###   ########.fr       */
+/*   Updated: 2019/05/21 05:08:53 by ashari           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "printf.h"
 
-int		*power(int nb, int power, int *res)
+char		*power(int nb, int power, char *res)
 {
 	int		i;
 	int		j;
-	int 	size;
+	int		size;
 
 	i = 0;
 	size = 1;

@@ -6,15 +6,15 @@
 /*   By: ashari <ashari@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/17 20:25:56 by ashari            #+#    #+#             */
-/*   Updated: 2019/05/20 18:19:33 by ashari           ###   ########.fr       */
+/*   Updated: 2019/05/21 05:16:43 by ashari           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "printf.h"
 
-int			*work_whole(int exp, unsigned long wh_b, int *whole)
+char			*work_whole(int exp, unsigned long wh_b, char *whole)
 {
-	int				*pow_two;
+	char			*pow_two;
 	int				iter;
 	unsigned long	mask;
 
@@ -24,7 +24,7 @@ int			*work_whole(int exp, unsigned long wh_b, int *whole)
 		whole = mult(whole, 0);
 		return (whole);
 	}
-	pow_two = ft_memalloc(sizeof(int) * (ARR_SIZE + 1));
+	pow_two = ft_strnew(sizeof(char) * (ARR_SIZE + 1));
 	pow_two[0] = 1;
 	iter = (exp < 63) ? exp + 1 : 64;
 	if (exp >= 63)

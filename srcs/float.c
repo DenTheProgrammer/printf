@@ -6,14 +6,14 @@
 /*   By: ashari <ashari@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/16 11:39:04 by ashari            #+#    #+#             */
-/*   Updated: 2019/05/20 18:54:16 by ashari           ###   ########.fr       */
+/*   Updated: 2019/05/21 05:15:11 by ashari           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "printf.h"
 #define TMP_SIZE 100
 
-static int		skip_chars(int *src)
+static int		skip_chars(char *src)
 {
 	int		i;
 
@@ -24,7 +24,7 @@ static int		skip_chars(int *src)
 	return (i);
 }
 
-static char		*parse_fract(char *res, int pres, int *src)
+static char		*parse_fract(char *res, int pres, char *src)
 {
 	int		i;
 	int		j;
@@ -51,7 +51,7 @@ static char		*parse_fract(char *res, int pres, int *src)
 	return (ft_strjoin_free(res, tmp, 1));
 }
 
-static char		*parse_whole(char *res, int *src, char sign)
+static char		*parse_whole(char *res, char *src, char sign)
 {
 	int		i;
 	int		j;

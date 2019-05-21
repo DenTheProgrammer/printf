@@ -6,7 +6,7 @@
 /*   By: ashari <ashari@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/17 20:26:45 by ashari            #+#    #+#             */
-/*   Updated: 2019/05/21 03:25:01 by ashari           ###   ########.fr       */
+/*   Updated: 2019/05/21 05:15:36 by ashari           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,8 +51,8 @@ static void		struct_init(t_wholenumb *n, t_flist *flist, t_form_lf bit)
 	n->sign = (bit.bytes.sign) ? '-' : '0';
 	n->fr_b = bit.bytes.mantisa;
 	n->wh_b = bit.bytes.mantisa;
-	n->whole = ft_memalloc(sizeof(int) * (ARR_SIZE + 1));
-	n->fract = ft_memalloc(sizeof(int) * (ARR_SIZE + 1));
+	n->whole = ft_strnew(sizeof(char) * (ARR_SIZE + 1));
+	n->fract = ft_strnew(sizeof(char) * (ARR_SIZE + 1));
 	if (flist->precision == -1)
 		flist->precision = 6;
 }

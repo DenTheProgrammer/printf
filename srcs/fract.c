@@ -6,13 +6,13 @@
 /*   By: ashari <ashari@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/17 20:24:51 by ashari            #+#    #+#             */
-/*   Updated: 2019/05/20 18:42:23 by ashari           ###   ########.fr       */
+/*   Updated: 2019/05/21 05:16:26 by ashari           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "printf.h"
 
-static int		count_fract(int sign, int exp, int *pow_five, t_wholenumb *n)
+static int		count_fract(int sign, int exp, char *pow_five, t_wholenumb *n)
 {
 	int		iter;
 	int		i;
@@ -30,13 +30,13 @@ static int		count_fract(int sign, int exp, int *pow_five, t_wholenumb *n)
 	return (iter);
 }
 
-int				*work_fract(int exp, t_wholenumb *n, t_flist *flist, int sign)
+char			*work_fract(int exp, t_wholenumb *n, t_flist *flist, int sign)
 {
-	int				*pow_five;
+	char			*pow_five;
 	int				iter;
 	unsigned long	mask;
 
-	pow_five = ft_memalloc(sizeof(int) * (ARR_SIZE + 1));
+	pow_five = ft_strnew(sizeof(char) * (ARR_SIZE + 1));
 	pow_five[0] = 1;
 	n->fract[0] = 1;
 	iter = count_fract(sign, exp, pow_five, n);

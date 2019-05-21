@@ -6,13 +6,13 @@
 /*   By: ashari <ashari@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/17 20:18:59 by ashari            #+#    #+#             */
-/*   Updated: 2019/05/17 20:22:36 by ashari           ###   ########.fr       */
+/*   Updated: 2019/05/21 05:10:34 by ashari           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "printf.h"
 
-static int		ft_numblen(int *n)
+static int		ft_numblen(char *n)
 {
 	int				i;
 
@@ -22,7 +22,7 @@ static int		ft_numblen(int *n)
 	return (ARR_SIZE - i);
 }
 
-int				*addit(int *a, int *b)
+char			*addit(char *a, char *b)
 {
 	int		i;
 	int		len;

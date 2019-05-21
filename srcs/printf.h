@@ -6,7 +6,7 @@
 /*   By: ashari <ashari@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 21:30:32 by ashari            #+#    #+#             */
-/*   Updated: 2019/05/20 21:42:40 by ashari           ###   ########.fr       */
+/*   Updated: 2019/05/21 05:13:00 by ashari           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,8 +47,8 @@ typedef	union			u_formlf
 
 typedef	struct			s_wholenumb
 {
-	int					*whole;
-	int					*fract;
+	char				*whole;
+	char				*fract;
 	char				sign;
 	long				wh_b;
 	long				fr_b;
@@ -76,13 +76,13 @@ void					apply_format_hex(t_flist *flist, va_list *valist);
 void					apply_format_ptr(t_flist *flist, va_list *valist);
 void					apply_format_float(t_flist *flist, va_list *valist);
 void					apply_format_percent(t_flist *flist, va_list *valist);
-int						*addit(int *a, int *b);
-int						*power(int nb, int power, int *res);
-int						*mult(int *a, int b);
-void					apply_pres_f(int pres, int *fract, int *whole);
-int						*work_fract(int exp, t_wholenumb *n, t_flist *flist,
+char					*addit(char *a, char *b);
+char					*power(int nb, int power, char *res);
+char					*mult(char *a, int b);
+void					apply_pres_f(int pres, char *fract, char *whole);
+char					*work_fract(int exp, t_wholenumb *n, t_flist *flist,
 						int sign);
-int						*work_whole(int exp, unsigned long wh_b, int *whole);
+char					*work_whole(int exp, unsigned long wh_b, char *whole);
 char					*print_float(long double var, t_flist *flist);
 char					*parse_result(t_wholenumb *n, t_flist *flist);
 

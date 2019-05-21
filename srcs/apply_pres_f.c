@@ -6,13 +6,13 @@
 /*   By: ashari <ashari@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 17:40:01 by ashari            #+#    #+#             */
-/*   Updated: 2019/05/20 17:40:17 by ashari           ###   ########.fr       */
+/*   Updated: 2019/05/21 05:13:38 by ashari           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "printf.h"
 
-static int				add_one_whole(int *whole, int i)
+static int				add_one_whole(char *whole, int i)
 {
 	whole[0] += 1;
 	while (whole[i] >= BASE && i < (ARR_SIZE - 1))
@@ -24,7 +24,7 @@ static int				add_one_whole(int *whole, int i)
 	return (i);
 }
 
-static int				add_one_fract(int *fract, int i, int pres)
+static int				add_one_fract(char *fract, int i, int pres)
 {
 	fract[++i] += 1;
 	while (fract[i] >= BASE && --pres > 0)
@@ -36,7 +36,7 @@ static int				add_one_fract(int *fract, int i, int pres)
 	return (i);
 }
 
-static int				five_and_numbs(const int *fract, int i)
+static int				five_and_numbs(const char *fract, int i)
 {
 	if (fract[i] != 5)
 		return (0);
@@ -51,7 +51,7 @@ static int				five_and_numbs(const int *fract, int i)
 	return (0);
 }
 
-void					apply_pres_f(int pres, int *fract, int *whole)
+void					apply_pres_f(int pres, char *fract, char *whole)
 {
 	int		i;
 	int		tmp_i;
