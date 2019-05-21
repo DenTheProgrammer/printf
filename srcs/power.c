@@ -12,30 +12,39 @@
 
 #include "printf.h"
 
-char		*power(int nb, int power, char *res)
+static int		ft_numblen(char *n)
+{
+	int				i;
+
+	i = 0;
+	while (i < ARR_SIZE && !n[i])
+		i++;
+	return (ARR_SIZE - i);
+}
+
+char		*power(int nb, int power, char *res, int *size)
 {
 	int		i;
 	int		j;
-	int		size;
 
 	i = 0;
-	size = 1;
 	while (i++ < power)
 	{
 		j = 0;
-		while (j < ARR_SIZE && j < size)
+		while (j < ARR_SIZE && j <= (*size))
 			res[j++] *= nb;
 		j = 0;
-		while (j < ARR_SIZE && j < size)
+		while (j < ARR_SIZE && j <= (*size))
 		{
 			if (res[j] >= BASE)
 			{
 				res[j + 1] += res[j] / BASE;
 				res[j] %= BASE;
-				size++;
+				(*size)++;
 			}
 			j++;
 		}
 	}
+	(*size) = ft_numblen(res) + 10;
 	return (res);
 }

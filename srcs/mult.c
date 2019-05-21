@@ -12,20 +12,21 @@
 
 #include "printf.h"
 
-char	*mult(char *a, int b)
+char	*mult(char *a, int b, int *size)
 {
 	size_t		i;
 
 	i = 0;
-	while (i < ARR_SIZE)
+	while (i < ARR_SIZE && i <= (*size))
 		a[i++] *= b;
 	i = 0;
-	while (i <= ARR_SIZE)
+	while (i <= ARR_SIZE && i <= (*size))
 	{
 		if (a[i] >= BASE)
 		{
 			a[i + 1] += a[i] / BASE;
 			a[i] %= BASE;
+			(*size)++;
 		}
 		i++;
 	}

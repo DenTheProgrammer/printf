@@ -12,7 +12,7 @@
 
 #include "printf.h"
 #include <stdio.h>
-#define SRC "%f|%-f|%+f|% f|%#f|%0f\n", 0., 0., 0., 0., 0., 0.
+#define SRC "%Lf|%-Lf|%+Lf|% Lf|%#Lf|%0Lf\n", 12.847e451L, 12.847e451L, 12.847e451L, 12.847e451L, 12.847e451L, 12.847e451L
 
 int		main(void)
 {

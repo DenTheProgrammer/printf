@@ -13,18 +13,6 @@
 #include "printf.h"
 #include <float.h>
 
-int				ft_reslen(const int *numb)
-{
-	int i;
-
-	i = ARR_SIZE - 1;
-	if (!numb)
-		return (1);
-	while (numb[i] == 0 && i > 0)
-		i--;
-	return (i);
-}
-
 char			*check_inf_nan(t_wholenumb *n, t_flist *flist)
 {
 	n->res = ft_strnew(5);
@@ -41,8 +29,6 @@ char			*check_inf_nan(t_wholenumb *n, t_flist *flist)
 	flist->flags = ft_str_removechar(flist->flags, '#');
 	flist->flags = ft_str_removechar(flist->flags, '0');
 	flist->precision = -1;
-	ft_memdel((void **)&(n->whole));
-	ft_memdel((void **)&(n->fract));
 	return (n->res);
 }
 
@@ -51,8 +37,10 @@ static void		struct_init(t_wholenumb *n, t_flist *flist, t_form_lf bit)
 	n->sign = (bit.bytes.sign) ? '-' : '0';
 	n->fr_b = bit.bytes.mantisa;
 	n->wh_b = bit.bytes.mantisa;
-	n->whole = ft_strnew(sizeof(char) * (ARR_SIZE + 1));
-	n->fract = ft_strnew(sizeof(char) * (ARR_SIZE + 1));
+	n->wh_size = 10;
+	n->fr_size = 10;
+	ft_bzero(n->whole, STACK_SIZE);
+	ft_bzero(n->fract, STACK_SIZE);
 	if (flist->precision == -1)
 		flist->precision = 6;
 }
@@ -84,8 +72,8 @@ char			*print_float(long double var, t_flist *flist)
 		n.fr_b = 0;
 	else
 		n.wh_b = 0;
-	n.whole = work_whole(exp, n.wh_b, n.whole);
-	n.fract = work_fract((exp >= 0 ? exp : exp * (-1)), &n, flist, (exp >= 0));
+	work_whole(exp, n.wh_b, n.whole, n.wh_size);
+	work_fract((exp >= 0 ? exp : exp * (-1)), &n, flist, (exp >= 0));
 	parse_result(&n, flist);
 	return (n.res);
 }

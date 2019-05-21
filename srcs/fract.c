@@ -24,32 +24,31 @@ static int		count_fract(int sign, int exp, char *pow_five, t_wholenumb *n)
 	{
 		iter = 64;
 		while (i++ < exp - 1)
-			n->fract = mult(n->fract, 10);
-		pow_five = power(5, exp - 1, pow_five);
+			mult(n->fract, 10, &(n->fr_size));
+		power(5, exp - 1, pow_five, &(n->fr_size));
 	}
 	return (iter);
 }
 
 char			*work_fract(int exp, t_wholenumb *n, t_flist *flist, int sign)
 {
-	char			*pow_five;
+	char			pow_five[STACK_SIZE];
 	int				iter;
 	unsigned long	mask;
 
-	pow_five = ft_strnew(sizeof(char) * (ARR_SIZE + 1));
+	ft_bzero(pow_five, STACK_SIZE);
 	pow_five[0] = 1;
 	n->fract[0] = 1;
 	iter = count_fract(sign, exp, pow_five, n);
 	mask = FIRST_BIT_M;
 	while (iter-- >= 0)
 	{
-		pow_five = mult(pow_five, 5);
-		n->fract = mult(n->fract, 10);
+		mult(pow_five, 5, &(n->fr_size));
+		mult(n->fract, 10, &(n->fr_size));
 		if (n->fr_b & mask)
-			n->fract = addit(n->fract, pow_five);
+			addit(n->fract, pow_five);
 		mask >>= 1u;
 	}
-	ft_memdel((void **)&pow_five);
 	apply_pres_f(flist->precision, n->fract, n->whole);
 	return (n->fract);
 }
