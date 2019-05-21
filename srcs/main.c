@@ -1,41 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   power.c                                            :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ashari <ashari@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/17 20:20:26 by ashari            #+#    #+#             */
-/*   Updated: 2019/05/21 03:14:33 by ashari           ###   ########.fr       */
+/*   Created: 2019/05/21 03:12:09 by ashari            #+#    #+#             */
+/*   Updated: 2019/05/21 03:12:15 by ashari           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "printf.h"
+#include <stdio.h>
+#define SRC "%f|%-f|%+f|% f|%#f|%0f\n", 0., 0., 0., 0., 0., 0.
 
-int		*power(int nb, int power, int *res)
+int		main(void)
 {
-	int		i;
-	int		j;
-	int 	size;
-
-	i = 0;
-	size = 1;
-	while (i++ < power)
-	{
-		j = 0;
-		while (j < ARR_SIZE && j < size)
-			res[j++] *= nb;
-		j = 0;
-		while (j < ARR_SIZE && j < size)
-		{
-			if (res[j] >= BASE)
-			{
-				res[j + 1] += res[j] / BASE;
-				res[j] %= BASE;
-				size++;
-			}
-			j++;
-		}
-	}
-	return (res);
+	ft_printf(SRC);
+	printf(SRC);
+	return (0);
 }
