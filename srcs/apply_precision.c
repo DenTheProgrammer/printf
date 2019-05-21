@@ -23,17 +23,18 @@ void	apply_precision_str(t_flist *flist)
 
 void	apply_flags_fix(t_flist *flist)
 {
-	if ((ft_strequ(flist->output, "0") && (flist->type != 'o')) ||
+	if ((ft_strequ(flist->output, "0") && (flist->type != 'o') &&
+		(flist->type != 'O')) ||
 		(flist->precision > 0 && ft_strequ(flist->output, "0")))
 		flist->flags = ft_str_removechar(flist->flags, '#');
-	if (flist->precision >= 0 && (flist->type != 'f'))
+	if (flist->precision >= 0 && (flist->type != 'f' && flist->type != 's'))
 		flist->flags = ft_str_removechar(flist->flags, '0');
 	if (flist->precision == 0 && ft_strequ(flist->output, "0") &&
 		flist->type != 'f')
 	{
 		free(flist->output);
 		flist->output = ft_strdup("");
-		if (flist->type != 'o')
+		if (flist->type != 'o' && flist->type != 'O')
 			flist->flags = ft_str_removechar(flist->flags, '#');
 		return ;
 	}
@@ -53,7 +54,8 @@ void	apply_precision(t_flist *flist)
 	}
 	else if (flist->type == 's')
 		apply_precision_str(flist);
-	else if (flist->type == 'x' || flist->type == 'o' || flist->type == 'X')
+	else if (flist->type == 'x' || flist->type == 'o' || flist->type == 'O'
+						|| flist->type == 'X' || flist->type == 'p')
 		flist->output = ft_strinsert(flist->output,
 				ft_str_generate(flist->precision - ft_strlen(flist->output)
 				- (ft_strchr(flist->flags, '#') &&

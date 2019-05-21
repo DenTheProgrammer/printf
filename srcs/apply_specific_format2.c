@@ -16,6 +16,12 @@ void	apply_format_char(t_flist *flist, va_list *valist)
 {
 	char *c;
 
+	if (flist->type == 'C')
+	{
+		flist->type = 'c';
+		free(flist->length);
+		flist->length = ft_strdup("l");
+	}
 	flist->precision = -1;
 	c = ft_strnew(2);
 	c[0] = va_arg(*valist, int);
@@ -32,8 +38,16 @@ void	apply_format_oct(t_flist *flist, va_list *valist)
 {
 	unsigned long long arg;
 
+	if (flist->type == 'O')
+	{
+		flist->type = 'o';
+		free(flist->length);
+		flist->length = ft_strdup("l");
+	}
 	arg = apply_length_uns(flist, valist);
 	flist->output = ft_itoa_base(arg, 8, 0);
+	flist->flags = ft_str_removechar(flist->flags, '+');
+	flist->flags = ft_str_removechar(flist->flags, ' ');
 }
 
 void	apply_format_hex(t_flist *flist, va_list *valist)
@@ -43,6 +57,8 @@ void	apply_format_hex(t_flist *flist, va_list *valist)
 	arg = apply_length_uns(flist, valist);
 	flist->output = (flist->type == 'x') ? ft_itoa_base(arg, 16, 0)
 			: ft_itoa_base(arg, 16, 1);
+	flist->flags = ft_str_removechar(flist->flags, '+');
+	flist->flags = ft_str_removechar(flist->flags, ' ');
 }
 
 void	apply_format_ptr(t_flist *flist, va_list *valist)
@@ -50,8 +66,8 @@ void	apply_format_ptr(t_flist *flist, va_list *valist)
 	long int arg;
 
 	arg = va_arg(*valist, long int);
-	if (arg == 0)
-		flist->output = ft_strdup("0x");
-	else
-		flist->output = ft_strjoin_free("0x", ft_itoa_base(arg, 16, 0), 2);
+	flist->output = ft_itoa_base(arg, 16, 0);
+	flist->flags = ft_str_removechar(flist->flags, '+');
+	flist->flags = ft_str_removechar(flist->flags, ' ');
+	ft_strpushchar(&flist->flags, '#');
 }

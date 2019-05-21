@@ -16,6 +16,12 @@ void	apply_format_int(t_flist *flist, va_list *valist)
 {
 	long long arg;
 
+	if (flist->type == 'D')
+	{
+		flist->type = 'd';
+		free(flist->length);
+		flist->length = ft_strdup("l");
+	}
 	arg = apply_length(flist, valist);
 	flist->output = ft_itoa_long(arg);
 }
@@ -24,6 +30,12 @@ void	apply_format_uns(t_flist *flist, va_list *valist)
 {
 	unsigned long int arg;
 
+	if (flist->type == 'U')
+	{
+		flist->type = 'u';
+		free(flist->length);
+		flist->length = ft_strdup("l");
+	}
 	flist->flags = ft_str_removechar(flist->flags, '+');
 	flist->flags = ft_str_removechar(flist->flags, ' ');
 	arg = apply_length_uns(flist, valist);
@@ -37,6 +49,8 @@ void	apply_format_str(t_flist *flist, va_list *valist)
 	tmp = va_arg(*valist, char*);
 	flist->output = ft_strdup(tmp ? tmp : "(null)");
 	apply_precision_str(flist);
+	flist->flags = ft_str_removechar(flist->flags, '+');
+	flist->flags = ft_str_removechar(flist->flags, ' ');
 }
 
 void	apply_format_float(t_flist *flist, va_list *valist)
@@ -53,5 +67,7 @@ void	apply_format_float(t_flist *flist, va_list *valist)
 void	apply_format_percent(t_flist *flist, va_list *valist)
 {
 	flist->output = ft_strdup("%");
+	flist->flags = ft_str_removechar(flist->flags, '+');
 	flist->flags = ft_str_removechar(flist->flags, ' ');
+	flist->precision = -1;
 }
