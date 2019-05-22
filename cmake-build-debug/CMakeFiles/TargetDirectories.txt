@@ -1,3 +1,0 @@
-/home/den/Desktop/printf/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/den/Desktop/printf/cmake-build-debug/CMakeFiles/printf.dir
-/home/den/Desktop/printf/cmake-build-debug/CMakeFiles/edit_cache.dir

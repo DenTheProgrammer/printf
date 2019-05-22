@@ -1,31 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   addit.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ashari <ashari@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/20 21:07:31 by mdebbi            #+#    #+#             */
-/*   Updated: 2019/05/21 01:26:34 by ashari           ###   ########.fr       */
+/*   Created: 2019/05/17 20:18:59 by ashari            #+#    #+#             */
+/*   Updated: 2019/05/21 05:10:34 by ashari           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "printf.h"
-#include <math.h>
-#include <float.h>
-#include <limits.h>
 
-int		ft_printf(const char *str, ...)
+static int		ft_numblen(char *n)
 {
-	va_list valist;
-	t_flist *format_list;
+	int				i;
 
-	if (!str)
-		return (0);
-	va_start(valist, str);
-	format_list = parse_input((char*)str);
-	parse_formats(format_list);
-	apply_formats(format_list, &valist);
-	va_end(valist);
-	return (printf_output(format_list));
+	i = 0;
+	while (i < ARR_SIZE && !n[i])
+		i++;
+	return (ARR_SIZE - i);
+}
+
+char			*addit(char *a, char *b)
+{
+	int		i;
+	int		len;
+
+	i = 0;
+	len = (ft_numblen(a) > ft_numblen(b)) ?
+	ft_numblen(a) : ft_numblen(b);
+	while (i < len)
+	{
+		a[i] = a[i] + b[i];
+		if (a[i] >= BASE)
+		{
+			a[i + 1] = a[i + 1] + a[i] / BASE;
+			a[i] = a[i] % BASE;
+		}
+		i++;
+	}
+	return (a);
 }

@@ -1,31 +1,57 @@
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    Makefile                                           :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: mdebbi <mdebbi@student.42.fr>              +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2019/04/02 20:20:20 by mdebbi            #+#    #+#              #
-#    Updated: 2019/04/11 13:03:01 by mdebbi           ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
-
 NAME = libftprintf.a
-LIBFT_DIR = ./libft
 
-$(NAME):
-	@make -C $(LIBFT_DIR)
-	gcc -c srcs/*.c libft/*.c -I ./libft -I ./srcs
-	ar -rc $(NAME) *.o
+# compiling
+
+GCC = gcc -g -c
+
+# paths
+
+SRC_DIR	= srcs/
+OBJ_DIR = obj/
+LIB_DIR = libft/
+
+# files
+
+SRC =	addit.c       apply_pres_f.c        parse_format.c         output.c            \
+            apply_flags.c           flist.c                 parse_arguments.c   \
+            apply_formats.c         float.c                 power.c             \
+            apply_precision.c       fract.c                 start.c             \
+            apply_specific_format.c \
+			apply_specific_format2.c ft_printf.c                    \
+            apply_width.c           mult.c                  whole.c
+
+OBJ = $(patsubst %.c, %.o, $(SRC))
+HEADER = includes
+LIB = libft/libft.a
+
+# files with dir
+
+C_PATH = $(addprefix $(SRC_DIR), $(SRC))
+O_PATH = $(addprefix $(OBJ_DIR), $(OBJ))
 
 all: $(NAME)
 
-clean:
-	rm -f *.o
-	@make -C $(LIBFT_DIR) clean
+$(NAME): $(OBJ_DIR) $(O_PATH)
+	cp $(LIB) ./$(NAME)
+	ar -rc $(NAME) $(O_PATH)
+	ranlib $(NAME)
+
+$(OBJ_DIR):
+	mkdir -p obj
+
+$(OBJ_DIR)%.o: $(SRC_DIR)%.c $(HEADER)
+	$(GCC) $< -o $@ -I $(HEADER) -I $(LIB_DIR)
+	make -C $(LIB_DIR)
 
 fclean: clean
 	rm -f $(NAME)
-	@make -C $(LIBFT_DIR) fclean
+	make fclean -C $(LIB_DIR)
+
+clean:
+	rm -f $(OBJ_PATH)
+	rm -rf $(OBJ_DIR)
+	make clean -C $(LIB_DIR)
 
 re: fclean all
+
+.PHONY: all fclean clean re

@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-static	size_t	intlen(long long n, int base)
+static	size_t	intlen(unsigned long long n, int base)
 {
 	size_t len;
 
@@ -25,15 +25,15 @@ static	size_t	intlen(long long n, int base)
 	return (len);
 }
 
-char			*ft_itoa_base(long long n, int base)
+char			*ft_itoa_base(unsigned long long n, int base, int uppercase)
 {
 	char	*res;
 	size_t	len;
-	char *barr;
+	char	*barr;
 
 	if (n == 0)
 		return (ft_strdup("0"));
-	barr = "0123456789abcdef";
+	barr = uppercase ? "0123456789ABCDEF" : "0123456789abcdef";
 	len = intlen(n, base);
 	res = ft_strnew(len);
 	if (!res)

@@ -29,7 +29,7 @@ char	*ft_strjoin_free(const char *s1, const char *s2, int tofree)
 	if (tofree == 1 || tofree > 2)
 		free((char*)s1);
 	ft_strcpy(res + len1, s2);
-	if (tofree >=2)
+	if (tofree >= 2)
 		free((char*)s2);
 	return (res);
 }
