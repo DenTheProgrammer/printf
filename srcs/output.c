@@ -29,7 +29,7 @@ int		printf_output(t_flist *flist)
 	res_len = 0;
 	while (flist)
 	{
-		res_len += ft_strlen(flist->output);
+		res_len += ft_strlen_safe(flist->output);
 		ft_stupid_putstr(flist->output);
 		tmp = flist;
 		flist = flist->next;
