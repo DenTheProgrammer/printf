@@ -14,7 +14,7 @@
 
 void	apply_precision_str(t_flist *flist)
 {
-	int prec;
+	size_t prec;
 
 	prec = (flist->precision < 0) ? ft_strlen(flist->output) : flist->precision;
 	if (prec < ft_strlen(flist->output))

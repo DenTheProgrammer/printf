@@ -45,7 +45,7 @@ static void		struct_init(t_wholenumb *n, t_flist *flist, t_form_lf bit)
 		flist->precision = 6;
 }
 
-static void		bytes_init(t_wholenumb *n, t_form_lf bit,
+static void		bytes_init(t_wholenumb *n,
 							unsigned long a, unsigned long b)
 {
 	n->wh_b = a;
@@ -64,9 +64,9 @@ char			*print_float(long double var, t_flist *flist)
 	if (exp == 16384)
 		return (check_inf_nan(&n, flist));
 	else if (var == LDBL_MIN || var == DBL_MIN)
-		bytes_init(&n, bit, 0, 0);
+		bytes_init(&n, 0, 0);
 	else if (exp >= 0 && exp < 63)
-		bytes_init(&n, bit, bit.bytes.mantisa >> (64u - (exp + 1u)),
+		bytes_init(&n, bit.bytes.mantisa >> (64u - (exp + 1u)),
 		bit.bytes.mantisa << (exp + 1u));
 	else if (exp >= 63)
 		n.fr_b = 0;

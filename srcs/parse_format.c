@@ -53,7 +53,7 @@ static char	*get_length(char *format)
 void		parse_formats(t_flist *flist)
 {
 	int			i;
-	static char *flags = "0+- #b";
+	static char *flags = "0+- #";
 
 	while (flist)
 	{

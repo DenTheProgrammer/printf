@@ -12,6 +12,16 @@
 
 #include "printf.h"
 
+static void			apply_prec_flags_width(t_flist *flist)
+{
+	if (flist->output)
+	{
+		apply_precision(flist);
+		apply_flags(flist);
+		apply_width(flist);
+	}
+}
+
 static void			apply_format_helper(t_flist *flist, va_list *valist)
 {
 	if (flist->type == 'd' || flist->type == 'i' || flist->type == 'D')
@@ -32,14 +42,11 @@ static void			apply_format_helper(t_flist *flist, va_list *valist)
 		apply_format_ptr(flist, valist);
 	else if (flist->type == 'u' || flist->type == 'U')
 		apply_format_uns(flist, valist);
+	else if (flist->type == 'b')
+		apply_format_byte(flist, valist);
 	else if (flist->type == '%')
-		apply_format_percent(flist, valist);
-	if (flist->output)
-	{
-		apply_precision(flist);
-		apply_flags(flist);
-		apply_width(flist);
-	}
+		apply_format_percent(flist);
+	apply_prec_flags_width(flist);
 }
 
 void				apply_formats(t_flist *flist, va_list *valist)

@@ -2,7 +2,7 @@ NAME = libftprintf.a
 
 # compiling
 
-GCC = gcc -g -c
+GCC = gcc -Wall -Wextra -Werror -c
 
 # paths
 
@@ -12,13 +12,13 @@ LIB_DIR = libft/
 
 # files
 
-SRC =	addit.c       apply_pres_f.c        parse_format.c         output.c            \
-            apply_flags.c           flist.c                 parse_arguments.c   \
-            apply_formats.c         float.c                 power.c             \
-            apply_precision.c       fract.c                 start.c             \
-            apply_specific_format.c \
-			apply_specific_format2.c ft_printf.c                    \
-            apply_width.c           mult.c                  whole.c
+SRC =	    addit.c                     apply_pres_f.c   parse_format.c      \
+            apply_flags.c               flist.c          parse_arguments.c   \
+            apply_formats.c             float.c          power.c             \
+            apply_precision.c           fract.c          start.c             \
+            apply_specific_format.c     output.c         whole.c             \
+			apply_specific_format2.c    ft_printf.c      ft_print_bits.c     \
+            apply_width.c               mult.c
 
 OBJ = $(patsubst %.c, %.o, $(SRC))
 HEADER = includes

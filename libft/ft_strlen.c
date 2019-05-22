@@ -48,7 +48,7 @@ size_t		ft_strlen(const char *s)
 	{
 		if (*ptr == '\0')
 			return (ptr - s);
-		ptr += 1;
+		ptr++;
 	}
 	lptr = (const unsigned long *)ptr;
 	while (1)
@@ -59,7 +59,7 @@ size_t		ft_strlen(const char *s)
 			if ((x = test_byte(ptr)) >= 0)
 				break ;
 		}
-		lptr += 1;
+		lptr++;
 	}
 	return (ptr - s + x);
 }

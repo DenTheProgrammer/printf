@@ -80,7 +80,7 @@ void		apply_flags(t_flist *flist)
 	if (ft_strchr(flist->flags, '+') && flist->output[0] != '-')
 		apply_flag_plus(flist);
 	else if (ft_strchr(flist->flags, ' ') && flist->output[0] != '-')
-		flist->output = ft_strjoin(" ", flist->output);
+		flist->output = ft_strjoin_free(" ", flist->output, 2);
 	if ((ft_strchr(flist->flags, '#') && !ft_strequ(flist->output, "0"))
 	|| flist->type == 'p')
 		apply_flag_hash(flist);

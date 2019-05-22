@@ -14,7 +14,7 @@
 
 char	*mult(char *a, int b, int *size)
 {
-	size_t		i;
+	int		i;
 
 	i = 0;
 	while (i < ARR_SIZE && i <= (*size))

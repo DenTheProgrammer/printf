@@ -12,16 +12,6 @@
 
 #include "printf.h"
 
-static int		ft_numblen(char *n)
-{
-	int				i;
-
-	i = 0;
-	while (i < ARR_SIZE && !n[i])
-		i++;
-	return (ARR_SIZE - i);
-}
-
 char			*power(int nb, int power, char *res, int *size)
 {
 	int		i;

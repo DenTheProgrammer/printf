@@ -64,7 +64,7 @@ void	apply_format_float(t_flist *flist, va_list *valist)
 	flist->output = print_float(arg, flist);
 }
 
-void	apply_format_percent(t_flist *flist, va_list *valist)
+void	apply_format_percent(t_flist *flist)
 {
 	flist->output = ft_strdup("%");
 	flist->flags = ft_str_removechar(flist->flags, '+');

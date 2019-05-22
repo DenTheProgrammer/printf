@@ -59,6 +59,7 @@ typedef	struct			s_wholenumb
 }						t_wholenumb;
 
 t_flist					*parse_input(char *str);
+char					*ft_print_bits(size_t size, void const *ptr);
 void					parse_formats(t_flist *flist);
 void					apply_formats(t_flist *flist, va_list *valist);
 int						printf_output(t_flist *flist);
@@ -78,7 +79,9 @@ void					apply_format_oct(t_flist *flist, va_list *valist);
 void					apply_format_hex(t_flist *flist, va_list *valist);
 void					apply_format_ptr(t_flist *flist, va_list *valist);
 void					apply_format_float(t_flist *flist, va_list *valist);
-void					apply_format_percent(t_flist *flist, va_list *valist);
+void					apply_format_percent(t_flist *flist);
+void					apply_format_byte(t_flist *flist, va_list *valist);
+char					*ft_print_bits(size_t size, void const *ptr);
 char					*addit(char *a, char *b);
 char					*power(int nb, int power, char *res, int *size);
 char					*mult(char *a, int b, int *size);

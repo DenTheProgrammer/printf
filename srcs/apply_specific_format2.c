@@ -72,9 +72,21 @@ void	apply_format_ptr(t_flist *flist, va_list *valist)
 	ft_strpushchar(&flist->flags, '#');
 }
 
-//void	apply_format_byte(t_flist *flist, va_list *valist)
-//{
-//	long long arg;
-//
-//	arg = apply_length(flist, valist);
-//}
+void	apply_format_byte(t_flist *flist, va_list *valist)
+{
+	long long arg;
+
+	arg = apply_length(flist, valist);
+	ft_bzero(flist->flags, ft_strlen(flist->flags));
+	flist->precision = -1;
+	if (ft_strequ(flist->length, "ll"))
+		flist->output = ft_print_bits(sizeof(long long), &arg);
+	else if (ft_strequ(flist->length, "l"))
+		flist->output = ft_print_bits(sizeof(long), &arg);
+	else if (ft_strequ(flist->length, "hh"))
+		flist->output = ft_print_bits(sizeof(char), &arg);
+	else if (ft_strequ(flist->length, "h"))
+		flist->output = ft_print_bits(sizeof(short), &arg);
+	else
+		flist->output = ft_print_bits(sizeof(int), &arg);
+}

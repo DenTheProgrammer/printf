@@ -32,8 +32,6 @@ char			*ft_itoa_uns(unsigned long long n)
 	char	*res;
 	size_t	len;
 
-//	if (n == 4294967296)
-//		return ("4294967296");
 	len = intlen(n);
 	res = ft_strnew(len);
 	if (!res)
