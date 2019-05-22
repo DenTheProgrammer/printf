@@ -71,3 +71,10 @@ void	apply_format_ptr(t_flist *flist, va_list *valist)
 	flist->flags = ft_str_removechar(flist->flags, ' ');
 	ft_strpushchar(&flist->flags, '#');
 }
+
+//void	apply_format_byte(t_flist *flist, va_list *valist)
+//{
+//	long long arg;
+//
+//	arg = apply_length(flist, valist);
+//}

@@ -13,11 +13,11 @@
 #include "printf.h"
 #include <stdio.h>
 #include <float.h>
-#define SRC1 "%.2147483f\n", 1.0
+#define SRC1 "%p\n", 0
 
 int		main(void)
 {
-	ft_printf(SRC1);
-	printf(SRC1);
+	ft_printf("%+b20d", 42);
+//	printf(SRC1);
 	return (0);
 }
