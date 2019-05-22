@@ -70,7 +70,8 @@ void		apply_flags(t_flist *flist)
 {
 	if (ft_strchr(flist->flags, '-'))
 		flist->flags = ft_str_removechar(flist->flags, '0');
-	if (flist->precision >= flist->width && flist->type != 's')
+	if (flist->precision >= flist->width && flist->type != 's'
+	&& flist->type != 'f')
 	{
 		flist->width = flist->precision;
 		flist->flags = ft_str_removechar(flist->flags, '-');

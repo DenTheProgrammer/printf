@@ -6,7 +6,7 @@
 /*   By: ashari <ashari@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/17 20:20:26 by ashari            #+#    #+#             */
-/*   Updated: 2019/05/21 05:08:53 by ashari           ###   ########.fr       */
+/*   Updated: 2019/05/22 14:56:03 by ashari           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ static int		ft_numblen(char *n)
 	return (ARR_SIZE - i);
 }
 
-char		*power(int nb, int power, char *res, int *size)
+char			*power(int nb, int power, char *res, int *size)
 {
 	int		i;
 	int		j;

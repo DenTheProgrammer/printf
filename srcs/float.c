@@ -6,90 +6,78 @@
 /*   By: ashari <ashari@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/16 11:39:04 by ashari            #+#    #+#             */
-/*   Updated: 2019/05/21 05:15:11 by ashari           ###   ########.fr       */
+/*   Updated: 2019/05/22 14:54:42 by ashari           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "printf.h"
 #define TMP_SIZE 100
 
-static int		skip_chars(char *src)
+static int		skip_chars(const char *src, int size)
 {
 	int		i;
 
-	i = ARR_SIZE - 1;
+	i = size + 1;
 	while (!src[i] && i >= 0)
 		i--;
 	i--;
 	return (i);
 }
 
-static char		*parse_fract(char *res, int pres, char *src)
+static char		*parse_fract(t_wholenumb *n, int pres, int j)
 {
 	int		i;
-	int		j;
-	char	tmp[TMP_SIZE];
 
-	j = 0;
-	tmp[j++] = '.';
-	i = skip_chars(src);
+	while (n->res[j])
+		j++;
+	n->res[j++] = '.';
+	i = skip_chars(n->fract, n->fr_size);
 	while (i >= 0 && pres--)
-		tmp[j++] = src[i--] + '0';
+		n->res[j++] = n->fract[i--] + '0';
 	while (pres-- > 0)
-	{
-		if (j >= (TMP_SIZE - 2))
-		{
-			tmp[j] = '\0';
-			res = ft_strjoin_free(res, tmp, 1);
-			ft_bzero(&tmp, TMP_SIZE);
-			j = 0;
-		}
-		tmp[j++] = '0';
-	}
-	tmp[j] = '\0';
-	return (ft_strjoin_free(res, tmp, 1));
+		n->res[j++] = '0';
+	return (n->res);
 }
 
-static char		*parse_whole(char *res, char *src, char sign, int wh_size)
+static int		parse_whole(char *res, const char *src, char sign, int wh_size)
 {
 	int		i;
 	int		j;
-	char	tmp[TMP_SIZE];
 
 	i = wh_size - 1;
 	j = 0;
-	while (!src[i] && i)
+	while (!src[i] && i >= 0)
 		i--;
-	res = ft_strnew(wh_size);
 	if (sign == '-')
-		tmp[j++] = '-';
+		res[j++] = '-';
 	while (i >= 0)
-	{
-		if (j >= (TMP_SIZE - 2))
-		{
-			tmp[j] = '\0';
-			res = ft_strjoin_free(res, tmp, 1);
-			ft_bzero(&tmp, TMP_SIZE);
-			j = 0;
-		}
-		tmp[j++] = src[i--] + '0';
-	}
-	tmp[j] = '\0';
-	return (ft_strjoin_free(res, tmp, 1));
+		res[j++] = src[i--] + '0';
+	return (j);
 }
 
 char			*parse_result(t_wholenumb *n, t_flist *flist)
 {
+	int		j;
+
+	j = 0;
+	flist->precision = (int)ft_abs((int)flist->precision);
+	n->res = (flist->precision > n->fr_size) ?
+	ft_strnew(flist->precision + n->wh_size)
+			: ft_strnew(n->fr_size + n->wh_size);
+	if (!n->res)
+		return (ft_strnew(1));
 	if (n->wh_b == 0)
-		n->res = (n->sign == '-') ? ft_strdup("-0") : ft_strdup("0");
+		n->res = (n->sign == '-') ? ft_strcpy(n->res, "-0") :
+		ft_strcpy(n->res, "0");
 	else
-		n->res = parse_whole(n->res, n->whole, n->sign, n->wh_size);
-	if (flist->precision != 0)
-		n->res = parse_fract(n->res, flist->precision, n->fract);
-	else
+		j = parse_whole(n->res, n->whole, n->sign, n->wh_size);
+	if (flist->precision)
+		n->res = parse_fract(n, flist->precision, j);
+	else if (!flist->precision && ft_strchr(flist->flags, '#'))
 	{
-		if (ft_strchr(flist->flags, '#'))
-			n->res = ft_strjoin(n->res, ".");
+		while (n->res[j])
+			j++;
+		n->res[j] = '.';
 	}
 	return (n->res);
 }
