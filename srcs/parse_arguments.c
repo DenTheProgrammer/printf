@@ -19,7 +19,7 @@
 t_flist		*parse_input_helper(size_t *i, char *str, t_flist *flist)
 {
 	int				w_start;
-	static char		*types = "cCsSpdDioOuUxX%f";
+	static char		*types = "cCsSpdDioOuUxX%fb";
 
 	w_start = *i;
 	if (str[*i] == '%')

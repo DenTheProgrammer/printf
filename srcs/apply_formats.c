@@ -34,9 +34,12 @@ static void			apply_format_helper(t_flist *flist, va_list *valist)
 		apply_format_uns(flist, valist);
 	else if (flist->type == '%')
 		apply_format_percent(flist, valist);
-	apply_precision(flist);
-	apply_flags(flist);
-	apply_width(flist);
+	if (flist->output)
+	{
+		apply_precision(flist);
+		apply_flags(flist);
+		apply_width(flist);
+	}
 }
 
 void				apply_formats(t_flist *flist, va_list *valist)

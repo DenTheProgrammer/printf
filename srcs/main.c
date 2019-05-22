@@ -17,7 +17,7 @@
 
 int		main(void)
 {
-	ft_printf("%+b20d", 42);
+	ft_printf("%", 42);
 //	printf(SRC1);
 	return (0);
 }
