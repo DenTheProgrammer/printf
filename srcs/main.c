@@ -15,9 +15,9 @@
 #include <float.h>
 #define SRC "%j\n", 4246445757457
 
-//int		main(void)
-//{
-//	ft_printf("{%04.s}\n", 0);
-//	printf("{%04.s}\n", 0);
-//	return (0);
-//}
+int		main(void)
+{
+	ft_printf("{%04.s}\n", 0);
+	printf("{%04.s}\n", 0);
+	return (0);
+}
