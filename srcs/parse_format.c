@@ -37,7 +37,8 @@ static char	*get_length(char *format)
 {
 	if (ft_strstr(format, "ll"))
 		return (ft_strdup("ll"));
-	else if (ft_strstr(format, "l"))
+	else if (ft_strstr(format, "l") || ft_strstr(format, "j")
+									|| ft_strstr(format, "z"))
 		return (ft_strdup("l"));
 	else if (ft_strstr(format, "L"))
 		return (ft_strdup("L"));
@@ -52,7 +53,7 @@ static char	*get_length(char *format)
 void		parse_formats(t_flist *flist)
 {
 	int			i;
-	static char *flags = "0+- #";
+	static char *flags = "0+- #b";
 
 	while (flist)
 	{

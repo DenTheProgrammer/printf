@@ -14,13 +14,13 @@
 
 static void			apply_format_helper(t_flist *flist, va_list *valist)
 {
-	if (flist->type == 'd' || flist->type == 'i')
+	if (flist->type == 'd' || flist->type == 'i' || flist->type == 'D')
 		apply_format_int(flist, valist);
-	else if (flist->type == 's')
+	else if (flist->type == 's' || flist->type == 'S')
 		apply_format_str(flist, valist);
-	else if (flist->type == 'c')
+	else if (flist->type == 'c' || flist->type == 'C')
 		apply_format_char(flist, valist);
-	else if (flist->type == 'o')
+	else if (flist->type == 'o' || flist->type == 'O')
 		apply_format_oct(flist, valist);
 	else if (flist->type == 'x')
 		apply_format_hex(flist, valist);
@@ -30,7 +30,7 @@ static void			apply_format_helper(t_flist *flist, va_list *valist)
 		apply_format_float(flist, valist);
 	else if (flist->type == 'p')
 		apply_format_ptr(flist, valist);
-	else if (flist->type == 'u')
+	else if (flist->type == 'u' || flist->type == 'U')
 		apply_format_uns(flist, valist);
 	else if (flist->type == '%')
 		apply_format_percent(flist, valist);

@@ -17,6 +17,9 @@ static void	apply_flag_plus(t_flist *flist)
 	size_t	nbrlen;
 	char	*tmp;
 
+	if (flist->type == 'o' || flist->type == 'O' || flist->type == 'x'
+	|| flist->type == 'X' || flist->type == 's' || flist->type == 'S')
+		return ;
 	nbrlen = ft_strlen(flist->output);
 	if (ft_strchr(flist->flags, '0'))
 	{
@@ -52,9 +55,9 @@ void		apply_flag_hash(t_flist *flist)
 
 	tmp_out = ft_strdup(flist->output);
 	free(flist->output);
-	if (flist->type == 'o')
+	if (flist->type == 'o' || flist->type == 'O')
 		flist->output = ft_strjoin("0", tmp_out);
-	else if (flist->type == 'x')
+	else if (flist->type == 'x' || flist->type == 'p')
 		flist->output = ft_strjoin("0x", tmp_out);
 	else if (flist->type == 'X')
 		flist->output = ft_strjoin("0X", tmp_out);
@@ -78,7 +81,8 @@ void		apply_flags(t_flist *flist)
 		apply_flag_plus(flist);
 	else if (ft_strchr(flist->flags, ' ') && flist->output[0] != '-')
 		flist->output = ft_strjoin(" ", flist->output);
-	if (ft_strchr(flist->flags, '#') && !ft_strequ(flist->output, "0"))
+	if ((ft_strchr(flist->flags, '#') && !ft_strequ(flist->output, "0"))
+	|| flist->type == 'p')
 		apply_flag_hash(flist);
 	if (ft_strchr(flist->flags, '-'))
 		apply_flag_minus(flist);
