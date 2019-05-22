@@ -6,7 +6,7 @@
 /*   By: ashari <ashari@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/17 20:24:51 by ashari            #+#    #+#             */
-/*   Updated: 2019/05/21 05:16:26 by ashari           ###   ########.fr       */
+/*   Updated: 2019/05/22 14:55:54 by ashari           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,8 @@ static int		count_fract(int sign, int exp, char *pow_five, t_wholenumb *n)
 	return (iter);
 }
 
-char			*work_fract(int exp, t_wholenumb *n, t_flist *flist, int sign)
+char			*work_fract(unsigned int exp, t_wholenumb *n,
+							t_flist *flist, int sign)
 {
 	char			pow_five[STACK_SIZE];
 	int				iter;

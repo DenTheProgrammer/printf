@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   apply_flags.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mdebbi <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: ashari <ashari@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 17:05:39 by mdebbi            #+#    #+#             */
-/*   Updated: 2019/05/20 17:05:41 by mdebbi           ###   ########.fr       */
+/*   Updated: 2019/05/22 14:53:30 by ashari           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,8 @@ void		apply_flags(t_flist *flist)
 {
 	if (ft_strchr(flist->flags, '-'))
 		flist->flags = ft_str_removechar(flist->flags, '0');
-	if (flist->precision >= flist->width && flist->type != 's')
+	if (flist->precision >= flist->width && flist->type != 's'
+	&& flist->type != 'f')
 	{
 		flist->width = flist->precision;
 		flist->flags = ft_str_removechar(flist->flags, '-');

@@ -6,7 +6,7 @@
 /*   By: ashari <ashari@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/17 20:26:45 by ashari            #+#    #+#             */
-/*   Updated: 2019/05/21 05:15:36 by ashari           ###   ########.fr       */
+/*   Updated: 2019/05/22 14:55:22 by ashari           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,8 @@ char			*print_float(long double var, t_flist *flist)
 	else
 		n.wh_b = 0;
 	work_whole(exp, n.wh_b, n.whole, &(n.wh_size));
-	work_fract((exp >= (-51)) ? (int)ft_abs(exp) : 0, &n, flist, (exp >= 0));
+	work_fract((exp >= (-1100)) ? (int)ft_abs((int)exp) :
+	(int)0, &n, flist, (exp >= 0));
 	parse_result(&n, flist);
 	return (n.res);
 }

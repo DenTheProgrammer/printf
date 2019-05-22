@@ -13,11 +13,11 @@
 #include "printf.h"
 #include <stdio.h>
 #include <float.h>
-#define SRC "%.350f|%.350f|%.350f|%.350f|%.350f", 1.e-1, 1.e-2, 1.e-18, 1.e-57, 1.e-201
+#define SRC1 "%.2147483f\n", 1.0
 
 int		main(void)
 {
-	ft_printf(SRC);
-	printf(SRC);
+	ft_printf(SRC1);
+	printf(SRC1);
 	return (0);
 }

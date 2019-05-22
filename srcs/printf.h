@@ -6,7 +6,7 @@
 /*   By: ashari <ashari@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 21:30:32 by ashari            #+#    #+#             */
-/*   Updated: 2019/05/21 05:13:00 by ashari           ###   ########.fr       */
+/*   Updated: 2019/05/22 14:57:48 by ashari           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 # define PRINTF_PRINTF_H
 # define ARR_SIZE 5000
 # define BASE 10
-# define STACK_SIZE 5002
+# define STACK_SIZE 10002
 # define FIRST_BIT_M (unsigned long)1 << 63u
 # include "../libft/libft.h"
 # include <stdarg.h>
@@ -51,8 +51,8 @@ typedef	struct			s_wholenumb
 	char				whole[STACK_SIZE];
 	char				fract[STACK_SIZE];
 	char				sign;
-	int 				wh_size;
-	int 				fr_size;
+	int					wh_size;
+	int					fr_size;
 	long				wh_b;
 	long				fr_b;
 	char				*res;
@@ -83,8 +83,8 @@ char					*addit(char *a, char *b);
 char					*power(int nb, int power, char *res, int *size);
 char					*mult(char *a, int b, int *size);
 void					apply_pres_f(int pres, char *fract, char *whole);
-char					*work_fract(int exp, t_wholenumb *n, t_flist *flist,
-						int sign);
+char					*work_fract(unsigned int exp, t_wholenumb *n,
+									t_flist *flist, int sign);
 char					*work_whole(int exp, unsigned long wh_b, char *whole,
 							int *wh_size);
 char					*print_float(long double var, t_flist *flist);

@@ -21,7 +21,7 @@ SRC =	addit.c       apply_pres_f.c        parse_format.c         output.c       
             apply_width.c           mult.c                  whole.c
 
 OBJ = $(patsubst %.c, %.o, $(SRC))
-HEADER = -I includes
+HEADER = includes
 LIB = libft/libft.a
 
 # files with dir
@@ -39,8 +39,8 @@ $(NAME): $(OBJ_DIR) $(O_PATH)
 $(OBJ_DIR):
 	mkdir -p obj
 
-$(OBJ_DIR)%.o: $(SRC_DIR)%.c
-	$(GCC) $< -o $@ $(HEADER) -I $(LIB_DIR)
+$(OBJ_DIR)%.o: $(SRC_DIR)%.c $(HEADER)
+	$(GCC) $< -o $@ -I $(HEADER) -I $(LIB_DIR)
 	make -C $(LIB_DIR)
 
 fclean: clean

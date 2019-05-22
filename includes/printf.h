@@ -6,14 +6,15 @@
 /*   By: ashari <ashari@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 21:30:32 by ashari            #+#    #+#             */
-/*   Updated: 2019/05/20 21:42:40 by ashari           ###   ########.fr       */
+/*   Updated: 2019/05/22 14:57:48 by ashari           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PRINTF_PRINTF_H
 # define PRINTF_PRINTF_H
-# define ARR_SIZE 500
+# define ARR_SIZE 5000
 # define BASE 10
+# define STACK_SIZE 10002
 # define FIRST_BIT_M (unsigned long)1 << 63u
 # include "../libft/libft.h"
 # include <stdarg.h>
@@ -47,9 +48,11 @@ typedef	union			u_formlf
 
 typedef	struct			s_wholenumb
 {
-	int					*whole;
-	int					*fract;
+	char				whole[STACK_SIZE];
+	char				fract[STACK_SIZE];
 	char				sign;
+	int					wh_size;
+	int					fr_size;
 	long				wh_b;
 	long				fr_b;
 	char				*res;
@@ -76,13 +79,14 @@ void					apply_format_hex(t_flist *flist, va_list *valist);
 void					apply_format_ptr(t_flist *flist, va_list *valist);
 void					apply_format_float(t_flist *flist, va_list *valist);
 void					apply_format_percent(t_flist *flist, va_list *valist);
-int						*addit(int *a, int *b);
-int						*power(int nb, int power, int *res);
-int						*mult(int *a, int b);
-void					apply_pres_f(int pres, int *fract, int *whole);
-int						*work_fract(int exp, t_wholenumb *n, t_flist *flist,
-						int sign);
-int						*work_whole(int exp, unsigned long wh_b, int *whole);
+char					*addit(char *a, char *b);
+char					*power(int nb, int power, char *res, int *size);
+char					*mult(char *a, int b, int *size);
+void					apply_pres_f(int pres, char *fract, char *whole);
+char					*work_fract(unsigned int exp, t_wholenumb *n,
+									t_flist *flist, int sign);
+char					*work_whole(int exp, unsigned long wh_b, char *whole,
+							int *wh_size);
 char					*print_float(long double var, t_flist *flist);
 char					*parse_result(t_wholenumb *n, t_flist *flist);
 
